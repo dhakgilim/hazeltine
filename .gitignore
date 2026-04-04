@@ -3,7 +3,8 @@
 node_modules/
 content/
 scripts/
-images/
+# Repo-root assets only (keep docs/images/ for GitHub Pages)
+/images/
 preview/
 frontend/
 rider-app/
