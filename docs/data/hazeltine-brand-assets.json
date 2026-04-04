@@ -1,8 +1,0 @@
-{
-  "source_page": "https://minndriveairport.wixsite.com/hazeltineautodetail",
-  "note": "Use local SVG wordmarks for UI (sharp at any DPI). Wix CDN kept for photography only.",
-  "logo_svg": "images/hazeltine-logo.svg",
-  "logo_svg_light": "images/hazeltine-logo-light.svg",
-  "hero_jpg": "https://static.wixstatic.com/media/75705f_c00458e93c824a71b42b8fb2d2c8be15~mv2.jpg/v1/fill/w_1920,h_1080,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/75705f_c00458e93c824a71b42b8fb2d2c8be15~mv2.jpg",
-  "wix_logo_png_reference": "https://static.wixstatic.com/media/75705f_be0ef1a5306242899bbcb2b94826d015~mv2.png"
-}

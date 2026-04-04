@@ -1,4 +1,4 @@
-# MinnDrive Events — Data Sources
+# Hazeltine vehicle events — data sources
 
 _Last updated: 2026-03-13_
 
@@ -118,9 +118,9 @@ Total events: **1,123+** from **25+ sources**
 | `scripts/fetch_tm_events.py` | Ticketmaster API fetcher |
 | `scripts/scrape_events.py` | Web scraper (all non-TM sources) |
 | `docs/data/events-master.json` | Master events database |
-| `docs/data/scrape-audit.json` | Scrape success/failure audit log (90-day retention) |
+| `docs/data/scrape-audit.json` | Scrape audit log (generated locally; gitignored) |
 | `docs/data/DATA_SOURCES.md` | This file |
-| `venues-v2.csv` | Venue metadata (key, name, category, city, coords) |
+| `docs/data/city-venue-distances.json` | City–venue proximity for Events UI |
 
 ## Not on Ticketmaster (Static Destination Cards Only)
 

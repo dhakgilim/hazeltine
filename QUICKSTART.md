@@ -167,7 +167,7 @@ crontab -e
 - **Full documentation:** `EVENTS_PIPELINE.md`
 - **Script reference:** `scripts/README.md`
 - **GitHub repo:** `dhakgilim/openclaw` (auto-synced)
-- **Live site:** minndrive.com (GitHub Pages)
+- **Live site:** GitHub Pages — `https://dhakgilim.github.io/hazeltine/`
 
 ---
 
