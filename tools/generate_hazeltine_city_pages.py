@@ -342,7 +342,7 @@ def render_page(
     <h2 class="section-title">Also serving nearby</h2>
     <p class="section-subtitle">Hazeltine covers 120+ cities across the Twin Cities metro.</p>
     {nearby}
-    <p style="margin-top:1.25rem;"><a href="all-cities.html" style="color:var(--forest);font-weight:600;text-decoration:none;">View all cities →</a></p>
+    <p class="nearby-view-all"><a href="all-cities.html">View all cities →</a></p>
   </div>
 </section>
 

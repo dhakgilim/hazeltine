@@ -22,9 +22,12 @@
   --max-w: 1120px;
   --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.06), 0 0 1px rgba(0, 0, 0, 0.04);
   --shadow-nav: 0 1px 0 rgba(0, 0, 0, 0.05);
+  /* Premium CTAs — same tokens as index.html (showroom gold + silver secondary) */
   --cta-gold: #c4a35a;
   --cta-gold-mid: #b8924a;
+  --cta-gold-hover: #a67d3a;
   --cta-on-gold: #1a1a1a;
+  --cta-silver: #a8b0bc;
   --cta-silver-border: #b8c0cc;
   --cta-silver-hover: #8f9aaa;
 }
@@ -88,8 +91,12 @@ footer .footer-brand .nav-brand img {
   border-radius: var(--radius-lg);
   font-weight: 600 !important;
   font-size: 0.8125rem !important;
+  letter-spacing: -0.02em;
   text-decoration: none;
+  border: none;
+  cursor: pointer;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+  transition: filter 0.15s, transform 0.15s;
 }
 .nav-cta:hover { filter: brightness(1.05); }
 
@@ -299,15 +306,33 @@ footer .footer-brand .nav-brand img {
   border-radius: var(--radius-lg);
   font-size: 0.9375rem;
   font-weight: 600;
+  letter-spacing: -0.02em;
   text-decoration: none;
   text-align: center;
   border: none;
   cursor: pointer;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  transition: filter 0.15s;
+  transition: filter 0.15s, transform 0.15s;
   display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
 }
 .btn-primary:hover { filter: brightness(1.06); }
+
+/* Glass hero card — primary = brighter gold stack; secondary = silver frame (matches index hero-card) */
+.hero-card .btn-primary {
+  width: 100%;
+  justify-content: center;
+  padding: 0.95rem 1rem;
+  font-size: 1rem;
+  background: linear-gradient(180deg, var(--cta-gold) 0%, var(--cta-gold-mid) 100%);
+  color: var(--cta-on-gold);
+}
+.hero-card .btn-primary:hover { filter: brightness(1.06); }
+
+.hero-card-ctas .btn-secondary {
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+}
 
 .btn-secondary {
   background: rgba(255, 255, 255, 0.95);
@@ -316,14 +341,29 @@ footer .footer-brand .nav-brand img {
   border-radius: var(--radius-lg);
   font-size: 0.9375rem;
   font-weight: 500;
+  letter-spacing: -0.02em;
   text-decoration: none;
   border: 2px solid var(--cta-silver-border);
   text-align: center;
-  transition: border-color 0.15s;
+  transition: border-color 0.15s, background 0.15s, color 0.15s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 .btn-secondary:hover {
   border-color: var(--cta-silver-hover);
+  background: #fff;
   color: var(--navy);
+}
+
+/* Light sections: optional brighter gold on primary CTAs (packages / local CTAs) */
+#packages .cta-row .btn-primary,
+section .cta-row .btn-primary {
+  background: linear-gradient(180deg, #e8d5a8 0%, var(--cta-gold) 55%, var(--cta-gold-mid) 100%);
+}
+#packages .cta-row .btn-primary:hover,
+section .cta-row .btn-primary:hover {
+  filter: brightness(1.05);
 }
 
 .hero-card .phone-link {
@@ -358,7 +398,13 @@ footer .footer-brand .nav-brand img {
   color: var(--text-muted);
 }
 
-.trust-item svg { color: var(--forest); width: 18px; height: 18px; opacity: 0.85; }
+.trust-item svg {
+  color: var(--cta-gold-mid);
+  width: 18px;
+  height: 18px;
+  opacity: 0.92;
+  filter: drop-shadow(0 0 0.5px rgba(184, 146, 74, 0.35));
+}
 
 section {
   padding: 4.5rem max(1.25rem, env(safe-area-inset-left)) 4.5rem max(1.25rem, env(safe-area-inset-right));
@@ -374,6 +420,8 @@ section {
   letter-spacing: 0.12em;
   margin-bottom: 0.5rem;
   opacity: 0.9;
+  padding-left: 0.65rem;
+  border-left: 3px solid var(--cta-gold-mid);
 }
 
 .section-title {
@@ -415,6 +463,11 @@ section {
   display: flex;
   flex-direction: column;
   box-shadow: var(--shadow-card);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.price-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08), 0 0 1px rgba(0, 0, 0, 0.06);
 }
 
 .price-card .tier-name {
@@ -567,7 +620,12 @@ section {
 .city-events-grid .event-date { font-size: 0.75rem; font-weight: 600; color: var(--forest); text-transform: uppercase; margin-bottom: 0.35rem; }
 .city-events-grid .event-name { font-size: 0.95rem; font-weight: 600; line-height: 1.3; margin-bottom: 0.35rem; color: var(--navy); }
 .city-events-grid .event-venue { font-size: 0.8125rem; color: var(--text-muted); }
-.city-events-grid .event-cta { margin-top: 0.75rem; font-size: 0.8125rem; font-weight: 600; color: var(--forest); }
+.city-events-grid .event-cta {
+  margin-top: 0.75rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--cta-gold-mid);
+}
 
 .city-events-empty {
   text-align: center;
@@ -576,7 +634,19 @@ section {
   max-width: 28rem;
   margin: 0 auto;
 }
-.city-events-empty a { color: var(--forest); font-weight: 600; }
+.city-events-empty a { color: var(--cta-gold-mid); font-weight: 600; }
+.city-events-empty a:hover { color: var(--cta-gold-hover); }
+
+.nearby-view-all { margin-top: 1.25rem; }
+.nearby-view-all a {
+  color: var(--cta-gold-mid);
+  font-weight: 600;
+  text-decoration: none;
+}
+.nearby-view-all a:hover {
+  color: var(--cta-gold-hover);
+  text-decoration: underline;
+}
 
 .nearby-section .nearby-grid {
   display: flex;
@@ -599,7 +669,8 @@ section {
 }
 
 .nearby-link:hover {
-  border-color: var(--forest);
+  border-color: var(--cta-gold-mid);
+  box-shadow: 0 2px 12px rgba(196, 163, 90, 0.18);
   transform: translateY(-1px);
 }
 
@@ -748,23 +819,31 @@ footer {
 
 .service-areas-grid-min a {
   font-size: 0.8125rem;
-  color: var(--forest);
+  color: var(--navy);
   text-decoration: none;
   font-weight: 600;
   padding: 0.35rem 0.65rem;
   border-radius: var(--radius-sm);
   background: var(--ios-card);
-  border: 1px solid var(--border);
+  border: 1px solid var(--cta-silver-border);
+  transition: border-color 0.15s, color 0.15s;
 }
-.service-areas-grid-min a:hover { background: #fff; }
+.service-areas-grid-min a:hover {
+  background: #fff;
+  border-color: var(--cta-gold-mid);
+  color: var(--cta-gold-hover);
+}
 
 .service-areas-popular-block .view-all { margin-top: 1.25rem; }
 .service-areas-popular-block .view-all a {
-  color: var(--forest);
+  color: var(--cta-gold-mid);
   font-weight: 600;
   text-decoration: none;
 }
-.service-areas-popular-block .view-all a:hover { text-decoration: underline; }
+.service-areas-popular-block .view-all a:hover {
+  color: var(--cta-gold-hover);
+  text-decoration: underline;
+}
 
 @media (max-width: 1100px) {
   .pricing-grid { grid-template-columns: repeat(2, 1fr); }
