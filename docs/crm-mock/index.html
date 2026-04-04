@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Hazeltine CRM — UI design preview</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page">
+    <header class="top">
+      <div class="brand">
+        <img src="../images/hazeltine-logo-light.svg" alt="Hazeltine" width="160" height="28">
+        <div class="brand-copy">
+          <h1>Operations CRM</h1>
+          <p>High-level screen designs · not connected to live data</p>
+        </div>
+      </div>
+      <div class="segmented" role="tablist" aria-label="Role preview">
+        <button type="button" role="tab" id="tab-customer" aria-selected="true" aria-controls="panel-customer">Customer</button>
+        <button type="button" role="tab" id="tab-admin" aria-selected="false" aria-controls="panel-admin">Admin</button>
+        <button type="button" role="tab" id="tab-detailer" aria-selected="false" aria-controls="panel-detailer">Detailer</button>
+      </div>
+    </header>
+
+    <div class="screens">
+      <section id="panel-customer" class="panel is-active" role="tabpanel" aria-labelledby="tab-customer">
+        <div class="panel-header">
+          <h2>Book a visit</h2>
+          <p>Mobile-first scheduling: package, three ranked time slots, service ZIP, deposit. Calm hierarchy, 44pt targets, one primary action.</p>
+        </div>
+        <div class="layout">
+          <div class="device" aria-hidden="true">
+            <div class="device-inner">
+              <div class="status-bar"><span>9:41</span><span>●●●●●</span></div>
+              <div class="screen-body">
+                <div class="nav-bar">
+                  <span class="chevron">‹</span>
+                  <span class="title">Schedule</span>
+                  <span class="chevron" style="visibility:hidden">›</span>
+                </div>
+                <div class="progress"><i></i><i></i><i></i></div>
+                <div class="label">Package</div>
+                <div class="chips">
+                  <button type="button" class="chip active" tabindex="-1">Interior + exterior</button>
+                  <button type="button" class="chip" tabindex="-1">Ceramic</button>
+                </div>
+                <div class="label" style="margin-top:22px">Preferred times</div>
+                <div class="card selected">
+                  <h3>Thu · 9:00–12:00</h3>
+                  <div class="meta">55346 · Morning window</div>
+                  <div class="badge-row">
+                    <span class="badge rank">1st choice</span>
+                    <span class="badge">$149 hold</span>
+                  </div>
+                </div>
+                <div class="card">
+                  <h3>Fri · 1:00–4:00</h3>
+                  <div class="meta">55346 · Afternoon</div>
+                  <div class="badge-row"><span class="badge rank">2nd</span></div>
+                </div>
+                <div class="card">
+                  <h3>Sat · 8:00–11:00</h3>
+                  <div class="meta">55346 · Early</div>
+                  <div class="badge-row"><span class="badge rank">3rd</span></div>
+                </div>
+                <div class="field">
+                  <label for="zip-mock">Service ZIP</label>
+                  <input id="zip-mock" class="input" type="text" value="55346" readonly aria-readonly="true">
+                </div>
+                <button type="button" class="btn-primary" tabindex="-1">Continue to payment</button>
+                <p class="helper">Mock UI only — no charges or bookings are created.</p>
+              </div>
+            </div>
+          </div>
+          <aside class="annotation">
+            <strong>Design intent</strong>
+            Apple-style clarity: one column, generous padding, hairline separators. Selected slot uses a soft blue wash (system accent) instead of heavy borders. Progress matches a three-step funnel without cluttering the chrome.
+          </aside>
+        </div>
+      </section>
+
+      <section id="panel-admin" class="panel" role="tabpanel" aria-labelledby="tab-admin" hidden>
+        <div class="panel-header">
+          <h2>Command center</h2>
+          <p>At-a-glance revenue and pipeline, weather context for routing, and assignment actions on pending jobs. Desktop-first density with readable type.</p>
+        </div>
+        <div class="layout">
+          <div class="canvas">
+            <div class="canvas-top">
+              <input class="search" type="search" placeholder="Search jobs, customers, plates…" aria-label="Search (mock)" readonly>
+              <div class="mini-actions">
+                <button type="button" class="mini-btn" tabindex="-1">Export</button>
+                <button type="button" class="mini-btn primary" tabindex="-1">New hold</button>
+              </div>
+            </div>
+            <div class="kpis">
+              <div class="kpi"><div class="value">$24.8k</div><div class="k">MTD collected</div></div>
+              <div class="kpi"><div class="value">18</div><div class="k">Jobs this week</div></div>
+              <div class="kpi"><div class="value">4</div><div class="k">Awaiting assign</div></div>
+              <div class="kpi"><div class="value">96%</div><div class="k">On-time window</div></div>
+            </div>
+            <div class="weather">
+              <div>
+                <strong>Twin Cities · next 48h</strong>
+                <div><span>Light rain possible Thu PM — suggest covered add-on or reschedule offers.</span></div>
+              </div>
+              <span style="font-size:22px" aria-hidden="true">🌧</span>
+            </div>
+            <div class="table-wrap">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Customer</th>
+                    <th>Window</th>
+                    <th>Package</th>
+                    <th>Status</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>A. Nguyen · 55346</td>
+                    <td>Thu 9–12</td>
+                    <td>Interior + exterior</td>
+                    <td><span class="pill">Needs detailer</span></td>
+                    <td><div class="mini-actions"><button type="button" class="mini-btn" tabindex="-1">Assign</button><button type="button" class="mini-btn primary" tabindex="-1">Confirm</button></div></td>
+                  </tr>
+                  <tr>
+                    <td>M. Patel · 55423</td>
+                    <td>Fri 13–16</td>
+                    <td>Ceramic</td>
+                    <td><span class="pill ok">Crew set</span></td>
+                    <td><div class="mini-actions"><button type="button" class="mini-btn" tabindex="-1">Open</button></div></td>
+                  </tr>
+                  <tr>
+                    <td>K. Olsen · 55116</td>
+                    <td>Sat 8–11</td>
+                    <td>Maintenance</td>
+                    <td><span class="pill">Deposit pending</span></td>
+                    <td><div class="mini-actions"><button type="button" class="mini-btn primary" tabindex="-1">Nudge</button></div></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <aside class="annotation">
+            <strong>Design intent</strong>
+            Neutral graphite surfaces, KPI tiles as quiet cards, and a weather strip as contextual intelligence — not a widget wall. Table typography stays small but tracked; actions are secondary buttons until primary is needed.
+          </aside>
+        </div>
+      </section>
+
+      <section id="panel-detailer" class="panel" role="tabpanel" aria-labelledby="tab-detailer" hidden>
+        <div class="panel-header">
+          <h2>Job in progress</h2>
+          <p>Checklist, photo documentation, and status handoff. Built for gloves-on use: large controls, high contrast, minimal typing.</p>
+        </div>
+        <div class="layout">
+          <div class="device" aria-hidden="true">
+            <div class="device-inner">
+              <div class="status-bar"><span>9:41</span><span>●●●●●</span></div>
+              <div class="screen-body">
+                <div class="nav-bar">
+                  <span class="chevron">‹</span>
+                  <span class="title">Job #1042</span>
+                  <span class="chevron" style="visibility:hidden">›</span>
+                </div>
+                <div class="card" style="margin-bottom:18px">
+                  <h3>A. Nguyen</h3>
+                  <div class="meta">55346 · Interior + exterior · Thu 9–12</div>
+                  <div class="badge-row">
+                    <span class="badge">Gate code: 7421*</span>
+                  </div>
+                </div>
+                <div class="label">Checklist</div>
+                <ul class="step-list">
+                  <li><span class="check done" aria-hidden="true"></span><div><strong>Arrival photo</strong><div class="meta">Driveway + plate visible</div></div></li>
+                  <li><span class="check" aria-hidden="true"></span><div><strong>Pre-inspection</strong><div class="meta">Note defects in app</div></div></li>
+                  <li><span class="check" aria-hidden="true"></span><div><strong>Interior complete</strong><div class="meta">Before / after</div></div></li>
+                </ul>
+                <div class="label" style="margin-top:20px">Photos</div>
+                <div class="photo-grid">
+                  <div class="photo-slot">Add</div>
+                  <div class="photo-slot">Add</div>
+                  <div class="photo-slot">Add</div>
+                  <div class="photo-slot">Add</div>
+                </div>
+                <div class="status-row">
+                  <button type="button" class="status-btn on" tabindex="-1">On site</button>
+                  <button type="button" class="status-btn" tabindex="-1">Wrapping</button>
+                </div>
+                <button type="button" class="btn-primary" tabindex="-1">Mark complete</button>
+              </div>
+            </div>
+          </div>
+          <aside class="annotation">
+            <strong>Design intent</strong>
+            Field workflow mirrors iOS Settings-style rows: clear title, secondary line, optional completion mark. Photo grid uses dashed affordances (upload / camera) without showing real imagery in the mock.
+          </aside>
+        </div>
+      </section>
+    </div>
+  </div>
+  <script>
+    (function () {
+      var tabs = [].slice.call(document.querySelectorAll('.segmented [role="tab"]'));
+      var panels = {
+        customer: document.getElementById('panel-customer'),
+        admin: document.getElementById('panel-admin'),
+        detailer: document.getElementById('panel-detailer')
+      };
+      var keys = ['customer', 'admin', 'detailer'];
+      function show(key) {
+        keys.forEach(function (k, i) {
+          var tab = tabs[i];
+          var panel = panels[k];
+          var on = k === key;
+          tab.setAttribute('aria-selected', on);
+          panel.classList.toggle('is-active', on);
+          panel.hidden = !on;
+        });
+      }
+      tabs.forEach(function (tab, i) {
+        tab.addEventListener('click', function () { show(keys[i]); });
+      });
+    })();
+  </script>
+</body>
+</html>
