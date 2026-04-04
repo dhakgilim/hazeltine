@@ -53,7 +53,19 @@ nav {
 }
 
 .nav-brand { display: flex; align-items: center; gap: 0.65rem; text-decoration: none; color: var(--text); }
-.nav-brand img { height: 40px; width: auto; display: block; }
+.nav-brand img {
+  height: 40px;
+  width: auto;
+  max-width: min(240px, 58vw);
+  display: block;
+  object-fit: contain;
+  object-position: left center;
+}
+
+footer .footer-brand .nav-brand img {
+  height: 44px;
+  max-width: min(280px, 85vw);
+}
 
 .nav-links { display: flex; gap: 1.25rem; align-items: center; flex-wrap: wrap; }
 .nav-links a {
@@ -172,6 +184,58 @@ nav {
   margin-bottom: 1.5rem;
   max-width: 34rem;
   line-height: 1.6;
+}
+
+.city-page-hero .hero-cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+.city-page-hero .hero-cta-row .btn-hero-gold {
+  background: linear-gradient(180deg, #e8d5a8 0%, var(--cta-gold) 55%, var(--cta-gold-mid) 100%);
+  color: var(--cta-on-gold);
+  padding: 0.875rem 1.375rem;
+  border-radius: var(--radius-lg);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: filter 0.15s;
+}
+.city-page-hero .hero-cta-row .btn-hero-gold:hover { filter: brightness(1.06); }
+
+.city-page-hero .hero-cta-row .btn-hero-outline {
+  background: rgba(255, 255, 255, 0.08);
+  border: 2px solid rgba(255, 255, 255, 0.45);
+  color: #fff;
+  padding: 0.875rem 1.375rem;
+  border-radius: var(--radius-lg);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.15s, border-color 0.15s;
+}
+.city-page-hero .hero-cta-row .btn-hero-outline:hover {
+  background: rgba(255, 255, 255, 0.14);
+  border-color: rgba(255, 255, 255, 0.65);
+}
+
+#mobile-faq { background: var(--ios-card); border-top: 1px solid var(--border); }
+.mobile-faq-inner { max-width: var(--max-w); margin: 0 auto; }
+.faq-simple-block { max-width: 42rem; margin: 0 auto; padding-bottom: 1rem; }
+.faq-simple-block h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin: 0 0 0.35rem;
+  color: var(--navy);
+}
+.faq-simple-block p {
+  margin: 0;
+  color: var(--text-muted);
+  line-height: 1.55;
+  font-size: 0.95rem;
 }
 
 .hero-card {
