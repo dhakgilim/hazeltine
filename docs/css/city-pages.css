@@ -30,6 +30,7 @@
   --cta-silver: #a8b0bc;
   --cta-silver-border: #b8c0cc;
   --cta-silver-hover: #8f9aaa;
+  --ios-fill: rgba(120, 120, 128, 0.12);
 }
 
 html { scroll-behavior: smooth; }
@@ -70,33 +71,80 @@ footer .footer-brand .nav-brand img {
   max-width: min(280px, 85vw);
 }
 
-.nav-links { display: flex; gap: 1.25rem; align-items: center; flex-wrap: wrap; }
-.nav-links a {
-  color: var(--label-secondary); text-decoration: none;
-  font-size: 0.8125rem; font-weight: 500;
-  transition: color 0.15s;
+/* Nav: browse (primary) vs book (actions) — matches index.html */
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0;
+  flex-wrap: nowrap;
 }
-.nav-links a:hover { color: var(--forest); }
+
+.nav-primary {
+  display: flex;
+  align-items: center;
+  gap: 0.05rem;
+  padding-right: 0.75rem;
+  margin-right: 0.65rem;
+  border-right: 1px solid var(--border);
+  flex-shrink: 1;
+  min-width: 0;
+}
+
+.nav-primary a {
+  color: var(--label-secondary);
+  text-decoration: none;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  padding: 0.4rem 0.45rem;
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+  transition: color 0.15s, background 0.15s;
+}
+
+.nav-primary a:hover {
+  color: var(--forest);
+  background: var(--ios-fill);
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  flex-shrink: 0;
+}
 
 .nav-schedule-inline {
-  font-size: 0.8125rem; font-weight: 600; color: var(--forest);
-  text-decoration: none; padding: 0.35rem 0.5rem; border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--forest);
+  text-decoration: none;
+  padding: 0.4rem 0.55rem;
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+  border: 1px solid transparent;
+  transition: background 0.15s, border-color 0.15s;
 }
-.nav-schedule-inline:hover { text-decoration: underline; }
+.nav-schedule-inline:hover {
+  background: var(--ios-fill);
+  border-color: var(--border);
+}
 
 .nav-cta {
   background: linear-gradient(180deg, var(--cta-gold) 0%, var(--cta-gold-mid) 100%) !important;
   color: var(--cta-on-gold) !important;
-  padding: 0.5rem 1rem;
+  padding: 0.45rem 0.95rem;
   border-radius: var(--radius-lg);
   font-weight: 600 !important;
-  font-size: 0.8125rem !important;
+  font-size: 0.75rem !important;
   letter-spacing: -0.02em;
   text-decoration: none;
   border: none;
   cursor: pointer;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
   transition: filter 0.15s, transform 0.15s;
+  white-space: nowrap;
 }
 .nav-cta:hover { filter: brightness(1.05); }
 
@@ -129,10 +177,53 @@ footer .footer-brand .nav-brand img {
   position: fixed; top: 56px; left: 0; right: 0;
   background: rgba(255, 255, 255, 0.96);
   backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
   flex-direction: column;
-  padding: 1.5rem 1.25rem calc(1.5rem + env(safe-area-inset-bottom));
-  gap: 1rem;
+  align-items: stretch;
+  padding: 1rem 1.25rem calc(1.25rem + env(safe-area-inset-bottom));
+  gap: 0;
   border-bottom: 1px solid var(--border);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+}
+
+.nav-links.open .nav-primary {
+  flex-direction: column;
+  align-items: stretch;
+  border-right: none;
+  padding-right: 0;
+  margin-right: 0;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border);
+  gap: 0.15rem;
+}
+
+.nav-links.open .nav-primary a {
+  padding: 0.65rem 0.75rem;
+  border-radius: var(--radius);
+  font-size: 0.9375rem;
+}
+
+.nav-links.open .nav-actions {
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.5rem;
+}
+
+.nav-links.open .nav-schedule-inline {
+  text-align: center;
+  padding: 0.65rem 1rem;
+  border: 1px solid var(--cta-silver-border);
+  border-radius: var(--radius-lg);
+  font-size: 0.9375rem;
+}
+
+.nav-links.open .nav-cta {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 0.9375rem !important;
+  text-align: center;
+  box-sizing: border-box;
 }
 
 /* City hero — photo + gradient (matches homepage energy) */
@@ -846,12 +937,9 @@ footer {
 }
 
 @media (max-width: 1100px) {
-  .pricing-grid { grid-template-columns: repeat(2, 1fr); }
-}
-
-@media (max-width: 900px) {
   .hamburger { display: flex; }
   .nav-links { display: none; }
+  .pricing-grid { grid-template-columns: repeat(2, 1fr); }
   .city-page-hero .hero-content { grid-template-columns: 1fr; }
   .info-grid { grid-template-columns: 1fr; }
   .footer-inner { grid-template-columns: 1fr 1fr; }

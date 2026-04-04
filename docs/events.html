@@ -8,7 +8,7 @@
 <link rel="icon" type="image/svg+xml" href="favicon.svg"><link rel="icon" type="image/png" href="favicon.png">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Car Shows &amp; Vehicle Events MN | Hazeltine Detailing</title>
-<meta name="description" content="Twin Cities car shows, Monster Jam, boat &amp; RV events, cruises, and autocross — curated for people who care how their vehicle looks. Hazeltine mobile &amp; bay detailing.">
+<meta name="description" content="Twin Cities car shows, Monster Jam, boat &amp; RV events, cruises, and autocross — curated for people who care how their vehicle looks. Hazeltine 100% mobile detailing.">
 <link rel="canonical" href="https://dhakgilim.github.io/hazeltine/events.html">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Vehicle Events — Hazeltine Detailing","description":"Car shows, Monster Jam, boat and RV events, and motorsports-adjacent listings in Minnesota.","url":"https://dhakgilim.github.io/hazeltine/events.html","isPartOf":{"@type":"WebSite","name":"Hazeltine Detailing","url":"https://dhakgilim.github.io/hazeltine/"}}</script><meta property="og:title" content="Car Shows &amp; Vehicle Events | Hazeltine">
 <meta property="og:description" content="Car shows, Monster Jam, cruises, boat &amp; RV events — not random concerts. Built for drivers who detail.">
@@ -24,11 +24,15 @@ body{font-family:'Inter',-apple-system,sans-serif;background:var(--bg);color:var
 nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(13,13,26,0.85);backdrop-filter:blur(20px);border-bottom:1px solid rgba(139,92,246,0.1);padding:0 2rem;height:72px;display:flex;align-items:center;justify-content:space-between}
 .nav-brand{display:flex;align-items:center;text-decoration:none}
 .nav-brand img{height:40px;width:auto;display:block;max-width:min(200px,52vw)}
-.nav-links{display:flex;gap:2rem;align-items:center}
-.nav-links a{color:var(--text-muted);text-decoration:none;font-size:0.9rem;font-weight:500;transition:color 0.2s}
-.nav-links a:hover{color:var(--text)}
-.nav-links a.active{color:var(--accent)}
-.nav-cta{background:var(--accent)!important;color:white!important;padding:0.6rem 1.5rem;border-radius:8px;font-weight:600!important}
+.nav-links{display:flex;flex-direction:row;align-items:center;gap:0;flex-wrap:nowrap}
+.nav-primary{display:flex;align-items:center;gap:0.05rem;padding-right:0.75rem;margin-right:0.65rem;border-right:1px solid rgba(139,92,246,0.22);flex-shrink:1;min-width:0}
+.nav-primary a{color:var(--text-muted);text-decoration:none;font-size:0.75rem;font-weight:500;letter-spacing:-0.02em;padding:0.4rem 0.45rem;border-radius:8px;white-space:nowrap;transition:color 0.2s,background 0.2s}
+.nav-primary a:hover{color:var(--text);background:rgba(139,92,246,0.12)}
+.nav-primary a.active{color:var(--accent)}
+.nav-actions{display:flex;align-items:center;gap:0.45rem;flex-shrink:0}
+.nav-schedule-inline{font-size:0.75rem;font-weight:600;color:var(--accent);text-decoration:none;padding:0.4rem 0.55rem;border-radius:8px;white-space:nowrap;border:1px solid transparent;transition:background 0.2s,border-color 0.2s}
+.nav-schedule-inline:hover{background:rgba(139,92,246,0.1);border-color:rgba(139,92,246,0.25)}
+.nav-cta{background:var(--accent)!important;color:white!important;padding:0.45rem 0.95rem;border-radius:10px;font-weight:600!important;font-size:0.75rem!important;letter-spacing:-0.02em;text-decoration:none;white-space:nowrap;box-shadow:0 1px 2px rgba(0,0,0,0.15)}
 .skip-link{position:absolute;top:-100px;left:0;background:var(--accent);color:white;padding:0.75rem 1.5rem;z-index:200;font-weight:600;text-decoration:none;border-radius:0 0 8px 0}
 .skip-link:focus{top:0}
 .hamburger{display:none;background:none;border:none;cursor:pointer;width:32px;height:24px;position:relative;flex-direction:column;justify-content:space-between}
@@ -36,7 +40,12 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(13,13,26,0.8
 .hamburger.active span:nth-child(1){transform:rotate(45deg) translate(7px,7px)}
 .hamburger.active span:nth-child(2){opacity:0}
 .hamburger.active span:nth-child(3){transform:rotate(-45deg) translate(7px,-7px)}
-.nav-links.open{display:flex!important;position:fixed;top:72px;left:0;right:0;background:rgba(13,13,26,0.98);backdrop-filter:blur(20px);flex-direction:column;padding:2rem;gap:1.5rem;border-bottom:1px solid rgba(139,92,246,0.15)}
+.nav-links.open{display:flex!important;position:fixed;top:72px;left:0;right:0;background:rgba(13,13,26,0.98);backdrop-filter:blur(20px);flex-direction:column;align-items:stretch;padding:1rem 1.25rem calc(1.25rem + env(safe-area-inset-bottom));gap:0;border-bottom:1px solid rgba(139,92,246,0.15);box-shadow:0 12px 32px rgba(0,0,0,0.35)}
+.nav-links.open .nav-primary{flex-direction:column;align-items:stretch;border-right:none;padding-right:0;margin-right:0;margin-bottom:0.75rem;padding-bottom:0.75rem;border-bottom:1px solid rgba(139,92,246,0.15);gap:0.15rem}
+.nav-links.open .nav-primary a{padding:0.65rem 0.75rem;border-radius:var(--radius);font-size:0.9375rem}
+.nav-links.open .nav-actions{flex-direction:column;align-items:stretch;gap:0.5rem}
+.nav-links.open .nav-schedule-inline{text-align:center;padding:0.65rem 1rem;border:1px solid rgba(139,92,246,0.3);border-radius:10px;font-size:0.9375rem}
+.nav-links.open .nav-cta{width:100%;padding:0.75rem 1rem;font-size:0.9375rem!important;text-align:center;box-sizing:border-box}
 .events-hero{padding:8rem 2rem 4rem;text-align:center;background-color:#071420;background-image:linear-gradient(180deg,rgba(7,20,32,0.82) 0%,rgba(1,50,32,0.88) 100%),url('https://static.wixstatic.com/media/75705f_c00458e93c824a71b42b8fb2d2c8be15~mv2.jpg/v1/fill/w_1920,h_1080,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/75705f_c00458e93c824a71b42b8fb2d2c8be15~mv2.jpg');background-position:center,center;background-size:cover,cover;background-repeat:no-repeat}
 .events-hero h1{font-family:'Playfair Display',serif;font-size:3rem;font-weight:700;line-height:1.15;margin-bottom:1rem}
 .events-hero h1 .highlight{background:linear-gradient(135deg,var(--accent),var(--accent-hover));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
@@ -75,7 +84,7 @@ footer{background:var(--bg-card);border-top:1px solid rgba(139,92,246,0.08);padd
 .footer-col a{display:block;color:var(--text-muted);text-decoration:none;font-size:0.85rem;margin-bottom:0.5rem;transition:color 0.2s}
 .footer-col a:hover{color:var(--accent)}
 .footer-bottom{max-width:var(--max-w);margin:2rem auto 0;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,0.05);text-align:center;font-size:0.8rem;color:var(--text-muted)}
-@media(max-width:900px){.hamburger{display:flex}.nav-links{display:none}.events-hero h1{font-size:2.2rem}.venue-grid{grid-template-columns:1fr}.footer-inner{grid-template-columns:1fr 1fr}}
+@media(max-width:1100px){.hamburger{display:flex}.nav-links{display:none}.events-hero h1{font-size:2.2rem}.venue-grid{grid-template-columns:1fr}.footer-inner{grid-template-columns:1fr 1fr}}
 @media(max-width:600px){.events-hero{padding:6rem 1rem 3rem}.footer-inner{grid-template-columns:1fr}}
 /* Filter Bar */
 .filter-bar{display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:2rem;padding-bottom:1rem;border-bottom:1px solid rgba(139,92,246,0.1)}
@@ -131,10 +140,21 @@ footer{background:var(--bg-card);border-top:1px solid rgba(139,92,246,0.08);padd
     <span></span><span></span><span></span>
   </button>
   <div class="nav-links">
-    <a href="index.html">Home</a>
-    <a href="events.html" class="active">Events</a>
-    <a href="all-cities.html">All Cities</a>
-    <a href="https://embed.evertransit.com/schedule.html?theme=default&amp;api_key=b68df50df04ee485999db06c3d29a936e6a6a49995d90be994f1895a439c6d152e" target="_blank" rel="noopener nofollow" class="nav-cta">Book Now</a>
+    <div class="nav-primary" role="group" aria-label="Site sections">
+      <a href="index.html">Home</a>
+      <a href="index.html#packages">Pricing</a>
+      <a href="index.html#service-menu">Services</a>
+      <a href="index.html#gallery">Results</a>
+      <a href="index.html#reviews">Reviews</a>
+      <a href="index.html#areas">Areas</a>
+      <a href="index.html#faq">FAQ</a>
+      <a href="all-cities.html">All cities</a>
+      <a href="events.html" class="active" aria-current="page">Events</a>
+    </div>
+    <div class="nav-actions" role="group" aria-label="Book detailing">
+      <a href="https://embed.evertransit.com/schedule.html?theme=default&amp;api_key=b68df50df04ee485999db06c3d29a936e6a6a49995d90be994f1895a439c6d152e" target="_blank" rel="noopener nofollow" class="nav-schedule-inline">Schedule</a>
+      <a href="index.html#book" class="nav-cta">Get quote</a>
+    </div>
   </div>
 </nav>
 
