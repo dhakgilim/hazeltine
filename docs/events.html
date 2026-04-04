@@ -7,14 +7,14 @@
 <meta http-equiv="Expires" content="0">
 <link rel="icon" type="image/svg+xml" href="favicon.svg"><link rel="icon" type="image/png" href="favicon.png">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Twin Cities Events | MinnDrive Airport Car Service</title>
-<meta name="description" content="Need a ride to Twin Cities events? MinnDrive serves 120+ cities to U.S. Bank Stadium, Xcel Energy Center, Target Center, and more. Flat rates, no surge.">
-<link rel="canonical" href="https://www.minndrive.com/events.html">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Twin Cities Events — MinnDrive","description":"Need a ride to Twin Cities events? MinnDrive serves 120+ cities with flat-rate car service to U.S. Bank Stadium, Xcel Energy Center, Target Center, and more.","url":"https://www.minndrive.com/events.html","isPartOf":{"@type":"WebSite","name":"MinnDrive","url":"https://www.minndrive.com"}}</script><meta property="og:title" content="Twin Cities Events | MinnDrive">
-<meta property="og:description" content="Need a ride to Twin Cities events? Flat rates from 120+ cities. No surge pricing.">
+<title>Car Shows &amp; Vehicle Events MN | Hazeltine Detailing</title>
+<meta name="description" content="Twin Cities car shows, Monster Jam, boat &amp; RV events, cruises, and autocross — curated for people who care how their vehicle looks. Hazeltine mobile &amp; bay detailing.">
+<link rel="canonical" href="https://dhakgilim.github.io/hazeltine/events.html">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Vehicle Events — Hazeltine Detailing","description":"Car shows, Monster Jam, boat and RV events, and motorsports-adjacent listings in Minnesota.","url":"https://dhakgilim.github.io/hazeltine/events.html","isPartOf":{"@type":"WebSite","name":"Hazeltine Detailing","url":"https://dhakgilim.github.io/hazeltine/"}}</script><meta property="og:title" content="Car Shows &amp; Vehicle Events | Hazeltine">
+<meta property="og:description" content="Car shows, Monster Jam, cruises, boat &amp; RV events — not random concerts. Built for drivers who detail.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://www.minndrive.com/events.html">
-<meta property="og:site_name" content="MinnDrive">
+<meta property="og:url" content="https://dhakgilim.github.io/hazeltine/events.html">
+<meta property="og:site_name" content="Hazeltine Detailing">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 <style>*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
@@ -124,7 +124,7 @@ footer{background:var(--bg-card);border-top:1px solid rgba(139,92,246,0.08);padd
 <body>
 <a href="#main" class="skip-link">Skip to main content</a>
 <nav role="navigation" aria-label="Main navigation">
-  <a href="index.html" class="nav-logo">Minn<span>Drive</span></a>
+  <a href="index.html" class="nav-logo">Hazel<span>tine</span></a>
   <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" onclick="this.classList.toggle('active');document.querySelector('.nav-links').classList.toggle('open');this.setAttribute('aria-expanded',this.classList.contains('active'))">
     <span></span><span></span><span></span>
   </button>
@@ -789,15 +789,24 @@ footer{background:var(--bg-card);border-top:1px solid rgba(139,92,246,0.08);padd
   let masterEvents = [];
   const PAGE_SIZE = 30;
 
+  function hazeltineIsVehicleEventRaw(e) {
+    var name = (e.name || '').toLowerCase();
+    var full = (name + ' ' + (e.description || '') + ' ' + (e.venue_name || '')).toLowerCase();
+    if (/brewing|big head todd|prenatal|egg hunt|puzzle contest|5k fun run/i.test(full)) return false;
+    if (/lfa \d+|\bboxing\b|\bwrestling\b/i.test(name) && !/monster jam/i.test(name)) return false;
+    if (/motorcycle/.test(name) && !/show|swap|meet|expo|rally|viking/i.test(name)) return false;
+    return /car show|auto show|monster jam|monster truck|boat show|rv show|motorcycle|cruise-in|cruise night|cars & coffee|cars and coffee|autocross|swap meet|gsta|gmcca|spring extravaganza|roadsters|on-water boat|mowog|viking motorcycle|truck show|jeep fest|off-road expo|collector car|exotic car meet|car meet|camper show|motorhome/i.test(name);
+  }
+
   async function loadMasterEvents(){
     try{
-      const resp = await fetch('/data/events-master.json?v='+todayLocal);
+      const resp = await fetch('data/events-master.json?v='+todayLocal);
       if(!resp.ok) return;
       const data = await resp.json();
       // Handle both flat array (new) and {events:[...]} (old) formats
       const events = Array.isArray(data) ? data : (data.events || []);
       masterEvents = events.filter(function(e){
-        return e.date >= todayLocal;
+        return e.date >= todayLocal && hazeltineIsVehicleEventRaw(e);
       }).map(function(e){
         return {
           name: e.name,

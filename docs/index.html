@@ -7,19 +7,19 @@
 <meta http-equiv="Expires" content="0">
 <link rel="icon" type="image/svg+xml" href="favicon.svg"><link rel="icon" type="image/png" href="favicon.png">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hazeltine Detailing | Auto Detailing Minneapolis &amp; St. Paul | Ceramic Coating &amp; Paint Correction</title>
-<meta name="description" content="Professional auto detailing in Minneapolis, St. Paul, and the Twin Cities metro: ceramic coating, paint correction, swirl removal, interior shampoo and leather conditioning. Mobile and bay appointments. Packages from $149. Call (763) 352-7411 or book online.">
-<meta name="keywords" content="auto detailing Minneapolis, car detailing St Paul, Twin Cities auto detailing, ceramic coating Minnesota, paint correction Minneapolis, mobile car detailing MN, interior detailing, leather cleaning car, swirl removal, hand wash, car wax alternative, Eden Prairie detailing, Bloomington car detail">
+<title>Mobile Auto Detailing Minnesota | Hazeltine — Interior Car Cleaning Minneapolis &amp; Ceramic Coating Chaska</title>
+<meta name="description" content="Mobile auto detailing across Minnesota: interior car cleaning Minneapolis, ceramic coating Chaska &amp; Twin Cities, paint correction, steam and extraction. Request a quote or schedule a bay. Packages from $149. (763) 352-7411.">
+<meta name="keywords" content="mobile auto detailing Minnesota, interior car cleaning Minneapolis, ceramic coating Chaska, mobile detailing Twin Cities, paint correction MN, steam cleaning car interior, hand wash decontamination, Eden Prairie detailing, Bloomington car detail, St Paul auto detailing">
 <link rel="canonical" href="https://dhakgilim.github.io/hazeltine/">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://dhakgilim.github.io/hazeltine/">
 <meta property="og:title" content="Hazeltine Detailing | Minneapolis &amp; St. Paul Auto Detailing &amp; Ceramic Coating">
-<meta property="og:description" content="Twin Cities car detailing: ceramic coating, paint correction, interior extraction, and leather care. Clear pricing from $149. Book your appointment online.">
+<meta property="og:description" content="Mobile auto detailing Minnesota — interior car cleaning Minneapolis, ceramic coating Chaska, Twin Cities. Request a quote or schedule a bay. From $149. (763) 352-7411.">
 <meta property="og:image" content="https://dhakgilim.github.io/hazeltine/images/hazeltine-logo.svg">
 <meta property="og:site_name" content="Hazeltine Detailing">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Hazeltine Detailing | Minneapolis &amp; St. Paul Auto Detailing">
-<meta name="twitter:description" content="Ceramic coating, paint correction, and interior detailing in the Twin Cities. Packages from $149. Book online.">
+<meta name="twitter:description" content="Mobile detailing MN, interior cleaning Minneapolis, ceramic Chaska. Get a quote or schedule online. Packages from $149.">
 <meta name="twitter:image" content="https://dhakgilim.github.io/hazeltine/images/hazeltine-logo.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -112,6 +112,30 @@
             "@type": "Answer",
             "text": "Yes. Interior packages include extraction, pet hair remediation, and Minnesota road-salt tracking cleanup. Heavy contamination is quoted after photos or an on-bay inspection."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you need my water or power for mobile detailing?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We can work with your exterior water spigot and standard outlets when available; if your site cannot support that, we will note it when you request a quote and plan accordingly or schedule at our bay."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is your weather policy for mobile detailing?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Exterior work is scheduled when ambient conditions allow safe results — generally about 40°F minimum for many exterior steps. We may reschedule if ice, heavy rain, or extreme cold would compromise the finish or your vehicle."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much space do you need for mobile detailing?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A flat area where we can safely open all doors and access the vehicle — typically a driveway, wide parking stall, or similar. Tight garages may work for interior-only work; tell us your layout in the quote request."
+          }
         }
       ]
     }
@@ -154,6 +178,14 @@
   --max-w: 1120px;
   --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.06), 0 0 1px rgba(0, 0, 0, 0.04);
   --shadow-nav: 0 1px 0 rgba(0, 0, 0, 0.05);
+  /* Premium CTA — showroom gold + silver secondary */
+  --cta-gold: #c4a35a;
+  --cta-gold-mid: #b8924a;
+  --cta-gold-hover: #a67d3a;
+  --cta-on-gold: #1a1a1a;
+  --cta-silver: #a8b0bc;
+  --cta-silver-border: #b8c0cc;
+  --cta-silver-hover: #8f9aaa;
 }
 
 html { scroll-behavior: smooth; }
@@ -213,17 +245,30 @@ nav {
 }
 .nav-links a:hover { color: var(--forest); }
 
+.nav-schedule-inline {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--forest);
+  text-decoration: none;
+  padding: 0.35rem 0.5rem;
+  border-radius: var(--radius-sm);
+}
+.nav-schedule-inline:hover { text-decoration: underline; }
+
 .nav-cta {
-  background: var(--forest) !important;
-  color: #fff !important;
+  background: linear-gradient(180deg, var(--cta-gold) 0%, var(--cta-gold-mid) 100%) !important;
+  color: var(--cta-on-gold) !important;
   padding: 0.5rem 1rem;
   border-radius: var(--radius-lg);
   font-weight: 600 !important;
   font-size: 0.8125rem !important;
-  transition: background 0.15s, transform 0.15s;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+  transition: filter 0.15s, transform 0.15s;
+  border: none;
+  cursor: pointer;
 }
 .nav-cta:hover {
-  background: var(--forest-hover) !important;
+  filter: brightness(1.05);
 }
 
 /* Skip link */
@@ -344,8 +389,8 @@ nav {
 .hero-buttons { display: flex; gap: 1rem; flex-wrap: wrap; }
 
 .btn-primary {
-  background: var(--forest);
-  color: #fff;
+  background: linear-gradient(180deg, var(--cta-gold) 0%, var(--cta-gold-mid) 100%);
+  color: var(--cta-on-gold);
   padding: 0.875rem 1.375rem;
   border-radius: var(--radius-lg);
   font-size: 0.9375rem;
@@ -353,22 +398,23 @@ nav {
   letter-spacing: -0.02em;
   text-decoration: none;
   border: none; cursor: pointer;
-  transition: background 0.15s, transform 0.15s;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: filter 0.15s, transform 0.15s;
   display: inline-flex; align-items: center; gap: 0.5rem;
 }
 
-.btn-primary:hover { background: var(--forest-hover); }
+.btn-primary:hover { filter: brightness(1.06); }
 
 .hero .hero-buttons .btn-primary {
-  background: #fff;
-  color: var(--forest);
+  background: linear-gradient(180deg, #e8d5a8 0%, var(--cta-gold) 55%, var(--cta-gold-mid) 100%);
+  color: var(--cta-on-gold);
 }
 .hero .hero-buttons .btn-primary:hover {
-  background: rgba(255, 255, 255, 0.92);
+  filter: brightness(1.05);
 }
 
 .btn-secondary {
-  background: var(--ios-card);
+  background: rgba(255, 255, 255, 0.95);
   color: var(--label);
   padding: 0.875rem 1.375rem;
   border-radius: var(--radius-lg);
@@ -376,23 +422,25 @@ nav {
   font-weight: 500;
   letter-spacing: -0.02em;
   text-decoration: none;
-  border: 1px solid var(--ios-separator);
-  transition: border-color 0.15s, background 0.15s;
+  border: 2px solid var(--cta-silver-border);
+  transition: border-color 0.15s, background 0.15s, color 0.15s;
 }
 
 .btn-secondary:hover {
-  border-color: rgba(1, 50, 32, 0.35);
-  background: rgba(1, 50, 32, 0.04);
+  border-color: var(--cta-silver-hover);
+  background: #fff;
+  color: var(--navy);
 }
 
 .hero .hero-buttons .btn-secondary {
-  background: rgba(255, 255, 255, 0.12);
-  border-color: rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.08);
+  border: 2px solid rgba(255, 255, 255, 0.45);
   color: #fff;
 }
 .hero .hero-buttons .btn-secondary:hover {
-  background: rgba(255, 255, 255, 0.2);
-  border-color: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.14);
+  border-color: rgba(255, 255, 255, 0.65);
+  color: #fff;
 }
 
 /* Hero booking card — iOS liquid glass */
@@ -434,7 +482,7 @@ nav {
   font-size: 1.35rem;
   font-weight: 700;
   letter-spacing: -0.03em;
-  color: var(--forest);
+  color: var(--cta-gold-mid);
   display: block;
 }
 
@@ -451,11 +499,22 @@ nav {
   justify-content: center;
   padding: 0.95rem 1rem;
   font-size: 1rem;
-  background: var(--forest);
-  color: #fff;
+  background: linear-gradient(180deg, var(--cta-gold) 0%, var(--cta-gold-mid) 100%);
+  color: var(--cta-on-gold);
 }
 .hero-card .btn-primary:hover {
-  background: var(--forest-hover);
+  filter: brightness(1.06);
+}
+.hero-card-ctas {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  margin-top: 0.25rem;
+}
+.hero-card-ctas .btn-secondary {
+  width: 100%;
+  justify-content: center;
+  text-align: center;
 }
 
 .hero-card .phone-link {
@@ -778,7 +837,7 @@ section { padding: 4.5rem max(1.25rem, env(safe-area-inset-left)) 4.5rem max(1.2
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
-  color: var(--forest);
+  color: var(--cta-gold-mid);
   font-size: 0.8125rem;
   font-weight: 600;
   text-decoration: none;
@@ -859,7 +918,7 @@ section { padding: 4.5rem max(1.25rem, env(safe-area-inset-left)) 4.5rem max(1.2
   line-height: 1.6;
 }
 
-/* ── THE RIDE ── */
+/* ── THE CRAFT ── */
 .craft-section {
   background: var(--ios-card);
   border-top: 1px solid var(--border);
@@ -1139,7 +1198,7 @@ section { padding: 4.5rem max(1.25rem, env(safe-area-inset-left)) 4.5rem max(1.2
   .service-areas-grid-min { grid-template-columns: repeat(2, 1fr); }
 }
 
-/* Injected city chips (if #popular-rides-grid is present) */
+/* Injected city chips (#service-areas-grid-rotated) */
 .area-rotated-link {
   display: block;
   background: var(--ios-card);
@@ -1203,8 +1262,8 @@ section { padding: 4.5rem max(1.25rem, env(safe-area-inset-left)) 4.5rem max(1.2
 }
 
 .btn-white {
-  background: #fff;
-  color: var(--forest);
+  background: linear-gradient(180deg, var(--cta-gold) 0%, var(--cta-gold-mid) 100%);
+  color: var(--cta-on-gold);
   padding: 0.9rem 1.5rem;
   border-radius: var(--radius-lg);
   font-size: 0.9375rem;
@@ -1212,13 +1271,42 @@ section { padding: 4.5rem max(1.25rem, env(safe-area-inset-left)) 4.5rem max(1.2
   letter-spacing: -0.02em;
   text-decoration: none;
   display: inline-flex; align-items: center; gap: 0.5rem;
-  transition: transform 0.15s, box-shadow 0.15s;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  transition: transform 0.15s, box-shadow 0.15s, filter 0.15s;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 .btn-white:hover {
   transform: translateY(-1px);
-  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.2);
+  filter: brightness(1.05);
+  box-shadow: 0 6px 28px rgba(0, 0, 0, 0.22);
+}
+
+.cta-banner .cta-banner-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+.btn-white-outline {
+  background: transparent;
+  color: #fff;
+  padding: 0.85rem 1.4rem;
+  border-radius: var(--radius-lg);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 2px solid rgba(255, 255, 255, 0.45);
+  transition: background 0.15s, border-color 0.15s;
+}
+.btn-white-outline:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.65);
 }
 
 /* ── FOOTER ── */
@@ -1286,8 +1374,340 @@ footer {
 }
 .footer-socials a:hover { color: #fff; }
 
+/* ── SERVICE MENU (interactive) ── */
+#service-menu { background: var(--ios-grouped); }
+.service-menu-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 2rem;
+  max-width: 40rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+.service-menu-card {
+  background: var(--ios-card);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+.service-menu-toggle {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem 1rem;
+  padding: 1.1rem 1.25rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-family: inherit;
+  color: var(--label);
+}
+.service-menu-toggle:focus-visible {
+  outline: 2px solid var(--forest);
+  outline-offset: 2px;
+}
+.service-menu-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--navy);
+}
+.service-menu-meta {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--cta-gold-mid);
+}
+.service-menu-chevron {
+  font-size: 0.75rem;
+  color: var(--label-secondary);
+  transition: transform 0.2s;
+}
+.service-menu-card.is-open .service-menu-chevron { transform: rotate(180deg); }
+.service-menu-panel {
+  display: none;
+  padding: 0 1.25rem 1.15rem;
+  border-top: 1px solid var(--ios-separator);
+}
+.service-menu-card.is-open .service-menu-panel { display: block; }
+.service-menu-panel ul {
+  margin: 0.85rem 0 0;
+  padding: 0 0 0 1.1rem;
+  color: var(--label-secondary);
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+.service-menu-panel li { margin-bottom: 0.35rem; }
+.service-menu-duration {
+  font-size: 0.8rem;
+  color: var(--label-secondary);
+  margin-top: 0.65rem;
+}
+
+/* ── BEFORE / AFTER GALLERY ── */
+#gallery { background: var(--ios-card); border-top: 1px solid var(--border); }
+.ba-wrap {
+  margin-top: 2rem;
+  position: relative;
+}
+.ba-slider {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  gap: 1rem;
+  padding: 0.25rem 0 1rem;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+}
+.ba-slide {
+  flex: 0 0 min(100%, 520px);
+  scroll-snap-align: start;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--ios-grouped);
+}
+.ba-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 200px;
+}
+.ba-half {
+  position: relative;
+  min-height: 180px;
+  background: #e8e8ed;
+}
+.ba-half img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.ba-label {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  background: rgba(0,0,0,0.65);
+  color: #fff;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+}
+.ba-caption {
+  padding: 0.65rem 0.85rem;
+  font-size: 0.8125rem;
+  color: var(--label-secondary);
+}
+.ba-nav {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+.ba-nav button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--ios-card);
+  cursor: pointer;
+  font-size: 1.1rem;
+  line-height: 1;
+  color: var(--navy);
+}
+.ba-nav button:focus-visible { outline: 2px solid var(--forest); }
+.ba-half.ba-fallback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 180px;
+  padding: 1rem;
+  font-size: 0.8rem;
+  color: var(--label-secondary);
+  text-align: center;
+  line-height: 1.4;
+}
+.ba-half.ba-fallback img { display: none; }
+
+/* ── HAZELTINE STANDARD ── */
+#standard {
+  background: var(--ios-grouped);
+  border-top: 1px solid var(--border);
+}
+.standard-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.standard-card {
+  background: var(--ios-card);
+  border-radius: var(--radius-lg);
+  padding: 1.35rem 1.2rem;
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--border);
+}
+.standard-card h3 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 0.5rem;
+}
+.standard-card p {
+  font-size: 0.875rem;
+  color: var(--label-secondary);
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* ── MOBILE DETAILING FAQ ── */
+#mobile-faq { background: var(--ios-card); border-top: 1px solid var(--border); }
+.mobile-faq-inner { max-width: 42rem; margin: 0 auto; }
+
+/* ── QUOTE MODAL ── */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  background: rgba(11, 31, 51, 0.45);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 1rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s, visibility 0.2s;
+}
+.modal-overlay.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+.modal-dialog {
+  background: var(--ios-card);
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  width: 100%;
+  max-width: 28rem;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 1.25rem 1.25rem calc(1.25rem + env(safe-area-inset-bottom));
+  box-shadow: 0 -8px 40px rgba(0,0,0,0.15);
+}
+@media (min-width: 500px) {
+  .modal-overlay { align-items: center; }
+  .modal-dialog { border-radius: var(--radius-lg); }
+}
+.modal-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.modal-head h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--navy);
+  margin: 0;
+}
+.modal-close {
+  background: var(--ios-grouped);
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  font-size: 1.25rem;
+  line-height: 1;
+  cursor: pointer;
+  color: var(--label);
+  flex-shrink: 0;
+}
+.quote-form label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--label-secondary);
+  margin-bottom: 0.35rem;
+  margin-top: 0.85rem;
+}
+.quote-form input[type="text"],
+.quote-form input[type="datetime-local"],
+.quote-form select,
+.quote-form textarea {
+  width: 100%;
+  padding: 0.65rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-size: 1rem;
+  font-family: inherit;
+  background: #fff;
+}
+.quote-form fieldset {
+  border: none;
+  padding: 0;
+  margin: 0.85rem 0 0;
+}
+.quote-form fieldset legend {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--label-secondary);
+  margin-bottom: 0.5rem;
+}
+.quote-form .radio-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.25rem;
+}
+.quote-form .radio-row label {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-weight: 500;
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 0.9rem;
+  color: var(--label);
+  margin: 0;
+  cursor: pointer;
+}
+.modal-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
+}
+.modal-actions .btn-primary,
+.modal-actions .btn-secondary {
+  width: 100%;
+  justify-content: center;
+}
+.quote-form-note {
+  font-size: 0.75rem;
+  color: var(--label-secondary);
+  margin-top: 0.75rem;
+  line-height: 1.45;
+}
+button.btn-primary,
+button.nav-cta {
+  font-family: inherit;
+  cursor: pointer;
+}
+.nav-cta.nav-cta--btn { text-decoration: none; }
+
 /* ── RESPONSIVE ── */
 @media (max-width: 900px) {
+  .standard-grid { grid-template-columns: 1fr; }
   .hero-content { grid-template-columns: 1fr; padding-top: 6rem; }
   .hero-card { margin-top: 2rem; }
   .hero-text h1 { font-size: 2.5rem; }
@@ -1323,14 +1743,17 @@ footer {
     <span></span><span></span><span></span>
   </button>
   <div class="nav-links">
-    <a href="#packages">Packages &amp; Pricing</a>
+    <a href="#packages">Packages</a>
+    <a href="#service-menu">Service menu</a>
+    <a href="#gallery">Results</a>
     <a href="#why">Why Hazeltine</a>
-    <a href="#the-craft">The Craft</a>
+    <a href="#standard">Standard</a>
     <a href="#reviews">Reviews</a>
-    <a href="#areas">Service Areas</a>
-    <a href="#faq">FAQ</a>
+    <a href="#areas">Service areas</a>
+    <a href="#mobile-faq">Mobile FAQ</a>
     <a href="events.html">Events</a>
-    <a href="https://embed.evertransit.com/schedule.html?theme=default&amp;api_key=b68df50df04ee485999db06c3d29a936e6a6a49995d90be994f1895a439c6d152e" target="_blank" rel="noopener nofollow" class="nav-cta">Book Now</a>
+    <a href="https://embed.evertransit.com/schedule.html?theme=default&amp;api_key=b68df50df04ee485999db06c3d29a936e6a6a49995d90be994f1895a439c6d152e" target="_blank" rel="noopener nofollow" class="nav-schedule-inline">Schedule</a>
+    <button type="button" class="nav-cta nav-cta--btn js-open-quote">Get quote</button>
   </div>
 </nav>
 
@@ -1347,7 +1770,8 @@ footer {
       <h1>Showroom Finish.<br>Real-World Tough.<br><span class="highlight">Hazeltine Standard.</span></h1>
       <p>Your Minneapolis–St. Paul shop for <strong>professional car detailing</strong>: <strong>paint correction</strong>, <strong>ceramic coating</strong>, hand wash and decon, and <strong>interior detailing</strong> with extraction and leather care — tuned for Minnesota road salt, pollen, and winter grime. Serving the full <strong>Twin Cities metro</strong> with clear packages and prep-first standards.</p>
       <div class="hero-buttons">
-        <a href="https://embed.evertransit.com/schedule.html?theme=default&amp;api_key=b68df50df04ee485999db06c3d29a936e6a6a49995d90be994f1895a439c6d152e" target="_blank" rel="noopener nofollow" class="btn-primary">Schedule Your Detail →</a>
+        <button type="button" class="btn-primary js-open-quote">Get your quote →</button>
+        <a href="https://embed.evertransit.com/schedule.html?theme=default&amp;api_key=b68df50df04ee485999db06c3d29a936e6a6a49995d90be994f1895a439c6d152e" target="_blank" rel="noopener nofollow" class="btn-secondary">Schedule visit</a>
         <a href="tel:+17633527411" class="btn-secondary">Call</a>
       </div>
     </div>
@@ -1371,7 +1795,10 @@ footer {
           <span class="label">Google avg.</span>
         </div>
       </div>
-      <a href="https://embed.evertransit.com/schedule.html?theme=default&amp;api_key=b68df50df04ee485999db06c3d29a936e6a6a49995d90be994f1895a439c6d152e" target="_blank" rel="noopener nofollow" class="btn-primary">Book your bay →</a>
+      <div class="hero-card-ctas">
+        <button type="button" class="btn-primary js-open-quote">Request a detail →</button>
+        <a href="https://embed.evertransit.com/schedule.html?theme=default&amp;api_key=b68df50df04ee485999db06c3d29a936e6a6a49995d90be994f1895a439c6d152e" target="_blank" rel="noopener nofollow" class="btn-secondary">Schedule bay →</a>
+      </div>
       <a href="tel:+17633527411" class="phone-link">or call (763) 352-7411</a>
     </div>
   </div>
@@ -1448,8 +1875,136 @@ footer {
       </div>
     </div>
     <p class="pricing-footnote">Add-ons: engine bay detail, headlight restoration, pet-hair remediation, and PPF-safe maintenance washes — priced after quick photos or in-person inspection.</p>
-    <div style="text-align:center;margin-top:2rem;">
-      <a href="https://embed.evertransit.com/schedule.html?theme=default&amp;api_key=b68df50df04ee485999db06c3d29a936e6a6a49995d90be994f1895a439c6d152e" target="_blank" rel="noopener nofollow" class="btn-primary">Lock a bay time →</a>
+    <div class="cta-row" style="text-align:center;margin-top:2rem;display:flex;flex-wrap:wrap;gap:0.75rem;justify-content:center;align-items:center;">
+      <button type="button" class="btn-primary js-open-quote">Get your quote →</button>
+      <a href="https://embed.evertransit.com/schedule.html?theme=default&amp;api_key=b68df50df04ee485999db06c3d29a936e6a6a49995d90be994f1895a439c6d152e" target="_blank" rel="noopener nofollow" class="btn-secondary">Schedule a bay →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SERVICE MENU (interactive cards) ═══ -->
+<section id="service-menu">
+  <div class="section-inner">
+    <div class="section-label">Service menu</div>
+    <h2 class="section-title">Packages you can open like a pro shop board</h2>
+    <p class="section-subtitle">Tap a tier for inclusions, starting price, and typical time on the vehicle. Final quote after photos or inspection.</p>
+    <div class="service-menu-grid">
+      <div class="service-menu-card" data-service-card>
+        <button type="button" class="service-menu-toggle" aria-expanded="false" id="svc-toggle-1" aria-controls="svc-panel-1">
+          <span class="service-menu-title">The Executive Wash</span>
+          <span class="service-menu-meta">From $149+ · ~2–3 hr</span>
+          <span class="service-menu-chevron" aria-hidden="true">▼</span>
+        </button>
+        <div class="service-menu-panel" id="svc-panel-1" role="region" aria-labelledby="svc-toggle-1">
+          <ul>
+            <li>pH-neutral two-bucket hand wash</li>
+            <li>Wheels, faces &amp; barrels cleaned</li>
+            <li>Iron fallout &amp; tar-safe decon (as needed)</li>
+            <li>Clay bar or synthetic clay when paint is rough</li>
+            <li>Microfiber-only dry + spray sealant</li>
+            <li>Glass in &amp; out</li>
+          </ul>
+          <p class="service-menu-duration">Typical sedan / crossover · road-salt season may add time</p>
+        </div>
+      </div>
+      <div class="service-menu-card" data-service-card>
+        <button type="button" class="service-menu-toggle" aria-expanded="false" id="svc-toggle-2" aria-controls="svc-panel-2">
+          <span class="service-menu-title">Cabin Revival</span>
+          <span class="service-menu-meta">From $199+ · ~3–4 hr</span>
+          <span class="service-menu-chevron" aria-hidden="true">▼</span>
+        </button>
+        <div class="service-menu-panel" id="svc-panel-2" role="region" aria-labelledby="svc-toggle-2">
+          <ul>
+            <li>Thorough vacuum &amp; compressed air</li>
+            <li>Steam touchpoints &amp; vents (as appropriate)</li>
+            <li>Hot water extraction on fabric</li>
+            <li>Leather clean + conditioner</li>
+            <li>Plastics detailed; glass streak-checked</li>
+            <li>Pet hair &amp; heavy stains quoted if extreme</li>
+          </ul>
+          <p class="service-menu-duration">4-door / small SUV baseline · third row or minivan +time</p>
+        </div>
+      </div>
+      <div class="service-menu-card" data-service-card>
+        <button type="button" class="service-menu-toggle" aria-expanded="false" id="svc-toggle-3" aria-controls="svc-panel-3">
+          <span class="service-menu-title">Showroom Polish</span>
+          <span class="service-menu-meta">From $449+ · ~1 day</span>
+          <span class="service-menu-chevron" aria-hidden="true">▼</span>
+        </button>
+        <div class="service-menu-panel" id="svc-panel-3" role="region" aria-labelledby="svc-toggle-3">
+          <ul>
+            <li>Full wash + chemical &amp; mechanical decon</li>
+            <li>Iron decontam &amp; clay before machine work</li>
+            <li>Single-stage machine polish for gloss &amp; swirl reduction</li>
+            <li>Sealant or entry ceramic option</li>
+            <li>Final wipe &amp; cure-time guidance</li>
+          </ul>
+          <p class="service-menu-duration">Well-maintained clear coat · neglected paint may need multi-stage</p>
+        </div>
+      </div>
+      <div class="service-menu-card" data-service-card>
+        <button type="button" class="service-menu-toggle" aria-expanded="false" id="svc-toggle-4" aria-controls="svc-panel-4">
+          <span class="service-menu-title">The Presidential Detail</span>
+          <span class="service-menu-meta">From $899+ · multi-stage + coating</span>
+          <span class="service-menu-chevron" aria-hidden="true">▼</span>
+        </button>
+        <div class="service-menu-panel" id="svc-panel-4" role="region" aria-labelledby="svc-toggle-4">
+          <ul>
+            <li>Multi-stage paint correction stack</li>
+            <li>Full decon: wash, iron, tar-safe, clay, panel prep</li>
+            <li>Steam &amp; extraction where interior is bundled</li>
+            <li>Pro-grade ceramic application &amp; level check</li>
+            <li>Cure schedule &amp; maintenance wash card</li>
+          </ul>
+          <p class="service-menu-duration">Quote after inspection · PPF or heavy defects discussed upfront</p>
+        </div>
+      </div>
+    </div>
+    <p style="text-align:center;margin-top:1.5rem;">
+      <button type="button" class="btn-primary js-open-quote">Request a detail →</button>
+    </p>
+  </div>
+</section>
+
+<!-- ═══ BEFORE / AFTER GALLERY ═══ -->
+<section id="gallery">
+  <div class="section-inner">
+    <div class="section-label">Results</div>
+    <h2 class="section-title">Before &amp; after</h2>
+    <p class="section-subtitle">Real transformations — lazy-loaded images. Drop WebP or JPG into <code style="font-size:0.85em;">docs/images/</code> using the filenames below for live swaps.</p>
+    <div class="ba-wrap">
+      <div class="ba-slider" id="ba-slider" tabindex="0" aria-label="Before and after gallery">
+        <article class="ba-slide">
+          <div class="ba-pair">
+            <div class="ba-half">
+              <span class="ba-label">Before</span>
+              <img src="images/ba-01-before.jpg" alt="Before: paint and trim before Hazeltine detailing" width="520" height="390" loading="lazy" decoding="async" data-fallback="Add images/ba-01-before.jpg">
+            </div>
+            <div class="ba-half">
+              <span class="ba-label">After</span>
+              <img src="images/ba-01-after.jpg" alt="After: corrected and protected finish" width="520" height="390" loading="lazy" decoding="async" data-fallback="Add images/ba-01-after.jpg">
+            </div>
+          </div>
+          <p class="ba-caption">Exterior decon + enhancement — swap in your pair.</p>
+        </article>
+        <article class="ba-slide">
+          <div class="ba-pair">
+            <div class="ba-half">
+              <span class="ba-label">Before</span>
+              <img src="images/ba-02-before.jpg" alt="Before: interior before deep clean" width="520" height="390" loading="lazy" decoding="async" data-fallback="Add images/ba-02-before.jpg">
+            </div>
+            <div class="ba-half">
+              <span class="ba-label">After</span>
+              <img src="images/ba-02-after.jpg" alt="After: refreshed cabin" width="520" height="390" loading="lazy" decoding="async" data-fallback="Add images/ba-02-after.jpg">
+            </div>
+          </div>
+          <p class="ba-caption">Interior extraction + leather care — second slider card.</p>
+        </article>
+      </div>
+      <div class="ba-nav">
+        <button type="button" id="ba-prev" aria-label="Previous before and after">‹</button>
+        <button type="button" id="ba-next" aria-label="Next before and after">›</button>
+      </div>
     </div>
   </div>
 </section>
@@ -1458,8 +2013,8 @@ footer {
 <section id="featured-events">
   <div class="featured-events-container">
     <div class="featured-events-header">
-      <h2>This Week in <span class="highlight">Minnesota</span></h2>
-      <p>Concerts, games &amp; nights out — roll up in paint that still pops after winter</p>
+      <h2>Vehicle events in <span class="highlight">Minnesota</span></h2>
+      <p>Car shows, cruises, Monster Jam, boat &amp; RV events — roll up looking sharp, not rideshare generic</p>
     </div>
     <div class="events-scroll-wrapper">
       <div class="events-grid" id="featured-events-grid">
@@ -1505,6 +2060,29 @@ footer {
         <div class="feature-icon">🏆</div>
         <h3>Twin Cities Obsessives</h3>
         <p>Road salt, pollen, and construction dust are seasonal bosses here — we detail like it, with repeat clients who notice the difference.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ HAZELTINE STANDARD ═══ -->
+<section id="standard">
+  <div class="section-inner">
+    <div class="section-label">The Hazeltine Standard</div>
+    <h2 class="section-title">How top shops work — without the attitude</h2>
+    <p class="section-subtitle">We’re not guessing with dollar-store soap and one filthy bucket. These three non-negotiables protect your paint and your time.</p>
+    <div class="standard-grid">
+      <div class="standard-card">
+        <h3>pH-neutral chemistry</h3>
+        <p>Wash and decon products matched to clear coat and trim — not whatever strips fastest. Alkaline abuse and mystery “foaming” soaps don’t live here.</p>
+      </div>
+      <div class="standard-card">
+        <h3>Two-bucket wash</h3>
+        <p>Rinse bucket + soap bucket with grit guards. Dirty water never gets a second pass on your panels — the single biggest cheat code against wash marring.</p>
+      </div>
+      <div class="standard-card">
+        <h3>Microfiber-only drying</h3>
+        <p>No squeegees on paint, no gas-station towels. Plush microfiber and controlled technique so you’re not trading dirt for shine.</p>
       </div>
     </div>
   </div>
@@ -1565,8 +2143,8 @@ footer {
 <section id="how">
   <div class="section-inner">
     <div class="section-label">How It Works</div>
-    <h2 class="section-title">Booked in 3 Steps</h2>
-    <p class="section-subtitle">No app to download. Book in 3 simple steps.</p>
+    <h2 class="section-title">Quoted in 3 steps</h2>
+    <p class="section-subtitle">No app to download — tell us the vehicle, we confirm scope, then you pick bay or mobile.</p>
     <div class="steps">
       <div class="step">
         <div class="step-number">1</div>
@@ -1575,17 +2153,18 @@ footer {
       </div>
       <div class="step">
         <div class="step-number">2</div>
-        <h3>Choose Date & Bay Time</h3>
-        <p>Lock an appointment window that fits your week. We’ll confirm vehicle condition notes before we start.</p>
+        <h3>Pick time &amp; place</h3>
+        <p>Lock a bay window or hold a mobile slot. We’ll confirm condition notes (pet hair, construction dust, etc.) before we start.</p>
       </div>
       <div class="step">
         <div class="step-number">3</div>
         <h3>Roll Out Clean</h3>
-        <p>Pickup with paint that pops, glass that disappears, and an interior you’re not embarrassed to offer a ride in.</p>
+        <p>Drive away with paint that pops, glass that reads invisible, and an interior you’re proud to show — showroom standard, not a quick wipe-down.</p>
       </div>
     </div>
-    <div style="text-align: center; margin-top: 3rem;">
-      <a href="https://embed.evertransit.com/schedule.html?theme=default&amp;api_key=b68df50df04ee485999db06c3d29a936e6a6a49995d90be994f1895a439c6d152e" target="_blank" rel="noopener nofollow" class="btn-primary">Schedule Your Detail →</a>
+    <div class="cta-row" style="text-align: center; margin-top: 3rem; display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; align-items: center;">
+      <button type="button" class="btn-primary js-open-quote">Get your quote →</button>
+      <a href="https://embed.evertransit.com/schedule.html?theme=default&amp;api_key=b68df50df04ee485999db06c3d29a936e6a6a49995d90be994f1895a439c6d152e" target="_blank" rel="noopener nofollow" class="btn-secondary">Schedule online →</a>
     </div>
   </div>
 </section>
@@ -1604,7 +2183,7 @@ footer {
           <div class="review-avatar">A</div>
           <div>
             <div class="review-name">Adam</div>
-            <div class="review-type">Daily Driver</div>
+            <div class="review-type">Daily driver</div>
           </div>
         </div>
       </div>
@@ -1637,19 +2216,19 @@ footer {
 <!-- ═══ SERVICE AREAS ═══ -->
 <section id="areas">
   <div class="section-inner">
-    <div class="section-label">Service Areas</div>
-    <h2 class="section-title">120+ Cities. One Standard.</h2>
-    <p class="section-subtitle">Local <strong>mobile and bay</strong> auto detailing from Bloomington to Stillwater — same prep, chemistry, and finish whether you’re in Minneapolis, St. Paul, or a ring suburb.</p>
+    <div class="section-label">Mobile service areas</div>
+    <h2 class="section-title">120+ mobile service areas. One standard.</h2>
+    <p class="section-subtitle">We route <strong>mobile detailing</strong> across the Twin Cities metro — Bloomington to Stillwater and everywhere between — with the same prep, chemistry, and finish whether we meet you in Minneapolis, St. Paul, or a ring suburb.</p>
     <div class="areas-grid" id="areas-grid">
       <!-- Populated by route rotation JS; static fallback below -->
-      <a href="auto-detailing-bloomington.html" class="area-card"><h3>Bloomington</h3><span>Mobile &amp; bay scheduling</span><div class="price">Detailing from $149+</div></a>
-      <a href="auto-detailing-minneapolis.html" class="area-card"><h3>Minneapolis</h3><span>Mobile &amp; bay scheduling</span><div class="price">Detailing from $149+</div></a>
-      <a href="auto-detailing-st-paul.html" class="area-card"><h3>St. Paul</h3><span>Mobile &amp; bay scheduling</span><div class="price">Detailing from $149+</div></a>
-      <a href="auto-detailing-eagan.html" class="area-card"><h3>Eagan</h3><span>Mobile &amp; bay scheduling</span><div class="price">Detailing from $149+</div></a>
-      <a href="auto-detailing-eden-prairie.html" class="area-card"><h3>Eden Prairie</h3><span>Mobile &amp; bay scheduling</span><div class="price">Detailing from $149+</div></a>
-      <a href="auto-detailing-woodbury.html" class="area-card"><h3>Woodbury</h3><span>Mobile &amp; bay scheduling</span><div class="price">Detailing from $149+</div></a>
-      <a href="auto-detailing-maple-grove.html" class="area-card"><h3>Maple Grove</h3><span>Mobile &amp; bay scheduling</span><div class="price">Detailing from $149+</div></a>
-      <a href="auto-detailing-shakopee.html" class="area-card"><h3>Shakopee</h3><span>Mobile &amp; bay scheduling</span><div class="price">Detailing from $149+</div></a>
+      <a href="auto-detailing-bloomington.html" class="area-card"><h3>Bloomington</h3><span>In our mobile service area</span><div class="price">Detailing from $149+</div></a>
+      <a href="auto-detailing-minneapolis.html" class="area-card"><h3>Minneapolis</h3><span>In our mobile service area</span><div class="price">Detailing from $149+</div></a>
+      <a href="auto-detailing-st-paul.html" class="area-card"><h3>St. Paul</h3><span>In our mobile service area</span><div class="price">Detailing from $149+</div></a>
+      <a href="auto-detailing-eagan.html" class="area-card"><h3>Eagan</h3><span>In our mobile service area</span><div class="price">Detailing from $149+</div></a>
+      <a href="auto-detailing-eden-prairie.html" class="area-card"><h3>Eden Prairie</h3><span>In our mobile service area</span><div class="price">Detailing from $149+</div></a>
+      <a href="auto-detailing-woodbury.html" class="area-card"><h3>Woodbury</h3><span>In our mobile service area</span><div class="price">Detailing from $149+</div></a>
+      <a href="auto-detailing-maple-grove.html" class="area-card"><h3>Maple Grove</h3><span>In our mobile service area</span><div class="price">Detailing from $149+</div></a>
+      <a href="auto-detailing-shakopee.html" class="area-card"><h3>Shakopee</h3><span>In our mobile service area</span><div class="price">Detailing from $149+</div></a>
     </div>
     <div class="areas-more">
       <a href="all-cities.html">View all 120+ cities →</a>
@@ -1660,9 +2239,35 @@ footer {
 <!-- ═══ CTA BANNER + BOOKING ═══ -->
 <section id="book" class="cta-banner">
   <h2>Ready for a Hazeltine Finish?</h2>
-  <p>Book <strong>car detailing</strong> in a minute: exterior wash, interior shampoo, paint correction, or ceramic — prep-first workflow across the Twin Cities.</p>
-  <a href="https://embed.evertransit.com/schedule.html?theme=default&amp;api_key=b68df50df04ee485999db06c3d29a936e6a6a49995d90be994f1895a439c6d152e" target="_blank" rel="noopener nofollow" class="btn-white" style="margin-top:1rem;">Book Now →</a>
-  <p class="cta-phone-note">Or call <a href="tel:+17633527411">(763) 352-7411</a> to book by phone</p>
+  <p>Request a <strong>quote</strong> for mobile or bay detailing — exterior, interior, correction, or ceramic — prep-first across the Twin Cities.</p>
+  <div class="cta-banner-actions">
+    <button type="button" class="btn-white js-open-quote">Get your quote →</button>
+    <a href="https://embed.evertransit.com/schedule.html?theme=default&amp;api_key=b68df50df04ee485999db06c3d29a936e6a6a49995d90be994f1895a439c6d152e" target="_blank" rel="noopener nofollow" class="btn-white-outline">Schedule online →</a>
+  </div>
+  <p class="cta-phone-note">Or call <a href="tel:+17633527411">(763) 352-7411</a></p>
+</section>
+
+<!-- ═══ MOBILE DETAILING FAQ ═══ -->
+<section id="mobile-faq">
+  <div class="section-inner mobile-faq-inner">
+    <div class="section-label">On-site detailing</div>
+    <h2 class="section-title">Mobile FAQ</h2>
+    <p class="section-subtitle">Quick answers before we roll up — same points as our structured data for search.</p>
+    <div class="faq-list" style="display:flex;flex-direction:column;gap:1.25rem;margin-top:1.5rem;">
+      <div>
+        <h3 style="font-size:1.05rem;font-weight:600;margin:0 0 0.35rem;">Do you need my water or power?</h3>
+        <p style="margin:0;color:var(--text-muted);line-height:1.55;font-size:0.95rem;">We can work with your exterior water spigot and standard outlets when available; if your site cannot support that, we will note it when you request a quote and plan accordingly or schedule at our bay.</p>
+      </div>
+      <div>
+        <h3 style="font-size:1.05rem;font-weight:600;margin:0 0 0.35rem;">Weather policy (about 40°F minimum)</h3>
+        <p style="margin:0;color:var(--text-muted);line-height:1.55;font-size:0.95rem;">Exterior work is scheduled when ambient conditions allow safe results — generally about <strong>40°F minimum</strong> for many exterior steps. We may reschedule if ice, heavy rain, or extreme cold would compromise the finish or your vehicle.</p>
+      </div>
+      <div>
+        <h3 style="font-size:1.05rem;font-weight:600;margin:0 0 0.35rem;">How much space do you need?</h3>
+        <p style="margin:0;color:var(--text-muted);line-height:1.55;font-size:0.95rem;">A flat area where we can safely open all doors and access the vehicle — typically a driveway, wide parking stall, or similar. Tight garages may work for interior-only work; tell us your layout in the quote request.</p>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- ═══ FAQ (matches JSON-LD FAQPage) ═══ -->
@@ -1709,6 +2314,50 @@ footer {
 </section>
 </main>
 
+<!-- ═══ QUOTE MODAL ═══ -->
+<div id="quote-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="quote-modal-title" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-head">
+      <h2 id="quote-modal-title">Request a detail</h2>
+      <button type="button" class="modal-close js-close-quote" aria-label="Close quote form">×</button>
+    </div>
+    <form id="quote-form" class="quote-form">
+      <label for="quote-vehicle">Vehicle year, make &amp; model</label>
+      <input type="text" id="quote-vehicle" name="vehicle" required autocomplete="off" placeholder="e.g. 2022 Honda Accord">
+
+      <fieldset>
+        <legend>Service location</legend>
+        <div class="radio-row">
+          <label><input type="radio" name="location" value="Home" required> Home</label>
+          <label><input type="radio" name="location" value="Office"> Office</label>
+        </div>
+      </fieldset>
+
+      <label for="quote-condition">Condition level</label>
+      <select id="quote-condition" name="condition" required>
+        <option value="" disabled selected>Select condition…</option>
+        <option value="Good">Good</option>
+        <option value="Heavy pet hair">Heavy pet hair</option>
+        <option value="Construction dust">Construction dust</option>
+      </select>
+
+      <label for="quote-when">Preferred date &amp; time</label>
+      <input type="datetime-local" id="quote-when" name="preferred_time" required>
+
+      <label for="quote-phone">Phone (optional)</label>
+      <input type="tel" id="quote-phone" name="phone" autocomplete="tel" placeholder="For follow-up">
+
+      <p id="quote-form-status" class="quote-form-note" hidden></p>
+
+      <div class="modal-actions">
+        <button type="submit" class="btn-primary">Copy message &amp; open SMS</button>
+        <a href="https://embed.evertransit.com/schedule.html?theme=default&amp;api_key=b68df50df04ee485999db06c3d29a936e6a6a49995d90be994f1895a439c6d152e" target="_blank" rel="noopener nofollow" class="btn-secondary">Or schedule online</a>
+      </div>
+      <p class="quote-form-note">We’ll bundle your answers into a text to <strong>(763) 352-7411</strong>. If SMS doesn’t open, the message is copied — paste it into your messaging app.</p>
+    </form>
+  </div>
+</div>
+
 <!-- ═══ FOOTER ═══ -->
 <footer>
   <div class="footer-inner">
@@ -1720,9 +2369,12 @@ footer {
     </div>
     <div class="footer-col">
       <h3>Service</h3>
-      <a href="https://embed.evertransit.com/schedule.html?theme=default&amp;api_key=b68df50df04ee485999db06c3d29a936e6a6a49995d90be994f1895a439c6d152e" target="_blank" rel="noopener nofollow">Book appointment</a>
-      <a href="#packages">Packages &amp; Pricing</a>
-      <a href="#areas">Service Areas</a>
+      <a href="#" class="js-open-quote">Get your quote</a>
+      <a href="https://embed.evertransit.com/schedule.html?theme=default&amp;api_key=b68df50df04ee485999db06c3d29a936e6a6a49995d90be994f1895a439c6d152e" target="_blank" rel="noopener nofollow">Schedule online</a>
+      <a href="#packages">Packages &amp; pricing</a>
+      <a href="#service-menu">Service menu</a>
+      <a href="#areas">Service areas</a>
+      <a href="#mobile-faq">Mobile FAQ</a>
       <a href="#faq">FAQ</a>
       <a href="events.html">Events</a>
       <a href="#the-craft">The Craft</a>
@@ -1747,7 +2399,7 @@ footer {
   </div>
   <div class="footer-bottom">
     <span>© 2026 Hazeltine Detailing. All rights reserved.</span>
-    <div class="footer-socials">      <a href="https://www.facebook.com/MinnDrive/" target="_blank" rel="noopener nofollow" title="Facebook"><img src="assets/icons/facebook.svg" alt="Facebook" style="width:24px;height:24px;"></a>      <a href="https://www.yelp.com/biz/minndrive-chaska" target="_blank" rel="noopener nofollow" title="Yelp"><img src="assets/icons/yelp.svg" alt="Yelp" style="width:24px;height:24px;"></a><a href="https://maps.app.goo.gl/XehiTJzZWRCXkyQW9" target="_blank" rel="noopener nofollow" title="Google"><img src="assets/icons/google.svg" alt="Google" style="width:22px;height:22px;"></a><a href="https://nextdoor.com/pages/minndrive-chaska-mn/" target="_blank" rel="noopener nofollow" title="Nextdoor"><img src="assets/icons/nextdoor.svg" alt="Nextdoor" style="width:22px;height:22px;"></a>    </div>
+    <div class="footer-socials"><a href="#" target="_blank" rel="noopener nofollow" title="Facebook — add Hazeltine URL" aria-disabled="true"><img src="assets/icons/facebook.svg" alt="" style="width:24px;height:24px;opacity:0.5"></a><a href="#" target="_blank" rel="noopener nofollow" title="Yelp — add Hazeltine URL" aria-disabled="true"><img src="assets/icons/yelp.svg" alt="" style="width:24px;height:24px;opacity:0.5"></a><a href="https://maps.app.goo.gl/XehiTJzZWRCXkyQW9" target="_blank" rel="noopener nofollow" title="Google Maps"><img src="assets/icons/google.svg" alt="Google" style="width:22px;height:22px"></a><a href="#" target="_blank" rel="noopener nofollow" title="Nextdoor — add Hazeltine URL" aria-disabled="true"><img src="assets/icons/nextdoor.svg" alt="" style="width:22px;height:22px;opacity:0.5"></a></div>
   </div>
 </footer>
 
@@ -1757,8 +2409,15 @@ footer {
   const grid = document.getElementById('featured-events-grid');
   if (!grid) return;
 
-  const BIG_VENUES = ['usbank', 'xcel', 'target', 'targetfield', 'allianz', 'armory'];
-  
+  function hazeltineIsVehicleEventRaw(e) {
+    var name = (e.name || '').toLowerCase();
+    var full = (name + ' ' + (e.description || '') + ' ' + (e.venue_name || '')).toLowerCase();
+    if (/brewing|big head todd|prenatal|egg hunt|puzzle contest|5k fun run/i.test(full)) return false;
+    if (/lfa \d+|\bboxing\b|\bwrestling\b/i.test(name) && !/monster jam/i.test(name)) return false;
+    if (/motorcycle/.test(name) && !/show|swap|meet|expo|rally|viking/i.test(name)) return false;
+    return /car show|auto show|monster jam|monster truck|boat show|rv show|motorcycle|cruise-in|cruise night|cars & coffee|cars and coffee|autocross|swap meet|gsta|gmcca|spring extravaganza|roadsters|on-water boat|mowog|viking motorcycle|truck show|jeep fest|off-road expo|collector car|exotic car meet|car meet|camper show|motorhome/i.test(name);
+  }
+
   function formatDate(dateStr) {
     const date = new Date(dateStr + 'T12:00:00');
     const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
@@ -1773,14 +2432,16 @@ footer {
   
   function getEventEmoji(category) {
     const emojiMap = {
-      'sports': '🏀',
-      'concerts': '🎵',
-      'theatre': '🎭',
-      'comedy': '😂',
-      'family': '👨‍👩‍👧‍👦',
-      'winery': '🍷'
+      'sports': '🚗',
+      'concerts': '🚗',
+      'theatre': '🚗',
+      'comedy': '🚗',
+      'family': '🚗',
+      'winery': '🚗',
+      'community': '🚗',
+      'festivals': '🚗'
     };
-    return emojiMap[category] || '🎉';
+    return emojiMap[category] || '🚗';
   }
   
   fetch('data/events-master.json?v=' + new Date().toISOString().slice(0, 10))
@@ -1798,30 +2459,17 @@ footer {
       
       const now = new Date();
       now.setHours(0, 0, 0, 0);
-      const twoWeeksLater = new Date(now);
-      twoWeeksLater.setDate(twoWeeksLater.getDate() + 14);
-      
-      // Filter to next 14 days
+      const horizon = new Date(now);
+      horizon.setDate(horizon.getDate() + 120);
+
       let upcoming = events.filter(ev => {
-        if (!ev.date) return false;
+        if (!ev.date || !hazeltineIsVehicleEventRaw(ev)) return false;
         const evDate = new Date(ev.date + 'T12:00:00');
-        return evDate >= now && evDate <= twoWeeksLater;
+        return evDate >= now && evDate <= horizon;
       });
-      
-      // Sort by date
+
       upcoming.sort((a, b) => new Date(a.date) - new Date(b.date));
-      
-      // Prioritize big venues
-      const bigVenueEvents = upcoming.filter(ev => BIG_VENUES.includes(ev.venue_key));
-      const otherEvents = upcoming.filter(ev => !BIG_VENUES.includes(ev.venue_key));
-      
-      // Take top 5: prefer big venue events
-      let featured = [];
-      if (bigVenueEvents.length >= 5) {
-        featured = bigVenueEvents.slice(0, 5);
-      } else {
-        featured = bigVenueEvents.concat(otherEvents.slice(0, 5 - bigVenueEvents.length));
-      }
+      let featured = upcoming.slice(0, 5);
       
       if (featured.length === 0) {
         // Hide the section if no events
@@ -1869,7 +2517,7 @@ footer {
 var CITY_ROTATION_DATA = [["Minneapolis","minneapolis","16",42],["St. Paul","st-paul","18",44],["Bloomington","bloomington","13",42],["Brooklyn Park","brooklyn-park","31",78],["Plymouth","plymouth","25",63],["Maple Grove","maple-grove","33",81],["Woodbury","woodbury","26",66],["Blaine","blaine","36",89],["Lakeville","lakeville","31",78],["Eagan","eagan","15",42],["Coon Rapids","coon-rapids","32",81],["Burnsville","burnsville","18",47],["Eden Prairie","eden-prairie","25",63],["Apple Valley","apple-valley","22",56],["Minnetonka","minnetonka","25",63],["Edina","edina","15",42],["St. Louis Park","st-louis-park","18",44],["Shakopee","shakopee","31",78],["Maplewood","maplewood","23",57],["Cottage Grove","cottage-grove","29",69],["Inver Grove Heights","inver-grove-heights","20",49],["Andover","andover","45",112],["Richfield","richfield","10",42],["Roseville","roseville","20",49],["Savage","savage","20",49],["Brooklyn Center","brooklyn-center","29",72],["Fridley","fridley","28",69],["Oakdale","oakdale","28",69],["Chaska","chaska","37",93],["Prior Lake","prior-lake","30",74],["Chanhassen","chanhassen","30",74],["Shoreview","shoreview","28",69],["White Bear Lake","white-bear-lake","33",81],["Rosemount","rosemount","23",57],["Champlin","champlin","43",104],["Farmington","farmington","33",84],["Crystal","crystal","25",63],["New Brighton","new-brighton","25",63],["Hastings","hastings","39",96],["Golden Valley","golden-valley","21",53],["Lino Lakes","lino-lakes","38",94],["Columbia Heights","columbia-heights","23",57],["New Hope","new-hope","26",66],["South St. Paul","south-st-paul","20",49],["Forest Lake","forest-lake","53",129],["West St. Paul","west-st-paul","15",42],["Stillwater","stillwater","44",109],["Hopkins","hopkins","21",51],["Anoka","anoka","43",106],["Ham Lake","ham-lake","46",114],["Hugo","hugo","41",102],["Rogers","rogers","48",118],["Robbinsdale","robbinsdale","24",59],["Vadnais Heights","vadnais-heights","28",69],["Waconia","waconia","51",124],["Mounds View","mounds-view","30",74],["North St. Paul","north-st-paul","28",69],["East Bethel","east-bethel","54",133],["Mendota Heights","mendota-heights","12",42],["Little Canada","little-canada","24",59],["Victoria","victoria","40",99],["Lake Elmo","lake-elmo","34",86],["Arden Hills","arden-hills","24",59],["Mound","mound","41",102],["Oak Grove","oak-grove","57",139],["Mahtomedi","mahtomedi","34",86],["Orono","orono","37",93],["Dayton","dayton","48",118],["Shorewood","shorewood","34",84],["St. Francis","st-francis","63",154],["Minnetrista","minnetrista","45",112],["Belle Plaine","belle-plaine","57",142],["Spring Lake Park","spring-lake-park","30",74],["Jordan","jordan","46",112],["Medina","medina","38",96],["Corcoran","corcoran","40",99],["Falcon Heights","falcon-heights","17",44],["St. Paul Park","st-paul-park","24",59],["Circle Pines","circle-pines","36",88],["Carver","carver","40",99],["North Oaks","north-oaks","32",81],["Nowthen","nowthen","59",144],["Elko New Market","elko-new-market","43",106],["Wayzata","wayzata","30",74],["Rockford","rockford","52",127],["Watertown","watertown","56",137],["Grant","grant","37",91],["Columbus","columbus","51",124],["Scandia","scandia","59",143],["Deephaven","deephaven","30",74],["Centerville","centerville","39",96],["Newport","newport","23",57],["Bayport","bayport","44",109],["Norwood Young America","norwood-young-america","62",154],["Independence","independence","47",114],["Hanover","hanover","52",127],["Greenfield","greenfield","49",123],["Osseo","osseo","36",88],["Afton","afton","40",99],["Lauderdale","lauderdale","18",44],["Excelsior","excelsior","32",81],["St. Bonifacius","st-bonifacius","47",114],["Lexington","lexington","21",51],["Cologne","cologne","52",127],["Mayer","mayer","59",143],["Long Lake","long-lake","36",88],["Spring Park","spring-park","38",94],["Tonka Bay","tonka-bay","34",84],["Dellwood","dellwood","36",88],["Hilltop","hilltop","25",63],["Marine on St. Croix","marine-on-st-croix","55",136],["Lilydale","lilydale","15",42],["Hamburg","hamburg","68",164],["Bethel","bethel","62",152],["Minnetonka Beach","minnetonka-beach","34",86],["Sunfish Lake","sunfish-lake","16",42],["Gem Lake","gem-lake","29",72],["Woodland","woodland","28",69],["New Germany","new-germany","64",158],["Medicine Lake","medicine-lake","25",63]];
 (function() {
   var PINNED = ['minneapolis','st-paul','bloomington','eagan']; // Always shown (top 4)
-  var GRID_SLOTS = 8;  // Service Areas grid
+  var GRID_SLOTS = 8;  // Mobile service area cards
   var POP_SLOTS = 12;  // Rotated service-area links
   
   // Seeded shuffle using day-of-year
@@ -1889,7 +2537,7 @@ var CITY_ROTATION_DATA = [["Minneapolis","minneapolis","16",42],["St. Paul","st-
   }
   
   function renderAreaCard(c) {
-    return '<a href="auto-detailing-' + c[1] + '.html" class="area-card"><h3>' + c[0] + '</h3><span>~' + c[2] + ' min to MSP</span><div class="price">From $' + c[3] + '</div></a>';
+    return '<a href="auto-detailing-' + c[1] + '.html" class="area-card"><h3>' + c[0] + '</h3><span>Mobile service area</span><div class="price">Detailing from $149+</div></a>';
   }
   function renderPopCard(c) {
     return '<a href="auto-detailing-' + c[1] + '.html" class="area-rotated-link">' + c[0] + '</a>';
@@ -1905,20 +2553,158 @@ var CITY_ROTATION_DATA = [["Minneapolis","minneapolis","16",42],["St. Paul","st-
     var seed = dayOfYear();
     var shuffled = seededShuffle(rest, seed);
     
-    // Service Areas grid: 4 pinned + 4 rotated
+    // Mobile service area grid: 4 pinned + 4 rotated
     var areaGrid = document.getElementById('areas-grid');
     if (areaGrid) {
       var areaCities = pinned.concat(shuffled.slice(0, GRID_SLOTS - pinned.length));
       areaGrid.innerHTML = areaCities.map(renderAreaCard).join('');
     }
     
-    // Popular Rides grid: 4 pinned + 8 rotated (different slice)
-    var popGrid = document.getElementById('popular-rides-grid');
+    // Popular city chips (footer block): pinned + rotated slice (offset so grid ≠ chips)
+    var popGrid = document.getElementById('service-areas-grid-rotated');
     if (popGrid) {
-      var popCities = pinned.concat(shuffled.slice(0, POP_SLOTS - pinned.length));
+      var needPop = POP_SLOTS - pinned.length;
+      var skip = GRID_SLOTS - pinned.length;
+      var popRest = shuffled.slice(skip, skip + needPop);
+      var i = 0;
+      while (popRest.length < needPop && shuffled.length > 0) {
+        popRest.push(shuffled[i % shuffled.length]);
+        i++;
+      }
+      var popCities = pinned.concat(popRest);
       popGrid.innerHTML = popCities.map(renderPopCard).join('');
     }
   } catch(e) { /* static fallback remains */ }
+})();
+</script>
+
+<script>
+(function () {
+  var modal = document.getElementById('quote-modal');
+  var form = document.getElementById('quote-form');
+  var statusEl = document.getElementById('quote-form-status');
+
+  function openQuote() {
+    if (!modal) return;
+    modal.classList.add('is-open');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    var focusTarget = modal.querySelector('#quote-vehicle');
+    if (focusTarget) focusTarget.focus();
+  }
+
+  function closeQuote() {
+    if (!modal) return;
+    modal.classList.remove('is-open');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    if (statusEl) statusEl.hidden = true;
+  }
+
+  document.querySelectorAll('.js-open-quote').forEach(function (el) {
+    el.addEventListener('click', function (e) {
+      e.preventDefault();
+      openQuote();
+    });
+  });
+
+  document.querySelectorAll('.js-close-quote').forEach(function (el) {
+    el.addEventListener('click', function () {
+      closeQuote();
+    });
+  });
+
+  if (modal) {
+    modal.addEventListener('click', function (e) {
+      if (e.target === modal) closeQuote();
+    });
+  }
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Escape' || !modal || !modal.classList.contains('is-open')) return;
+    closeQuote();
+  });
+
+  document.querySelectorAll('.service-menu-toggle').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var card = btn.closest('.service-menu-card');
+      if (!card) return;
+      var willOpen = !card.classList.contains('is-open');
+      document.querySelectorAll('.service-menu-card.is-open').forEach(function (c) {
+        if (c !== card) {
+          c.classList.remove('is-open');
+          var t = c.querySelector('.service-menu-toggle');
+          if (t) t.setAttribute('aria-expanded', 'false');
+        }
+      });
+      card.classList.toggle('is-open', willOpen);
+      btn.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+    });
+  });
+
+  var slider = document.getElementById('ba-slider');
+  var baPrev = document.getElementById('ba-prev');
+  var baNext = document.getElementById('ba-next');
+  if (slider && baPrev && baNext) {
+    function baStep(dir) {
+      var slide = slider.querySelector('.ba-slide');
+      var amount = slide ? slide.getBoundingClientRect().width + 16 : Math.round(slider.clientWidth * 0.92);
+      slider.scrollBy({ left: dir * amount, behavior: 'smooth' });
+    }
+    baPrev.addEventListener('click', function () { baStep(-1); });
+    baNext.addEventListener('click', function () { baStep(1); });
+  }
+
+  document.querySelectorAll('#gallery .ba-half img').forEach(function (img) {
+    img.addEventListener('error', function () {
+      var p = img.parentElement;
+      if (!p || p.classList.contains('ba-fallback')) return;
+      p.classList.add('ba-fallback');
+      var msg = img.getAttribute('data-fallback') || 'Add image file';
+      img.remove();
+      var s = document.createElement('span');
+      s.textContent = msg;
+      p.appendChild(s);
+    });
+  });
+
+  if (form) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+      var fd = new FormData(form);
+      var text = [
+        'Hazeltine — detail quote',
+        '',
+        'Vehicle: ' + (fd.get('vehicle') || ''),
+        'Location: ' + (fd.get('location') || ''),
+        'Condition: ' + (fd.get('condition') || ''),
+        'Preferred: ' + (fd.get('preferred_time') || ''),
+        'Phone: ' + (fd.get('phone') || '(not provided)')
+      ].join('\n');
+
+      function showStatus(msg) {
+        if (!statusEl) return;
+        statusEl.textContent = msg;
+        statusEl.hidden = false;
+      }
+
+      var pCopy = navigator.clipboard && navigator.clipboard.writeText
+        ? navigator.clipboard.writeText(text)
+        : Promise.reject();
+
+      pCopy.then(function () {
+        showStatus('Message copied. If SMS did not open, paste into a text to (763) 352-7411.');
+      }).catch(function () {
+        showStatus('Copy manually:\n\n' + text);
+      });
+
+      window.location.href = 'sms:+17633527411&body=' + encodeURIComponent(text);
+    });
+  }
 })();
 </script>
 
