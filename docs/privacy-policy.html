@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/svg+xml" href="favicon.svg"><link rel="icon" type="image/png" href="favicon.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy | MinnDrive</title>
+<meta name="description" content="Privacy Policy for MinnDrive airport car service. Serving 120+ cities across the Minneapolis–St. Paul metro.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<style>*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0d0d1a;--bg-card:#141428;--bg-card-hover:#1a1a36;--text:#f0f0f5;--text-muted:#9898b0;--accent:#8B5CF6;--accent-glow:rgba(139,92,246,0.3);--accent-hover:#a78bfa;--radius:12px;--max-w:1200px}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(13,13,26,0.85);backdrop-filter:blur(20px);border-bottom:1px solid rgba(139,92,246,0.1);padding:0 2rem;height:72px;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700;color:var(--text);text-decoration:none;letter-spacing:1px}
+.nav-logo span{color:var(--accent)}
+.nav-links{display:flex;gap:2rem;align-items:center}
+.nav-links a{color:var(--text-muted);text-decoration:none;font-size:0.9rem;font-weight:500;transition:color 0.2s}
+.nav-links a:hover{color:var(--text)}
+.nav-cta{background:var(--accent)!important;color:white!important;padding:0.6rem 1.5rem;border-radius:8px;font-weight:600!important}
+.skip-link{position:absolute;top:-100px;left:0;background:var(--accent);color:white;padding:0.75rem 1.5rem;z-index:200;font-weight:600;text-decoration:none;border-radius:0 0 8px 0}
+.skip-link:focus{top:0}
+.hamburger{display:none;background:none;border:none;cursor:pointer;width:32px;height:24px;position:relative;flex-direction:column;justify-content:space-between}
+.hamburger span{display:block;height:2px;width:100%;background:var(--text);border-radius:2px;transition:all 0.3s}
+.hamburger.active span:nth-child(1){transform:rotate(45deg) translate(7px,7px)}
+.hamburger.active span:nth-child(2){opacity:0}
+.hamburger.active span:nth-child(3){transform:rotate(-45deg) translate(7px,-7px)}
+.nav-links.open{display:flex!important;position:fixed;top:72px;left:0;right:0;background:rgba(13,13,26,0.98);backdrop-filter:blur(20px);flex-direction:column;padding:2rem;gap:1.5rem;border-bottom:1px solid rgba(139,92,246,0.15)}
+.city-hero{padding:8rem 2rem 4rem;background:linear-gradient(180deg,rgba(13,13,26,0.7) 0%,rgba(13,13,26,0.85) 100%),url('img/hero-backseat.jpg') center/cover no-repeat;background-attachment:scroll}
+.city-hero-inner{max-width:var(--max-w);margin:0 auto}
+.breadcrumb{font-size:0.85rem;color:var(--text-muted);margin-bottom:1.5rem}
+.breadcrumb a{color:var(--accent);text-decoration:none}
+.breadcrumb a:hover{text-decoration:underline}
+.city-hero h1{font-family:'Playfair Display',serif;font-size:3rem;font-weight:700;line-height:1.15;margin-bottom:1.5rem}
+.city-hero h1 .highlight{background:linear-gradient(135deg,var(--accent),var(--accent-hover));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero-stack{display:flex;flex-direction:column;gap:0.5rem;margin-bottom:2rem;}
+.carousel-row{position:relative;overflow:hidden;background:var(--bg-card);border:1px solid rgba(139,92,246,0.12);border-radius:14px;padding:0.3rem 1.5rem 0.1rem!important;min-height:70px;}
+.dest-track{display:flex;transition:transform 0.35s ease;}
+.dest-card{flex:0 0 100%;box-sizing:border-box;padding:0;text-align:center;min-height:0;background:transparent;}
+.dest-time{font-size:1.3rem;font-weight:700;color:var(--accent);display:block;}
+.dest-name{font-size:0.65rem;font-weight:600;color:var(--text-muted);display:block;margin-top:0.1rem;text-transform:uppercase;letter-spacing:1px;}
+.carousel-dots{display:flex;justify-content:center;gap:0.4rem;padding:0.15rem 0 0;}
+.carousel-dots .dot{width:5px;height:5px;border-radius:50%;background:rgba(139,92,246,0.25);transition:background 0.3s;}
+.carousel-dots .dot.active{background:var(--accent);}
+.price-slide{flex:0 0 100%;box-sizing:border-box;padding:0;text-align:center;}
+.hero-stack-row{padding:0.55rem 1.5rem;min-height:70px;display:flex;flex-direction:column;justify-content:center;text-align:center;background:var(--bg-card);border:1px solid rgba(139,92,246,0.12);border-radius:14px;}
+.row-number{font-size:1.3rem;font-weight:700;color:var(--accent);display:block;}
+.row-label{font-size:0.65rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:1px;margin-top:0.1rem;display:block;}
+.hero-disclaimer{font-size:0.7rem;color:var(--text-muted);opacity:0.6;text-align:center;margin-top:0.25rem;font-style:italic;}
+.city-intro{font-size:1.15rem;color:var(--text-muted);max-width:750px;line-height:1.8;margin-bottom:2.5rem}
+.btn-primary{background:var(--accent);color:white;padding:1rem 2.5rem;border-radius:10px;font-size:1.05rem;font-weight:600;text-decoration:none;border:none;cursor:pointer;transition:all 0.3s;display:inline-flex;align-items:center;gap:0.5rem}
+.btn-primary:hover{background:var(--accent-hover);box-shadow:0 8px 30px var(--accent-glow);transform:translateY(-2px)}
+.btn-secondary{background:transparent;color:var(--text);padding:1rem 2.5rem;border-radius:10px;font-size:1.05rem;font-weight:500;text-decoration:none;border:1px solid rgba(255,255,255,0.15);transition:all 0.3s}
+.btn-secondary:hover{border-color:var(--accent);background:rgba(139,92,246,0.08)}
+section{padding:4rem 2rem}
+.section-inner{max-width:var(--max-w);margin:0 auto}
+.section-label{color:var(--accent);font-size:0.8rem;font-weight:600;text-transform:uppercase;letter-spacing:2px;margin-bottom:0.75rem}
+.section-title{font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;margin-bottom:1rem;line-height:1.2}
+.section-subtitle{color:var(--text-muted);font-size:1rem;max-width:600px;line-height:1.7;margin-bottom:2rem}
+.info-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem;margin-bottom:3rem}
+.info-card{background:var(--bg-card);border:1px solid rgba(139,92,246,0.08);border-radius:var(--radius);padding:2rem;transition:all 0.3s}
+.info-card:hover{border-color:rgba(139,92,246,0.25);background:var(--bg-card-hover);transform:translateY(-2px)}
+.info-card h3{font-size:1.1rem;font-weight:600;margin-bottom:0.6rem;display:flex;align-items:center;gap:0.5rem}
+.info-card p{font-size:0.9rem;color:var(--text-muted);line-height:1.6}
+.faq-section{background:var(--bg-card)}
+.faq-item{border-bottom:1px solid rgba(255,255,255,0.05)}
+.faq-question{width:100%;background:none;border:none;color:var(--text);padding:1.25rem 0;font-size:1rem;font-weight:500;text-align:left;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-family:inherit}
+.faq-icon{color:var(--accent);font-size:1.3rem;transition:transform 0.3s}
+.faq-item.open .faq-icon{transform:rotate(45deg)}
+.faq-answer{max-height:0;overflow:hidden;transition:max-height 0.3s ease}
+.faq-item.open .faq-answer{max-height:300px}
+.faq-answer p{padding:0 0 1.25rem;font-size:0.9rem;color:var(--text-muted);line-height:1.7}
+.nearby-grid{display:flex;gap:0.75rem;flex-wrap:wrap;margin-top:1rem}
+.nearby-link{background:var(--bg-card);border:1px solid rgba(139,92,246,0.08);border-radius:8px;padding:0.6rem 1.2rem;color:var(--text);text-decoration:none;font-size:0.9rem;transition:all 0.2s}
+.nearby-link:hover{border-color:var(--accent);background:var(--bg-card-hover)}
+.cta-banner{background:linear-gradient(135deg,var(--accent),#6d28d9);padding:5rem 2rem;text-align:center}
+.cta-banner h2{font-family:'Playfair Display',serif;font-size:2.5rem;font-weight:700;margin-bottom:1rem}
+.cta-banner p{font-size:1.1rem;opacity:0.9;margin-bottom:2rem;max-width:500px;margin-left:auto;margin-right:auto}
+.btn-white{background:white;color:var(--accent);padding:1rem 2.5rem;border-radius:10px;font-size:1.05rem;font-weight:600;text-decoration:none;display:inline-flex;align-items:center;gap:0.5rem;transition:all 0.3s}
+.btn-white:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(0,0,0,0.2)}
+footer{background:var(--bg-card);border-top:1px solid rgba(139,92,246,0.08);padding:3rem 2rem 1.5rem}
+.footer-inner{max-width:var(--max-w);margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem}
+.footer-brand p{color:var(--text-muted);font-size:0.85rem;margin-top:0.75rem;max-width:280px;line-height:1.6}
+.footer-col h4{font-size:0.85rem;font-weight:600;text-transform:uppercase;letter-spacing:1px;margin-bottom:1rem;color:var(--text)}
+.footer-col a{display:block;color:var(--text-muted);text-decoration:none;font-size:0.85rem;margin-bottom:0.5rem;transition:color 0.2s}
+.footer-col a:hover{color:var(--accent)}
+.footer-bottom{max-width:var(--max-w);margin:2rem auto 0;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,0.05);text-align:center;font-size:0.8rem;color:var(--text-muted)}
+@media(min-width:1024px){
+.city-hero{padding:10rem 2rem 5rem;}
+.city-hero-inner{display:grid;grid-template-columns:1fr 420px;gap:3rem;align-items:start;}
+.city-hero-inner .breadcrumb{grid-column:1/-1;}
+.city-hero-inner h1{grid-column:1;margin-bottom:0.5rem;}
+.hero-stack{grid-column:2;grid-row:2/5;margin-bottom:0;display:flex;flex-direction:column;gap:0.5rem;}
+.hero-stack .carousel-row,.hero-stack .hero-stack-row{display:none;}
+.hero-stack .hero-disclaimer{display:none;}
+.desk-tabs{display:flex!important;gap:0;border-radius:12px;overflow:hidden;border:1px solid rgba(139,92,246,0.15);margin-bottom:0.5rem;}
+.desk-tab{flex:1;padding:0.7rem 0.4rem;text-align:center;cursor:pointer;background:var(--bg-card);border:none;color:var(--text-muted);font-size:0.7rem;font-weight:600;text-transform:uppercase;letter-spacing:0.5px;transition:all 0.2s;font-family:inherit;border-right:1px solid rgba(139,92,246,0.1);}
+.desk-tab:last-child{border-right:none;}
+.desk-tab:hover{background:var(--bg-card-hover);color:var(--text);}
+.desk-tab.active{background:var(--accent);color:white;}
+.desk-grid{display:grid!important;grid-template-columns:1fr 1fr;gap:0.5rem;}
+.desk-stat{background:var(--bg-card);border:1px solid rgba(139,92,246,0.12);border-radius:12px;padding:1rem;text-align:center;}
+.desk-stat .row-number{font-size:1.4rem;font-weight:700;color:var(--accent);}
+.desk-stat .row-label{font-size:0.65rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:1px;margin-top:0.15rem;}
+.desk-prices{display:flex!important;justify-content:center;gap:1.5rem;padding:0.6rem 0;font-size:0.85rem;color:var(--text-muted);}
+.desk-prices span{color:var(--accent);font-weight:600;}
+.desk-disclaimer{display:block!important;font-size:0.7rem;color:var(--text-muted);opacity:0.6;text-align:center;font-style:italic;}
+.city-intro{grid-column:1;}
+.info-grid{grid-template-columns:repeat(3,1fr);}
+.faq-grid{display:grid;grid-template-columns:1fr 300px;gap:2rem;align-items:start;}
+.faq-grid .faq-sidebar{position:sticky;top:100px;}
+.cta-banner{font-size:1.1em;}
+.footer-inner{grid-template-columns:repeat(4,1fr);}
+}
+.desk-tabs,.desk-grid,.desk-prices,.desk-disclaimer{display:none;}
+@media(max-width:900px){.hamburger{display:flex}.nav-links{display:none}.city-hero h1{font-size:2.2rem}.info-grid{grid-template-columns:1fr}.footer-inner{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.city-hero{padding:6rem 1rem 3rem}.footer-inner{grid-template-columns:1fr}}
+.policy-hero{background:var(--surface);padding:4rem 1.5rem 2rem;text-align:center}
+.policy-hero h1{font-family:'Playfair Display',serif;font-size:2.2rem;color:var(--text)}
+.policy-hero p{color:var(--text-muted);margin-top:0.5rem}
+.policy-content{max-width:800px;margin:0 auto;padding:2rem 1.5rem 4rem}
+.policy-content h2{font-size:1.3rem;color:var(--text);margin:2rem 0 0.75rem;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,0.06)}
+.policy-content h2:first-of-type{border-top:none;padding-top:0}
+.policy-content p,.policy-content li{font-size:0.95rem;color:var(--text-muted);line-height:1.8}
+.policy-content ul{padding-left:1.5rem;margin:0.5rem 0}
+.policy-content a{color:var(--accent)}
+.policy-content strong{color:var(--text)}
+.contact-box{background:var(--surface);border-radius:12px;padding:1.5rem;margin:2rem 0}
+.contact-box h3{color:var(--text);margin-bottom:0.5rem}
+</style>
+<script>function loadScript(a){var b=document.getElementsByTagName("head")[0],c=document.createElement("script");c.type="text/javascript",c.src="https://tracker.metricool.com/resources/be.js",c.onreadystatechange=a,c.onload=a,b.appendChild(c)}loadScript(function(){beTracker.t({hash:"5c6a5ef4e3c7cca1567e6995a471fa07"})})</script></head>
+<body>
+<a href="#main" class="skip-link">Skip to main content</a>
+<nav role="navigation" aria-label="Main navigation">
+  <a href="index.html" class="nav-logo">Minn<span>Drive</span></a>
+  <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" onclick="this.classList.toggle('active');document.querySelector('.nav-links').classList.toggle('open');this.setAttribute('aria-expanded',this.classList.contains('active'))">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="events.html">Events</a>
+    <a href="all-cities.html">All Cities</a>
+    <a href="https://embed.evertransit.com/schedule.html?theme=default&amp;api_key=b68df50df04ee485999db06c3d29a936e6a6a49995d90be994f1895a439c6d152e" target="_blank" rel="noopener nofollow" class="nav-cta">Book Now</a>
+  </div>
+</nav>
+<main id="main">
+<section class="policy-hero">
+  <h1>Privacy Policy</h1>
+  <p>Last updated: March 12, 2026</p>
+</section>
+<div class="policy-content">
+
+<h2>Overview</h2>
+<p>MinnDrive ("we," "us," or "our") operates the website minndrive.com and provides airport car service across the Minneapolis–St. Paul metropolitan area. This Privacy Policy explains how we collect, use, and protect your personal information when you use our website or services.</p>
+
+<h2>Information We Collect</h2>
+<p>When you book a ride or interact with our website, we may collect:</p>
+<ul>
+<li><strong>Contact information</strong> — name, phone number, email address</li>
+<li><strong>Ride details</strong> — pickup address, destination, date and time, number of passengers</li>
+<li><strong>Payment information</strong> — processed securely through our booking platform (EverTransit); we do not store credit card numbers directly</li>
+<li><strong>Device information</strong> — browser type, IP address, and cookies for website functionality</li>
+</ul>
+
+<h2>How We Use Your Information</h2>
+<p>We use your information to:</p>
+<ul>
+<li>Confirm and fulfill your ride booking</li>
+<li>Communicate with you about your upcoming ride (pickup time, driver details, changes)</li>
+<li>Send booking confirmations and receipts</li>
+<li>Improve our service and website</li>
+<li>Respond to your inquiries</li>
+</ul>
+<p>We do <strong>not</strong> sell, rent, or share your personal information with third parties for marketing purposes.</p>
+
+<h2>Third-Party Services</h2>
+<p>Our booking system is powered by EverTransit. When you book a ride, your information is processed according to EverTransit's privacy practices. We also use:</p>
+<ul>
+<li><strong>Google Fonts</strong> — for website typography</li>
+<li><strong>Cloudflare</strong> — for website security and performance</li>
+</ul>
+
+<h2>Cookies</h2>
+<p>Our website uses minimal cookies for basic functionality. We do not use tracking cookies for advertising purposes.</p>
+
+<h2>Data Retention</h2>
+<p>We retain your booking information for a reasonable period to fulfill our service obligations and comply with legal requirements. You may request deletion of your data by contacting us.</p>
+
+<h2>Your Rights</h2>
+<p>You have the right to:</p>
+<ul>
+<li>Request access to your personal information</li>
+<li>Request correction of inaccurate information</li>
+<li>Request deletion of your data</li>
+<li>Opt out of any promotional communications</li>
+</ul>
+
+<h2>Contact Us</h2>
+<p>If you have questions about this Privacy Policy, contact us at <a href="contact.html">contact us</a> or call <a href="tel:+17633527411">763-352-7411</a>.</p>
+
+</div>
+</main>
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="index.html" class="nav-logo" style="font-size:1.4rem;">Minn<span style="color:var(--accent);">Drive</span></a>
+      <p>Minneapolis–St. Paul's highest-rated airport car service. Serving 120+ cities including 120+ cities across the Twin Cities metro.</p>
+    </div>
+    <div class="footer-col"><h3>Popular Cities</h3><a href="auto-detailing-bloomington.html">Bloomington</a><a href="auto-detailing-minneapolis.html">Minneapolis</a><a href="auto-detailing-eagan.html">Eagan</a><a href="auto-detailing-woodbury.html">Woodbury</a></div>
+    <div class="footer-col"><h3>Company</h3><a href="contact.html">Contact</a><a href="privacy-policy.html">Privacy</a><a href="terms-and-conditions.html">Terms</a></div>
+  </div>
+  <div class="footer-bottom">© 2026 MinnDrive. All rights reserved. | Airport car service — Twin Cities, MN<div style="display:flex;justify-content:center;gap:1rem;margin-top:0.75rem;"><a href="https://www.facebook.com/MinnDrive/" target="_blank" rel="noopener nofollow" title="Facebook"><img src="assets/icons/facebook.svg" alt="Facebook" style="width:22px;height:22px;"></a><a href="https://www.yelp.com/biz/minndrive-chaska" target="_blank" rel="noopener nofollow" title="Yelp"><img src="assets/icons/yelp.svg" alt="Yelp" style="width:22px;height:22px;"></a><a href="https://maps.app.goo.gl/XehiTJzZWRCXkyQW9" target="_blank" rel="noopener nofollow" title="Google"><img src="assets/icons/google.svg" alt="Google" style="width:22px;height:22px;"></a><a href="https://nextdoor.com/pages/minndrive-chaska-mn/" target="_blank" rel="noopener nofollow" title="Nextdoor"><img src="assets/icons/nextdoor.svg" alt="Nextdoor" style="width:22px;height:22px;"></a></div></div>
+</footer>
+</body>
+</html>

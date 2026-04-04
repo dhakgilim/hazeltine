@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/svg+xml" href="favicon.svg"><link rel="icon" type="image/png" href="favicon.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>All Service Areas — 120+ Cities | MinnDrive Airport Car Service</title>
+<meta name="description" content="MinnDrive serves 120+ cities across the Minneapolis–St. Paul metro. Find your city and book a premium airport ride today.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0d0d1a;--bg-card:#141428;--bg-card-hover:#1a1a36;--text:#f0f0f5;--text-muted:#9898b0;--accent:#8B5CF6;--accent-glow:rgba(139,92,246,0.3);--accent-hover:#a78bfa;--radius:12px;--max-w:1200px}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(13,13,26,0.85);backdrop-filter:blur(20px);border-bottom:1px solid rgba(139,92,246,0.1);padding:0 2rem;height:72px;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700;color:var(--text);text-decoration:none;letter-spacing:1px}
+.nav-logo span{color:var(--accent)}
+.nav-links{display:flex;gap:2rem;align-items:center}
+.nav-links a{color:var(--text-muted);text-decoration:none;font-size:0.9rem;font-weight:500;transition:color 0.2s}
+.nav-links a:hover{color:var(--text)}
+.nav-cta{background:var(--accent)!important;color:white!important;padding:0.6rem 1.5rem;border-radius:8px;font-weight:600!important}
+.hamburger{display:none;background:none;border:none;cursor:pointer;width:32px;height:24px;position:relative;flex-direction:column;justify-content:space-between}
+.hamburger span{display:block;height:2px;width:100%;background:var(--text);border-radius:2px;transition:all 0.3s}
+.hamburger.active span:nth-child(1){transform:rotate(45deg) translate(7px,7px)}
+.hamburger.active span:nth-child(2){opacity:0}
+.hamburger.active span:nth-child(3){transform:rotate(-45deg) translate(7px,-7px)}
+.nav-links.open{display:flex!important;position:fixed;top:72px;left:0;right:0;background:rgba(13,13,26,0.98);backdrop-filter:blur(20px);flex-direction:column;padding:2rem;gap:1.5rem}
+@media(max-width:900px){.hamburger{display:flex}.nav-links{display:none}}
+.page-header{padding:7rem 2rem 3rem;text-align:center}
+.page-header h1{font-family:'Playfair Display',serif;font-size:2.8rem;font-weight:700;margin-bottom:1rem}
+.page-header h1 .highlight{background:linear-gradient(135deg,var(--accent),var(--accent-hover));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.page-header p{color:var(--text-muted);font-size:1.1rem;max-width:600px;margin:0 auto}
+.cities-section{padding:2rem 2rem 5rem}
+.cities-inner{max-width:var(--max-w);margin:0 auto}
+.cities-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+.area-card{background:var(--bg-card);border:1px solid rgba(139,92,246,0.08);border-radius:var(--radius);padding:1.25rem 1.5rem;text-decoration:none;color:var(--text);transition:all 0.3s;display:block}
+.area-card:hover{border-color:var(--accent);background:var(--bg-card-hover);transform:translateY(-2px)}
+.area-card h3{font-size:0.95rem;font-weight:600}
+footer{background:var(--bg-card);border-top:1px solid rgba(139,92,246,0.08);padding:2rem;text-align:center}
+.footer-bottom{max-width:var(--max-w);margin:0 auto;font-size:0.8rem;color:var(--text-muted)}
+.footer-socials{display:flex;justify-content:center;gap:1rem;margin-top:0.75rem}
+@media(max-width:900px){.cities-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.cities-grid{grid-template-columns:1fr}}
+</style>
+<script>function loadScript(a){var b=document.getElementsByTagName("head")[0],c=document.createElement("script");c.type="text/javascript",c.src="https://tracker.metricool.com/resources/be.js",c.onreadystatechange=a,c.onload=a,b.appendChild(c)}loadScript(function(){beTracker.t({hash:"5c6a5ef4e3c7cca1567e6995a471fa07"})})</script></head>
+<body>
+<nav role="navigation" aria-label="Main navigation">
+  <a href="index.html" class="nav-logo">Minn<span>Drive</span></a>
+  <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" onclick="this.classList.toggle('active');document.querySelector('.nav-links').classList.toggle('open');this.setAttribute('aria-expanded',this.classList.contains('active'))">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="events.html">Events</a>
+    <a href="all-cities.html" class="active">All Cities</a>
+    <a href="https://embed.evertransit.com/schedule.html?theme=default&amp;api_key=b68df50df04ee485999db06c3d29a936e6a6a49995d90be994f1895a439c6d152e" target="_blank" rel="noopener nofollow" class="nav-cta">Book Now</a>
+  </div>
+</nav>
+<main>
+<div class="page-header">
+  <h1>All <span class="highlight">120+ Cities</span> We Serve</h1>
+  <p>Premium airport car service across the entire Minneapolis–St. Paul metro. Find your city below and book your ride.</p>
+</div>
+<section class="cities-section">
+  <div class="cities-inner">
+    <div class="cities-grid">
+      <a href="auto-detailing-afton.html" class="area-card"><h3>Afton</h3></a>
+      <a href="auto-detailing-andover.html" class="area-card"><h3>Andover</h3></a>
+      <a href="auto-detailing-anoka.html" class="area-card"><h3>Anoka</h3></a>
+      <a href="auto-detailing-apple-valley.html" class="area-card"><h3>Apple Valley</h3></a>
+      <a href="auto-detailing-arden-hills.html" class="area-card"><h3>Arden Hills</h3></a>
+      <a href="auto-detailing-bayport.html" class="area-card"><h3>Bayport</h3></a>
+      <a href="auto-detailing-belle-plaine.html" class="area-card"><h3>Belle Plaine</h3></a>
+      <a href="auto-detailing-bethel.html" class="area-card"><h3>Bethel</h3></a>
+      <a href="auto-detailing-blaine.html" class="area-card"><h3>Blaine</h3></a>
+      <a href="auto-detailing-bloomington.html" class="area-card"><h3>Bloomington</h3></a>
+      <a href="auto-detailing-brooklyn-center.html" class="area-card"><h3>Brooklyn Center</h3></a>
+      <a href="auto-detailing-brooklyn-park.html" class="area-card"><h3>Brooklyn Park</h3></a>
+      <a href="auto-detailing-burnsville.html" class="area-card"><h3>Burnsville</h3></a>
+      <a href="auto-detailing-carver.html" class="area-card"><h3>Carver</h3></a>
+      <a href="auto-detailing-centerville.html" class="area-card"><h3>Centerville</h3></a>
+      <a href="auto-detailing-champlin.html" class="area-card"><h3>Champlin</h3></a>
+      <a href="auto-detailing-chanhassen.html" class="area-card"><h3>Chanhassen</h3></a>
+      <a href="auto-detailing-chaska.html" class="area-card"><h3>Chaska</h3></a>
+      <a href="auto-detailing-circle-pines.html" class="area-card"><h3>Circle Pines</h3></a>
+      <a href="auto-detailing-cologne.html" class="area-card"><h3>Cologne</h3></a>
+      <a href="auto-detailing-columbia-heights.html" class="area-card"><h3>Columbia Heights</h3></a>
+      <a href="auto-detailing-columbus.html" class="area-card"><h3>Columbus</h3></a>
+      <a href="auto-detailing-coon-rapids.html" class="area-card"><h3>Coon Rapids</h3></a>
+      <a href="auto-detailing-corcoran.html" class="area-card"><h3>Corcoran</h3></a>
+      <a href="auto-detailing-cottage-grove.html" class="area-card"><h3>Cottage Grove</h3></a>
+      <a href="auto-detailing-crystal.html" class="area-card"><h3>Crystal</h3></a>
+      <a href="auto-detailing-dayton.html" class="area-card"><h3>Dayton</h3></a>
+      <a href="auto-detailing-deephaven.html" class="area-card"><h3>Deephaven</h3></a>
+      <a href="auto-detailing-dellwood.html" class="area-card"><h3>Dellwood</h3></a>
+      <a href="auto-detailing-eagan.html" class="area-card"><h3>Eagan</h3></a>
+      <a href="auto-detailing-east-bethel.html" class="area-card"><h3>East Bethel</h3></a>
+      <a href="auto-detailing-eden-prairie.html" class="area-card"><h3>Eden Prairie</h3></a>
+      <a href="auto-detailing-edina.html" class="area-card"><h3>Edina</h3></a>
+      <a href="auto-detailing-elko-new-market.html" class="area-card"><h3>Elko New Market</h3></a>
+      <a href="auto-detailing-excelsior.html" class="area-card"><h3>Excelsior</h3></a>
+      <a href="auto-detailing-falcon-heights.html" class="area-card"><h3>Falcon Heights</h3></a>
+      <a href="auto-detailing-farmington.html" class="area-card"><h3>Farmington</h3></a>
+      <a href="auto-detailing-forest-lake.html" class="area-card"><h3>Forest Lake</h3></a>
+      <a href="auto-detailing-fridley.html" class="area-card"><h3>Fridley</h3></a>
+      <a href="auto-detailing-gem-lake.html" class="area-card"><h3>Gem Lake</h3></a>
+      <a href="auto-detailing-golden-valley.html" class="area-card"><h3>Golden Valley</h3></a>
+      <a href="auto-detailing-grant.html" class="area-card"><h3>Grant</h3></a>
+      <a href="auto-detailing-greenfield.html" class="area-card"><h3>Greenfield</h3></a>
+      <a href="auto-detailing-ham-lake.html" class="area-card"><h3>Ham Lake</h3></a>
+      <a href="auto-detailing-hamburg.html" class="area-card"><h3>Hamburg</h3></a>
+      <a href="auto-detailing-hanover.html" class="area-card"><h3>Hanover</h3></a>
+      <a href="auto-detailing-hastings.html" class="area-card"><h3>Hastings</h3></a>
+      <a href="auto-detailing-hilltop.html" class="area-card"><h3>Hilltop</h3></a>
+      <a href="auto-detailing-hopkins.html" class="area-card"><h3>Hopkins</h3></a>
+      <a href="auto-detailing-hugo.html" class="area-card"><h3>Hugo</h3></a>
+      <a href="auto-detailing-independence.html" class="area-card"><h3>Independence</h3></a>
+      <a href="auto-detailing-inver-grove-heights.html" class="area-card"><h3>Inver Grove Heights</h3></a>
+      <a href="auto-detailing-jordan.html" class="area-card"><h3>Jordan</h3></a>
+      <a href="auto-detailing-lake-elmo.html" class="area-card"><h3>Lake Elmo</h3></a>
+      <a href="auto-detailing-lakeville.html" class="area-card"><h3>Lakeville</h3></a>
+      <a href="auto-detailing-lauderdale.html" class="area-card"><h3>Lauderdale</h3></a>
+      <a href="auto-detailing-lexington.html" class="area-card"><h3>Lexington</h3></a>
+      <a href="auto-detailing-lilydale.html" class="area-card"><h3>Lilydale</h3></a>
+      <a href="auto-detailing-lino-lakes.html" class="area-card"><h3>Lino Lakes</h3></a>
+      <a href="auto-detailing-little-canada.html" class="area-card"><h3>Little Canada</h3></a>
+      <a href="auto-detailing-long-lake.html" class="area-card"><h3>Long Lake</h3></a>
+      <a href="auto-detailing-mahtomedi.html" class="area-card"><h3>Mahtomedi</h3></a>
+      <a href="auto-detailing-maple-grove.html" class="area-card"><h3>Maple Grove</h3></a>
+      <a href="auto-detailing-maplewood.html" class="area-card"><h3>Maplewood</h3></a>
+      <a href="auto-detailing-marine-on-st-croix.html" class="area-card"><h3>Marine On St. Croix</h3></a>
+      <a href="auto-detailing-mayer.html" class="area-card"><h3>Mayer</h3></a>
+      <a href="auto-detailing-medicine-lake.html" class="area-card"><h3>Medicine Lake</h3></a>
+      <a href="auto-detailing-medina.html" class="area-card"><h3>Medina</h3></a>
+      <a href="auto-detailing-mendota-heights.html" class="area-card"><h3>Mendota Heights</h3></a>
+      <a href="auto-detailing-minneapolis.html" class="area-card"><h3>Minneapolis</h3></a>
+      <a href="auto-detailing-minnetonka.html" class="area-card"><h3>Minnetonka</h3></a>
+      <a href="auto-detailing-minnetonka-beach.html" class="area-card"><h3>Minnetonka Beach</h3></a>
+      <a href="auto-detailing-minnetrista.html" class="area-card"><h3>Minnetrista</h3></a>
+      <a href="auto-detailing-mound.html" class="area-card"><h3>Mound</h3></a>
+      <a href="auto-detailing-mounds-view.html" class="area-card"><h3>Mounds View</h3></a>
+      <a href="auto-detailing-new-brighton.html" class="area-card"><h3>New Brighton</h3></a>
+      <a href="auto-detailing-new-germany.html" class="area-card"><h3>New Germany</h3></a>
+      <a href="auto-detailing-new-hope.html" class="area-card"><h3>New Hope</h3></a>
+      <a href="auto-detailing-newport.html" class="area-card"><h3>Newport</h3></a>
+      <a href="auto-detailing-north-oaks.html" class="area-card"><h3>North Oaks</h3></a>
+      <a href="auto-detailing-north-st-paul.html" class="area-card"><h3>North St. Paul</h3></a>
+      <a href="auto-detailing-norwood-young-america.html" class="area-card"><h3>Norwood Young America</h3></a>
+      <a href="auto-detailing-nowthen.html" class="area-card"><h3>Nowthen</h3></a>
+      <a href="auto-detailing-oak-grove.html" class="area-card"><h3>Oak Grove</h3></a>
+      <a href="auto-detailing-oakdale.html" class="area-card"><h3>Oakdale</h3></a>
+      <a href="auto-detailing-orono.html" class="area-card"><h3>Orono</h3></a>
+      <a href="auto-detailing-osseo.html" class="area-card"><h3>Osseo</h3></a>
+      <a href="auto-detailing-plymouth.html" class="area-card"><h3>Plymouth</h3></a>
+      <a href="auto-detailing-prior-lake.html" class="area-card"><h3>Prior Lake</h3></a>
+      <a href="auto-detailing-richfield.html" class="area-card"><h3>Richfield</h3></a>
+      <a href="auto-detailing-robbinsdale.html" class="area-card"><h3>Robbinsdale</h3></a>
+      <a href="auto-detailing-rockford.html" class="area-card"><h3>Rockford</h3></a>
+      <a href="auto-detailing-rogers.html" class="area-card"><h3>Rogers</h3></a>
+      <a href="auto-detailing-rosemount.html" class="area-card"><h3>Rosemount</h3></a>
+      <a href="auto-detailing-roseville.html" class="area-card"><h3>Roseville</h3></a>
+      <a href="auto-detailing-savage.html" class="area-card"><h3>Savage</h3></a>
+      <a href="auto-detailing-scandia.html" class="area-card"><h3>Scandia</h3></a>
+      <a href="auto-detailing-shakopee.html" class="area-card"><h3>Shakopee</h3></a>
+      <a href="auto-detailing-shoreview.html" class="area-card"><h3>Shoreview</h3></a>
+      <a href="auto-detailing-shorewood.html" class="area-card"><h3>Shorewood</h3></a>
+      <a href="auto-detailing-south-st-paul.html" class="area-card"><h3>South St. Paul</h3></a>
+      <a href="auto-detailing-spring-lake-park.html" class="area-card"><h3>Spring Lake Park</h3></a>
+      <a href="auto-detailing-spring-park.html" class="area-card"><h3>Spring Park</h3></a>
+      <a href="auto-detailing-st-bonifacius.html" class="area-card"><h3>St. Bonifacius</h3></a>
+      <a href="auto-detailing-st-francis.html" class="area-card"><h3>St. Francis</h3></a>
+      <a href="auto-detailing-st-louis-park.html" class="area-card"><h3>St. Louis Park</h3></a>
+      <a href="auto-detailing-st-paul.html" class="area-card"><h3>St. Paul</h3></a>
+      <a href="auto-detailing-st-paul-park.html" class="area-card"><h3>St. Paul Park</h3></a>
+      <a href="auto-detailing-stillwater.html" class="area-card"><h3>Stillwater</h3></a>
+      <a href="auto-detailing-sunfish-lake.html" class="area-card"><h3>Sunfish Lake</h3></a>
+      <a href="auto-detailing-tonka-bay.html" class="area-card"><h3>Tonka Bay</h3></a>
+      <a href="auto-detailing-vadnais-heights.html" class="area-card"><h3>Vadnais Heights</h3></a>
+      <a href="auto-detailing-victoria.html" class="area-card"><h3>Victoria</h3></a>
+      <a href="auto-detailing-waconia.html" class="area-card"><h3>Waconia</h3></a>
+      <a href="auto-detailing-watertown.html" class="area-card"><h3>Watertown</h3></a>
+      <a href="auto-detailing-wayzata.html" class="area-card"><h3>Wayzata</h3></a>
+      <a href="auto-detailing-west-st-paul.html" class="area-card"><h3>West St. Paul</h3></a>
+      <a href="auto-detailing-white-bear-lake.html" class="area-card"><h3>White Bear Lake</h3></a>
+      <a href="auto-detailing-woodbury.html" class="area-card"><h3>Woodbury</h3></a>
+      <a href="auto-detailing-woodland.html" class="area-card"><h3>Woodland</h3></a>
+    </div>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="footer-bottom">© 2026 MinnDrive. All rights reserved. | Airport car service — Twin Cities, MN
+    <div class="footer-socials">
+      <a href="https://www.facebook.com/MinnDrive/" target="_blank" rel="noopener" title="Facebook"><img src="assets/icons/facebook.svg" alt="Facebook" style="width:22px;height:22px;"></a>
+      <a href="https://www.yelp.com/biz/minndrive-chaska" target="_blank" rel="noopener" title="Yelp"><img src="assets/icons/yelp.svg" alt="Yelp" style="width:22px;height:22px;"></a><a href="https://maps.app.goo.gl/XehiTJzZWRCXkyQW9" target="_blank" rel="noopener" title="Google"><img src="assets/icons/google.svg" alt="Google" style="width:22px;height:22px;"></a><a href="https://nextdoor.com/pages/minndrive-chaska-mn/" target="_blank" rel="noopener" title="Nextdoor"><img src="assets/icons/nextdoor.svg" alt="Nextdoor" style="width:22px;height:22px;"></a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

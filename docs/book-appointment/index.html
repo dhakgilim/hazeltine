@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book Your Ride — MinnDrive Airport Car Service</title>
+<meta name="description" content="Book your MinnDrive airport car service in 60 seconds. No app needed, no surge pricing, gratuity included. Serving 120+ Twin Cities metro communities.">
+<link rel="canonical" href="https://www.minndrive.com/book-appointment/">
+<link rel="icon" type="image/svg+xml" href="../favicon.svg"><link rel="icon" type="image/png" href="../favicon.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.minndrive.com/book-appointment/">
+<meta property="og:title" content="Book Your Ride — MinnDrive Airport Car Service">
+<meta property="og:description" content="Book your MinnDrive airport car service in 60 seconds. No app needed, no surge pricing.">
+<meta property="og:image" content="https://www.minndrive.com/img/hero-backseat.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0d0d1a;
+  --bg-card: #141428;
+  --text: #f0f0f5;
+  --text-muted: #9898b0;
+  --accent: #8B5CF6;
+  --accent-glow: rgba(139, 92, 246, 0.3);
+  --accent-hover: #a78bfa;
+  --radius: 12px;
+  --max-w: 1200px;
+}
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Inter', -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}
+nav {
+  position: fixed; top: 0; left: 0; right: 0;
+  z-index: 100;
+  background: rgba(13, 13, 26, 0.85);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(139, 92, 246, 0.1);
+  padding: 0 2rem;
+  height: 72px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.nav-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem; font-weight: 700;
+  color: var(--text); text-decoration: none; letter-spacing: 1px;
+}
+.nav-logo span { color: var(--accent); }
+.nav-links { display: flex; gap: 2rem; align-items: center; }
+.nav-links a {
+  color: var(--text-muted); text-decoration: none;
+  font-size: 0.9rem; font-weight: 500; transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--text); }
+.nav-cta {
+  background: var(--accent) !important; color: white !important;
+  padding: 0.6rem 1.5rem; border-radius: 8px;
+  font-weight: 600 !important; transition: all 0.2s;
+}
+.nav-cta:hover {
+  background: var(--accent-hover) !important;
+  box-shadow: 0 4px 20px var(--accent-glow);
+}
+.hamburger {
+  display: none; background: none; border: none; cursor: pointer;
+  width: 32px; height: 24px; position: relative;
+  flex-direction: column; justify-content: space-between;
+}
+.hamburger span {
+  display: block; height: 2px; width: 100%;
+  background: var(--text); border-radius: 2px; transition: all 0.3s;
+}
+.hamburger.active span:nth-child(1) { transform: translateY(11px) rotate(45deg); }
+.hamburger.active span:nth-child(2) { opacity: 0; }
+.hamburger.active span:nth-child(3) { transform: translateY(-11px) rotate(-45deg); }
+
+main {
+  padding-top: 72px;
+  min-height: calc(100vh - 72px);
+  display: flex; flex-direction: column;
+}
+.booking-header {
+  text-align: center;
+  padding: 2.5rem 1.5rem 1rem;
+}
+.booking-header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem; margin: 0 0 0.5rem;
+}
+.booking-header h1 span {
+  background: linear-gradient(135deg, var(--accent), var(--accent-hover));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+.booking-header p {
+  color: var(--text-muted); font-size: 1rem; margin: 0;
+}
+.booking-frame-wrapper {
+  flex: 1;
+  max-width: var(--max-w);
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1.5rem 2rem;
+  box-sizing: border-box;
+}
+.booking-frame-wrapper iframe {
+  width: 100%;
+  min-height: 700px;
+  height: calc(100vh - 220px);
+  border: 1px solid rgba(139, 92, 246, 0.15);
+  border-radius: var(--radius);
+  background: #fff;
+}
+.booking-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  max-width: var(--max-w);
+  margin: 0 auto 3rem;
+  padding: 0 1.5rem;
+}
+.booking-info-card {
+  background: var(--bg-card);
+  border: 1px solid rgba(139, 92, 246, 0.08);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  text-align: center;
+}
+.booking-info-card h3 {
+  font-size: 0.85rem; color: var(--accent);
+  text-transform: uppercase; letter-spacing: 1px;
+  margin: 0 0 0.5rem;
+}
+.booking-info-card p {
+  margin: 0; color: var(--text-muted); font-size: 0.9rem;
+}
+.phone-cta {
+  text-align: center;
+  padding: 0 1.5rem 2rem;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+.phone-cta a { color: var(--accent); text-decoration: none; font-weight: 600; }
+.phone-cta a:hover { text-decoration: underline; }
+
+footer {
+  background: var(--bg-card);
+  border-top: 1px solid rgba(139, 92, 246, 0.08);
+  padding: 2rem;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+footer a { color: var(--text-muted); text-decoration: none; margin: 0 0.75rem; }
+footer a:hover { color: var(--text); }
+
+@media (max-width: 768px) {
+  .hamburger { display: flex; }
+  .nav-links {
+    display: none; position: absolute; top: 72px; left: 0; right: 0;
+    background: rgba(13, 13, 26, 0.97); flex-direction: column;
+    padding: 1.5rem; gap: 1rem;
+  }
+  .nav-links.open { display: flex; }
+  .booking-header h1 { font-size: 1.5rem; }
+  .booking-frame-wrapper iframe { min-height: 600px; height: calc(100vh - 200px); }
+}
+</style>
+</head>
+<body>
+
+<nav role="navigation" aria-label="Main navigation">
+  <a href="/" class="nav-logo">Minn<span>Drive</span></a>
+  <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" onclick="this.classList.toggle('active');document.querySelector('.nav-links').classList.toggle('open');this.setAttribute('aria-expanded',this.classList.contains('active'))">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="nav-links">
+    <a href="/">Home</a>
+    <a href="/all-cities.html">Service Areas</a>
+    <a href="/events.html">Events</a>
+    <a href="/contact.html">Contact</a>
+    <a href="/book-appointment/" class="nav-cta">Book Now</a>
+  </div>
+</nav>
+
+<main>
+  <div class="booking-header">
+    <h1>Book Your <span>Ride</span></h1>
+    <p>No app needed. No surge pricing. Gratuity included. Book in 60 seconds.</p>
+  </div>
+
+  <div class="booking-frame-wrapper">
+    <iframe
+      src="https://embed.evertransit.com/schedule.html?theme=default&api_key=b68df50df04ee485999db06c3d29a936e6a6a49995d90be994f1895a439c6d152e"
+      title="Book a MinnDrive ride"
+      loading="lazy"
+      allow="payment"
+    ></iframe>
+  </div>
+
+  <div class="phone-cta">
+    Prefer to book by phone? Call <a href="tel:+17633527411">(763) 352-7411</a>
+  </div>
+
+  <div class="booking-info">
+    <div class="booking-info-card">
+      <h3>Upfront Pricing</h3>
+      <p>Your fare is confirmed before you book. No surprises, no surge.</p>
+    </div>
+    <div class="booking-info-card">
+      <h3>Gratuity Included</h3>
+      <p>20% gratuity is built into every fare. No awkward tip math.</p>
+    </div>
+    <div class="booking-info-card">
+      <h3>15 Min Free Wait</h3>
+      <p>Your driver waits 15 minutes from your scheduled time — no extra charge.</p>
+    </div>
+    <div class="booking-info-card">
+      <h3>24/7 Service</h3>
+      <p>Early flights, late arrivals — we're there. $20 fee for midnight–3:30 AM.</p>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div>
+    <a href="/">Home</a>
+    <a href="/all-cities.html">Cities</a>
+    <a href="/events.html">Events</a>
+    <a href="/contact.html">Contact</a>
+    <a href="/privacy-policy.html">Privacy</a>
+    <a href="/terms-and-conditions.html">Terms</a>
+  </div>
+  <p style="margin-top:1rem;">© 2026 MinnDrive. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

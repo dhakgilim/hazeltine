@@ -1,0 +1,28 @@
+.DS_Store
+.env
+node_modules/
+content/
+scripts/
+images/
+preview/
+frontend/
+rider-app/
+src/
+velo/
+velo_pages/
+wix-site/
+wix_and_instructions/
+wix and evertransit/
+*.bak
+*.bak2
+*.tmp
+*.log
+.wix/
+.vscode/
+jsconfig.json
+
+# Events pipeline — ignore logs and backups, keep master DB
+docs/data/*.backup.json
+docs/data/scrape-run.log
+docs/data/scrape-run-summary.json
+docs/data/scrape-audit.json

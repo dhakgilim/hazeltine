@@ -1,0 +1,1488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<link rel="icon" type="image/svg+xml" href="favicon.svg"><link rel="icon" type="image/png" href="favicon.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hazeltine Detailing — Twin Cities Auto Detailing | Minneapolis–St. Paul</title>
+<meta name="description" content="Twin Cities auto detailing: paint correction, ceramic protection, interior reconditioning. Book a Hazeltine appointment in minutes. Serving 120+ metro communities.">
+<link rel="canonical" href="https://www.minndrive.com/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.minndrive.com/">
+<meta property="og:title" content="Hazeltine Detailing — Twin Cities Auto Detailing | Minneapolis–St. Paul">
+<meta property="og:description" content="Twin Cities auto detailing: paint correction, ceramic protection, interior reconditioning. Book a Hazeltine appointment in minutes.">
+<meta property="og:image" content="https://www.minndrive.com/img/hero-backseat.jpg">
+<meta property="og:site_name" content="Hazeltine Detailing">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Hazeltine Detailing — Twin Cities Auto Detailing | Minneapolis–St. Paul">
+<meta name="twitter:description" content="Twin Cities auto detailing: paint correction, ceramic protection, interior reconditioning. Book a Hazeltine appointment in minutes.">
+<meta name="twitter:image" content="https://www.minndrive.com/img/hero-backseat.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Hazeltine Detailing",
+  "description": "Twin Cities auto detailing — paint correction, ceramic coatings, interior reconditioning, and protective packages. Upfront packages, appointment booking, 120+ metro service areas.",
+  "url": "https://www.minndrive.com",
+  "telephone": "+1-763-352-7411",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Minneapolis",
+    "addressRegion": "MN",
+    "addressCountry": "US"
+  },
+  "areaServed": {
+    "@type": "State",
+    "name": "Minnesota"
+  },
+  "serviceType": "Auto Detailing",
+  "priceRange": "$42+",
+  "openingHours": "Mo-Su 00:00-23:59",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5.0",
+    "reviewCount": "500"
+  }
+}
+</script>
+<style>
+/* ═══════════════════════════════════════════════
+   HAZELTINE DETAILING — HOMEPAGE
+   Dark luxury theme with purple accent
+   ═══════════════════════════════════════════════ */
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --bg: #0d0d1a;
+  --bg-card: #141428;
+  --bg-card-hover: #1a1a36;
+  --text: #f0f0f5;
+  --text-muted: #9898b0;
+  --accent: #8B5CF6;
+  --accent-glow: rgba(139, 92, 246, 0.3);
+  --accent-hover: #a78bfa;
+  --gold: #d4a853;
+  --radius: 12px;
+  --max-w: 1200px;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── NAV ── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0;
+  z-index: 100;
+  background: rgba(13, 13, 26, 0.85);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(139, 92, 246, 0.1);
+  padding: 0 2rem;
+  height: 72px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+
+.nav-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem; font-weight: 700;
+  color: var(--text);
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+.nav-logo span { color: var(--accent); }
+
+.nav-links { display: flex; gap: 2rem; align-items: center; }
+.nav-links a {
+  color: var(--text-muted); text-decoration: none;
+  font-size: 0.9rem; font-weight: 500;
+  transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--text); }
+
+.nav-cta {
+  background: var(--accent) !important;
+  color: white !important;
+  padding: 0.6rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600 !important;
+  transition: all 0.2s;
+}
+.nav-cta:hover {
+  background: var(--accent-hover) !important;
+  box-shadow: 0 4px 20px var(--accent-glow);
+}
+
+/* Skip link */
+.skip-link {
+  position: absolute; top: -100px; left: 0;
+  background: var(--accent); color: white;
+  padding: 0.75rem 1.5rem; z-index: 200;
+  font-weight: 600; text-decoration: none;
+  border-radius: 0 0 8px 0;
+}
+.skip-link:focus { top: 0; }
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  background: none; border: none; cursor: pointer;
+  width: 32px; height: 24px;
+  position: relative;
+  flex-direction: column; justify-content: space-between;
+}
+.hamburger span {
+  display: block; height: 2px; width: 100%;
+  background: var(--text); border-radius: 2px;
+  transition: all 0.3s;
+}
+.hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(7px, 7px); }
+.hamburger.active span:nth-child(2) { opacity: 0; }
+.hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(7px, -7px); }
+
+.nav-links.open {
+  display: flex !important;
+  position: fixed; top: 72px; left: 0; right: 0;
+  background: rgba(13, 13, 26, 0.98);
+  backdrop-filter: blur(20px);
+  flex-direction: column;
+  padding: 2rem;
+  gap: 1.5rem;
+  border-bottom: 1px solid rgba(139, 92, 246, 0.15);
+}
+
+@media (max-width: 900px) {
+  .hamburger { display: flex; }
+}
+
+/* ── HERO ── */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex; align-items: center;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute; inset: 0;
+  background: url('img/hero-backseat.jpg') center/cover no-repeat;
+}
+
+.hero-bg::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(135deg, rgba(13,13,26,0.92) 0%, rgba(13,13,26,0.65) 50%, rgba(13,13,26,0.4) 100%);
+}
+
+.hero-content {
+  position: relative; z-index: 2;
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 8rem 2rem 4rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.hero-text h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.15;
+  margin-bottom: 1.5rem;
+}
+
+.hero-text h1 .highlight {
+  background: linear-gradient(135deg, var(--accent), var(--accent-hover));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-text p {
+  font-size: 1.15rem;
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+  max-width: 500px;
+  line-height: 1.7;
+}
+
+.hero-badges {
+  display: flex; gap: 1.5rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.badge {
+  display: flex; align-items: center; gap: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.badge svg { width: 18px; height: 18px; color: var(--accent); flex-shrink: 0; }
+
+.hero-buttons { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+.btn-primary {
+  background: var(--accent);
+  color: white;
+  padding: 1rem 2.5rem;
+  border-radius: 10px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  text-decoration: none;
+  border: none; cursor: pointer;
+  transition: all 0.3s;
+  display: inline-flex; align-items: center; gap: 0.5rem;
+}
+
+.btn-primary:hover {
+  background: var(--accent-hover);
+  box-shadow: 0 8px 30px var(--accent-glow);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--text);
+  padding: 1rem 2.5rem;
+  border-radius: 10px;
+  font-size: 1.05rem;
+  font-weight: 500;
+  text-decoration: none;
+  border: 1px solid rgba(255,255,255,0.15);
+  transition: all 0.3s;
+}
+
+.btn-secondary:hover {
+  border-color: var(--accent);
+  background: rgba(139, 92, 246, 0.08);
+}
+
+/* Hero booking card */
+.hero-card {
+  background: rgba(20, 20, 40, 0.85);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(139, 92, 246, 0.15);
+  border-radius: 16px;
+  padding: 2.5rem;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+}
+
+.hero-card h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.hero-card .quick-stats {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.stat-box {
+  background: rgba(139, 92, 246, 0.08);
+  border: 1px solid rgba(139, 92, 246, 0.12);
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+}
+
+.stat-box .number {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--accent);
+  display: block;
+}
+
+.stat-box .label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 0.25rem;
+}
+
+.hero-card .btn-primary {
+  width: 100%;
+  justify-content: center;
+  padding: 1.1rem;
+  font-size: 1.1rem;
+}
+
+.hero-card .phone-link {
+  display: block;
+  text-align: center;
+  margin-top: 1rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.hero-card .phone-link:hover { color: var(--accent); }
+
+/* ── TRUST BAR ── */
+.trust-bar {
+  background: var(--bg-card);
+  border-top: 1px solid rgba(139, 92, 246, 0.08);
+  border-bottom: 1px solid rgba(139, 92, 246, 0.08);
+  padding: 1.5rem 2rem;
+}
+
+.trust-bar-inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.trust-item {
+  display: flex; align-items: center; gap: 0.6rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.trust-item svg { color: var(--accent); width: 20px; height: 20px; }
+
+/* ── SECTION UTILITY ── */
+section { padding: 6rem 2rem; }
+
+.section-inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+}
+
+.section-label {
+  color: var(--accent);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 0.75rem;
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.section-subtitle {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  max-width: 600px;
+  line-height: 1.7;
+}
+
+/* ── FEATURED EVENTS ── */
+#featured-events {
+  background: var(--bg);
+  padding: 4rem 2rem;
+  overflow: hidden;
+}
+
+.featured-events-container {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.featured-events-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.featured-events-header h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.featured-events-header h2 .highlight {
+  background: linear-gradient(135deg, var(--gold), #f0d479);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.featured-events-header p {
+  color: var(--text-muted);
+  font-size: 1rem;
+}
+
+.events-scroll-wrapper {
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent) var(--bg-card);
+  padding: 0 0 1rem;
+}
+
+.events-scroll-wrapper::-webkit-scrollbar {
+  height: 8px;
+}
+
+.events-scroll-wrapper::-webkit-scrollbar-track {
+  background: var(--bg-card);
+  border-radius: 4px;
+}
+
+.events-scroll-wrapper::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 4px;
+}
+
+.events-grid {
+  display: flex;
+  gap: 1.25rem;
+  width: max-content;
+}
+
+.event-card {
+  background: var(--bg-card);
+  border: 1px solid rgba(139, 92, 246, 0.08);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: all 0.3s;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: var(--text);
+  width: 280px;
+  min-width: 280px;
+  flex-shrink: 0;
+}
+
+.event-card:hover {
+  border-color: var(--gold);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.3);
+}
+
+.event-image {
+  width: 100%;
+  height: 180px;
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(212, 168, 83, 0.2));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.event-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.event-image.placeholder {
+  font-size: 2.5rem;
+}
+
+.event-info {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.event-date {
+  color: var(--gold);
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.event-name {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.event-venue {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: auto;
+  padding-bottom: 1rem;
+}
+
+.event-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--gold);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: gap 0.2s;
+}
+
+.event-card:hover .event-cta {
+  gap: 0.75rem;
+}
+
+@media (max-width: 900px) {
+  .events-grid {
+    gap: 1rem;
+  }
+  
+  .event-card {
+    width: 260px;
+    min-width: 260px;
+  }
+  
+  #featured-events {
+    padding: 3rem 0;
+  }
+  
+  .featured-events-container {
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  .featured-events-header {
+    padding: 0 2rem;
+  }
+}
+
+/* ── WHY HAZELTINE ── */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.feature-card {
+  background: var(--bg-card);
+  border: 1px solid rgba(139, 92, 246, 0.08);
+  border-radius: var(--radius);
+  padding: 2rem;
+  transition: all 0.3s;
+}
+
+.feature-card:hover {
+  border-color: rgba(139, 92, 246, 0.25);
+  background: var(--bg-card-hover);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.3);
+}
+
+.feature-icon {
+  width: 48px; height: 48px;
+  background: rgba(139, 92, 246, 0.12);
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 1.25rem;
+  font-size: 1.4rem;
+}
+
+.feature-card h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+}
+
+.feature-card p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* ── THE RIDE ── */
+.craft-section {
+  background: var(--bg-card);
+}
+
+.craft-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.craft-image {
+  border-radius: 16px;
+  overflow: hidden;
+  aspect-ratio: 4/3;
+}
+
+.craft-image img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+
+.craft-details { list-style: none; }
+
+.craft-details li {
+  display: flex; align-items: flex-start; gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.craft-details li:last-child { border-bottom: none; }
+
+.craft-check {
+  width: 24px; height: 24px;
+  background: rgba(139, 92, 246, 0.15);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+  color: var(--accent);
+  font-size: 0.8rem;
+}
+
+.craft-details h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.craft-details p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* ── HOW IT WORKS ── */
+.steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+  counter-reset: step;
+}
+
+.step {
+  text-align: center;
+  padding: 2rem;
+  position: relative;
+}
+
+.step-number {
+  width: 56px; height: 56px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-hover));
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 1.25rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.step h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.step p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+/* ── REVIEWS ── */
+.reviews-section {
+  background: var(--bg);
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.review-card {
+  background: var(--bg-card);
+  border: 1px solid rgba(139, 92, 246, 0.08);
+  border-radius: var(--radius);
+  padding: 2rem;
+}
+
+.review-stars {
+  color: var(--gold);
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  letter-spacing: 2px;
+}
+
+.review-card blockquote {
+  font-size: 0.95rem;
+  color: var(--text);
+  line-height: 1.7;
+  font-style: italic;
+  margin-bottom: 1.25rem;
+}
+
+.review-author {
+  display: flex; align-items: center; gap: 0.75rem;
+}
+
+.review-avatar {
+  width: 40px; height: 40px;
+  background: rgba(139, 92, 246, 0.2);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--accent);
+}
+
+.review-name {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.review-type {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+/* ── SERVICE AREAS ── */
+.areas-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-top: 3rem;
+}
+
+.area-card {
+  background: var(--bg-card);
+  border: 1px solid rgba(139, 92, 246, 0.08);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  text-decoration: none;
+  color: var(--text);
+  transition: all 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+
+.area-card:hover {
+  border-color: var(--accent);
+  background: var(--bg-card-hover);
+  transform: translateY(-2px);
+}
+
+.area-card h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.area-card span {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.area-card .price {
+  color: var(--accent);
+  font-weight: 600;
+  margin-top: auto;
+  padding-top: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.areas-more {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.areas-more a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.areas-more a:hover { text-decoration: underline; }
+
+/* ── CTA BANNER ── */
+.cta-banner {
+  background: linear-gradient(135deg, var(--accent), #6d28d9);
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.cta-banner h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.cta-banner p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  margin-bottom: 2rem;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn-white {
+  background: white;
+  color: var(--accent);
+  padding: 1rem 2.5rem;
+  border-radius: 10px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  transition: all 0.3s;
+}
+
+.btn-white:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+}
+
+/* ── FOOTER ── */
+footer {
+  background: var(--bg-card);
+  border-top: 1px solid rgba(139, 92, 246, 0.08);
+  padding: 3rem 2rem 1.5rem;
+}
+
+.footer-inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 3rem;
+}
+
+.footer-brand p {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  margin-top: 0.75rem;
+  max-width: 280px;
+  line-height: 1.6;
+}
+
+.footer-col h4 {
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+  color: var(--text);
+}
+
+.footer-col a {
+  display: block;
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+  transition: color 0.2s;
+}
+
+.footer-col a:hover { color: var(--accent); }
+
+.footer-bottom {
+  max-width: var(--max-w);
+  margin: 2rem auto 0;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.footer-socials { display: flex; gap: 1rem; }
+.footer-socials a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.2s;
+}
+.footer-socials a:hover { color: var(--accent); }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .hero-content { grid-template-columns: 1fr; padding-top: 6rem; }
+  .hero-card { margin-top: 2rem; }
+  .hero-text h1 { font-size: 2.5rem; }
+  .features-grid, .reviews-grid, .steps { grid-template-columns: 1fr; }
+  .areas-grid { grid-template-columns: repeat(2, 1fr); }
+  .craft-grid { grid-template-columns: 1fr; }
+  .footer-inner { grid-template-columns: 1fr 1fr; }
+  .nav-links { display: none; }
+  .section-title { font-size: 2rem; }
+}
+
+@media (max-width: 600px) {
+  .areas-grid { grid-template-columns: 1fr; }
+  .hero-content { padding: 5rem 1rem 2rem; }
+  .hero-text h1 { font-size: 2rem; }
+  .hero-bg { background-position: calc(50% - 2in) center; }
+  .footer-inner { grid-template-columns: 1fr; }
+  .trust-bar-inner { flex-direction: column; gap: 0.75rem; align-items: center; }
+}
+</style>
+<script>function loadScript(a){var b=document.getElementsByTagName("head")[0],c=document.createElement("script");c.type="text/javascript",c.src="https://tracker.metricool.com/resources/be.js",c.onreadystatechange=a,c.onload=a,b.appendChild(c)}loadScript(function(){beTracker.t({hash:"5c6a5ef4e3c7cca1567e6995a471fa07"})})</script></head>
+<body>
+
+<!-- Skip link for accessibility -->
+<a href="#main" class="skip-link">Skip to main content</a>
+
+<!-- ═══ NAV ═══ -->
+<nav role="navigation" aria-label="Main navigation">
+  <a href="/" class="nav-logo">Hazel<span>tine</span></a>
+  <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" onclick="this.classList.toggle('active');document.querySelector('.nav-links').classList.toggle('open');this.setAttribute('aria-expanded',this.classList.contains('active'))">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="nav-links">
+    <a href="#why">Why Hazeltine</a>
+    <a href="#the-craft">The Craft</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#areas">Service Areas</a>
+    <a href="events.html">Events</a>
+    <a href="https://embed.evertransit.com/schedule.html?theme=default&amp;api_key=b68df50df04ee485999db06c3d29a936e6a6a49995d90be994f1895a439c6d152e" target="_blank" rel="noopener nofollow" class="nav-cta">Book Now</a>
+  </div>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<main id="main">
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <div class="hero-text">
+      <div class="hero-badges">
+        <div class="badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          Minnesota's #1 Rated
+        </div>
+        <div class="badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M16 12l-4-4-4 4M12 16V8"/></svg>
+          Since 2018
+        </div>
+      </div>
+      <h1>Showroom Finish.<br>Real-World Tough.<br><span class="highlight">Hazeltine Standard.</span></h1>
+      <p>Paint correction, ceramic protection, and interior reconditioning — built for Minnesota seasons. Clear packages, obsessive prep, and a finish you’ll want to stare at in the garage.</p>
+      <div class="hero-buttons">
+        <a href="https://embed.evertransit.com/schedule.html?theme=default&amp;api_key=b68df50df04ee485999db06c3d29a936e6a6a49995d90be994f1895a439c6d152e" target="_blank" rel="noopener nofollow" class="btn-primary">Schedule Your Detail →</a>
+        <a href="tel:+17633527411" class="btn-secondary">📞 Call Now</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <h3>Quick Trip Estimate</h3>
+      <div class="quick-stats">
+        <div class="stat-box">
+          <span class="number">$42</span>
+          <span class="label">Starting at</span>
+        </div>
+        <div class="stat-box">
+          <span class="number">24/7</span>
+          <span class="label">Available</span>
+        </div>
+        <div class="stat-box">
+          <span class="number">120+</span>
+          <span class="label">Cities Served</span>
+        </div>
+        <div class="stat-box">
+          <span class="number">5.0★</span>
+          <span class="label">Rating</span>
+        </div>
+      </div>
+      <a href="https://embed.evertransit.com/schedule.html?theme=default&amp;api_key=b68df50df04ee485999db06c3d29a936e6a6a49995d90be994f1895a439c6d152e" target="_blank" rel="noopener nofollow" class="btn-primary">Book in 60 Seconds →</a>
+      <a href="tel:+17633527411" class="phone-link">or call (763) 352-7411</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TRUST BAR ═══ -->
+<div class="trust-bar">
+  <div class="trust-bar-inner">
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      Licensed & Insured
+    </div>
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+      Pro-Grade Products
+    </div>
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      Prep-Forward Process
+    </div>
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+      Clear Package Pricing
+    </div>
+  </div>
+</div>
+
+<!-- ═══ FEATURED EVENTS ═══ -->
+<section id="featured-events">
+  <div class="featured-events-container">
+    <div class="featured-events-header">
+      <h2>This Week in <span class="highlight">Minnesota</span></h2>
+      <p>Local happenings worth a clean car and a night out</p>
+    </div>
+    <div class="events-scroll-wrapper">
+      <div class="events-grid" id="featured-events-grid">
+        <!-- Events will be populated here by JavaScript -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ WHY HAZELTINE ═══ -->
+<section id="why">
+  <div class="section-inner">
+    <div class="section-label">Why Hazeltine</div>
+    <h2 class="section-title">Not a Tunnel Wash.<br>A Real Detail.</h2>
+    <p class="section-subtitle">We’re built for owners who care how paint ages — not just how it shines under gas-station lights.</p>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">🧪</div>
+        <h3>Correct Chemistry</h3>
+        <p>pH-safe washes, iron fallout control, and finishing products matched to your clear coat — not whatever’s cheapest in a five-gallon pail.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">✨</div>
+        <h3>Paint That Reads “Deep”</h3>
+        <p>Wash-and-wax is a Band-Aid. We chase swirls, water spots, and oxidation so the finish looks expensive in direct sun.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🛡️</div>
+        <h3>Protection That Lasts</h3>
+        <p>Ceramic and sealant options with realistic durability claims — applied only after the paint is truly clean and level.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🪑</div>
+        <h3>Interiors You Live In</h3>
+        <p>Leather, Alcantara, and family-grade messes get extraction and conditioning — not a perfume bomb to hide the crumbs.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📋</div>
+        <h3>Packages, Not Guesswork</h3>
+        <p>Clear tiers with time-on-bay expectations. You’ll know what’s included before we touch a towel to the paint.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🏆</div>
+        <h3>Twin Cities Obsessives</h3>
+        <p>Road salt, pollen, and construction dust are seasonal bosses here — we detail like it, with repeat clients who notice the difference.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ THE CRAFT ═══ -->
+<section id="the-craft" class="craft-section">
+  <div class="section-inner">
+    <div class="section-label">The Craft</div>
+    <h2 class="section-title">What “Detailed” Actually Means</h2>
+    <p class="section-subtitle">The boring stuff — done right — is what separates a weekend wash from a Hazeltine finish.</p>
+    <div class="craft-grid">
+      <div class="craft-image">
+        <img src="img/backseat-comfort.jpg" alt="Interior and finish work — Hazeltine Detailing">
+      </div>
+      <ul class="craft-details">
+        <li>
+          <div class="craft-check">✓</div>
+          <div>
+            <h3>Decon Before Dressing</h3>
+            <p>Iron, tar, and embedded grit come out before anything “shiny” goes on — so you’re not sealing scratches under wax.</p>
+          </div>
+        </li>
+        <li>
+          <div class="craft-check">✓</div>
+          <div>
+            <h3>Two-Bucket Discipline</h3>
+            <p>Clean water stays clean. Dirty mitts don’t boomerang back onto your panels.</p>
+          </div>
+        </li>
+        <li>
+          <div class="craft-check">✓</div>
+          <div>
+            <h3>Trim & Glass Finished Last</h3>
+            <p>So product doesn’t migrate where it shouldn’t — especially around rubber, seals, and sensors.</p>
+          </div>
+        </li>
+        <li>
+          <div class="craft-check">✓</div>
+          <div>
+            <h3>Interior Airflow & Drying</h3>
+            <p>Fabric and carpet get proper extraction and dry-down — not “wet dog” humidity locked in the cabin.</p>
+          </div>
+        </li>
+        <li>
+          <div class="craft-check">✓</div>
+          <div>
+            <h3>Final Walk in Mixed Light</h3>
+            <p>We QC in daylight-biased and shadow-biased angles — where cheap jobs fall apart first.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ HOW IT WORKS ═══ -->
+<section id="how">
+  <div class="section-inner">
+    <div class="section-label">How It Works</div>
+    <h2 class="section-title">Booked in 3 Steps</h2>
+    <p class="section-subtitle">No app to download. Book in 3 simple steps.</p>
+    <div class="steps">
+      <div class="step">
+        <div class="step-number">1</div>
+        <h3>Pick Your Package</h3>
+        <p>Exterior, interior, or full correction stack — choose the tier that matches how hard you use the car.</p>
+      </div>
+      <div class="step">
+        <div class="step-number">2</div>
+        <h3>Choose Date & Bay Time</h3>
+        <p>Lock an appointment window that fits your week. We’ll confirm vehicle condition notes before we start.</p>
+      </div>
+      <div class="step">
+        <div class="step-number">3</div>
+        <h3>Roll Out Clean</h3>
+        <p>Pickup with paint that pops, glass that disappears, and an interior you’re not embarrassed to offer a ride in.</p>
+      </div>
+    </div>
+    <div style="text-align: center; margin-top: 3rem;">
+      <a href="https://embed.evertransit.com/schedule.html?theme=default&amp;api_key=b68df50df04ee485999db06c3d29a936e6a6a49995d90be994f1895a439c6d152e" target="_blank" rel="noopener nofollow" class="btn-primary">Schedule Your Detail →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ REVIEWS ═══ -->
+<section id="reviews" class="reviews-section">
+  <div class="section-inner">
+    <div class="section-label">Reviews</div>
+    <h2 class="section-title">What Our Clients Say</h2>
+    <p class="section-subtitle">Real reviews from real people. We don't do fake testimonials.</p>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <blockquote>"Hazeltine brought the paint back from Minnesota winter hell. Swirls I stopped noticing until they were gone. Worth every hour in the bay."</blockquote>
+        <div class="review-author">
+          <div class="review-avatar">A</div>
+          <div>
+            <div class="review-name">Adam</div>
+            <div class="review-type">Daily Driver</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <blockquote>"My first time in a new city and I felt safe and confident with my private driver. My driver was fantastic and even gave me some wonderful tips."</blockquote>
+        <div class="review-author">
+          <div class="review-avatar">L</div>
+          <div>
+            <div class="review-name">Liz</div>
+            <div class="review-type">Weekend Car</div>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <blockquote>"Interior smelled like… nothing. In a good way. Kids’ crumbs gone, leather soft again — they actually explained what they used."</blockquote>
+        <div class="review-author">
+          <div class="review-avatar">L</div>
+          <div>
+            <div class="review-name">Les</div>
+            <div class="review-type">Repeat Client</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SERVICE AREAS ═══ -->
+<section id="areas">
+  <div class="section-inner">
+    <div class="section-label">Service Areas</div>
+    <h2 class="section-title">120+ Cities. One Standard.</h2>
+    <p class="section-subtitle">From Bloomington to Stillwater, every vehicle gets the same Hazeltine treatment.</p>
+    <div class="areas-grid" id="areas-grid">
+      <!-- Populated by route rotation JS; static fallback below -->
+      <a href="auto-detailing-bloomington.html" class="area-card"><h3>Bloomington</h3><span>Metro service area</span><div class="price">Packages from $42</div></a>
+      <a href="auto-detailing-minneapolis.html" class="area-card"><h3>Minneapolis</h3><span>Metro service area</span><div class="price">Packages from $44</div></a>
+      <a href="auto-detailing-st-paul.html" class="area-card"><h3>St. Paul</h3><span>Metro service area</span><div class="price">Packages from $42</div></a>
+      <a href="auto-detailing-eagan.html" class="area-card"><h3>Eagan</h3><span>Metro service area</span><div class="price">Packages from $42</div></a>
+      <a href="auto-detailing-eden-prairie.html" class="area-card"><h3>Eden Prairie</h3><span>Metro service area</span><div class="price">Packages from $48</div></a>
+      <a href="auto-detailing-woodbury.html" class="area-card"><h3>Woodbury</h3><span>Metro service area</span><div class="price">Packages from $49</div></a>
+      <a href="auto-detailing-maple-grove.html" class="area-card"><h3>Maple Grove</h3><span>Metro service area</span><div class="price">Packages from $71</div></a>
+      <a href="auto-detailing-shakopee.html" class="area-card"><h3>Shakopee</h3><span>Metro service area</span><div class="price">Packages from $62</div></a>
+    </div>
+    <div class="areas-more">
+      <a href="all-cities.html">View all 120+ cities →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CTA BANNER + BOOKING ═══ -->
+<section id="book" class="cta-banner">
+  <h2>Ready for a Hazeltine Finish?</h2>
+  <p>Book your detail in a minute. Clear packages, prep-first workflow, Twin Cities obsessed.</p>
+  <a href="https://embed.evertransit.com/schedule.html?theme=default&amp;api_key=b68df50df04ee485999db06c3d29a936e6a6a49995d90be994f1895a439c6d152e" target="_blank" rel="noopener nofollow" class="btn-white" style="margin-top:1rem;">Book Now →</a>
+  <p style="margin-top:1.5rem;font-size:0.9rem;opacity:0.7;">Or call <a href="tel:+17633527411" style="color:white;text-decoration:underline;">(763) 352-7411</a> to book by phone</p>
+</section>
+
+
+<section id="service-areas-popular" style="padding:3rem 2rem;max-width:var(--max-w);margin:0 auto;">
+  <h2 style="font-family:'Playfair Display',serif;font-size:1.8rem;margin-bottom:1.5rem;text-align:center;">Popular <span style="background:linear-gradient(135deg,var(--accent),var(--accent-hover));-webkit-background-clip:text;-webkit-text-fill-color:transparent;">Service Areas</span></h2>
+  <div id="service-areas-grid-rotated" style="display:grid;grid-template-columns:repeat(4,1fr);gap:0.75rem;text-align:center;">
+    <a href="auto-detailing-bloomington.html" style="background:var(--bg-card);border:1px solid rgba(139,92,246,0.08);border-radius:var(--radius);padding:1rem;text-decoration:none;color:var(--text);transition:all 0.3s;">Bloomington</a>
+    <a href="auto-detailing-minneapolis.html" style="background:var(--bg-card);border:1px solid rgba(139,92,246,0.08);border-radius:var(--radius);padding:1rem;text-decoration:none;color:var(--text);transition:all 0.3s;">Minneapolis</a>
+    <a href="auto-detailing-st-paul.html" style="background:var(--bg-card);border:1px solid rgba(139,92,246,0.08);border-radius:var(--radius);padding:1rem;text-decoration:none;color:var(--text);transition:all 0.3s;">St. Paul</a>
+    <a href="auto-detailing-eden-prairie.html" style="background:var(--bg-card);border:1px solid rgba(139,92,246,0.08);border-radius:var(--radius);padding:1rem;text-decoration:none;color:var(--text);transition:all 0.3s;">Eden Prairie</a>
+    <a href="auto-detailing-plymouth.html" style="background:var(--bg-card);border:1px solid rgba(139,92,246,0.08);border-radius:var(--radius);padding:1rem;text-decoration:none;color:var(--text);transition:all 0.3s;">Plymouth</a>
+    <a href="auto-detailing-eagan.html" style="background:var(--bg-card);border:1px solid rgba(139,92,246,0.08);border-radius:var(--radius);padding:1rem;text-decoration:none;color:var(--text);transition:all 0.3s;">Eagan</a>
+    <a href="auto-detailing-maple-grove.html" style="background:var(--bg-card);border:1px solid rgba(139,92,246,0.08);border-radius:var(--radius);padding:1rem;text-decoration:none;color:var(--text);transition:all 0.3s;">Maple Grove</a>
+    <a href="auto-detailing-woodbury.html" style="background:var(--bg-card);border:1px solid rgba(139,92,246,0.08);border-radius:var(--radius);padding:1rem;text-decoration:none;color:var(--text);transition:all 0.3s;">Woodbury</a>
+    <a href="auto-detailing-burnsville.html" style="background:var(--bg-card);border:1px solid rgba(139,92,246,0.08);border-radius:var(--radius);padding:1rem;text-decoration:none;color:var(--text);transition:all 0.3s;">Burnsville</a>
+    <a href="auto-detailing-lakeville.html" style="background:var(--bg-card);border:1px solid rgba(139,92,246,0.08);border-radius:var(--radius);padding:1rem;text-decoration:none;color:var(--text);transition:all 0.3s;">Lakeville</a>
+    <a href="auto-detailing-chaska.html" style="background:var(--bg-card);border:1px solid rgba(139,92,246,0.08);border-radius:var(--radius);padding:1rem;text-decoration:none;color:var(--text);transition:all 0.3s;">Chaska</a>
+    <a href="auto-detailing-shakopee.html" style="background:var(--bg-card);border:1px solid rgba(139,92,246,0.08);border-radius:var(--radius);padding:1rem;text-decoration:none;color:var(--text);transition:all 0.3s;">Shakopee</a>
+  </div>
+  <p style="text-align:center;margin-top:1.25rem;"><a href="all-cities.html" style="color:var(--accent);text-decoration:none;font-weight:600;">View all 120+ cities →</a></p>
+</section>
+</main>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="/" class="nav-logo" style="font-size:1.4rem;">Hazel<span style="color:var(--accent);">tine</span></a>
+      <p>Twin Cities auto detailing — correction, protection, and interiors done with prep you can see. Serving 120+ communities across the metro.</p>
+    </div>
+    <div class="footer-col">
+      <h3>Service</h3>
+      <a href="https://embed.evertransit.com/schedule.html?theme=default&amp;api_key=b68df50df04ee485999db06c3d29a936e6a6a49995d90be994f1895a439c6d152e" target="_blank" rel="noopener nofollow">Book appointment</a>
+      <a href="#areas">Service Areas</a>
+      <a href="events.html">Events</a>
+      <a href="#the-craft">The Craft</a>
+      <a href="#how">How It Works</a>
+    </div>
+    <div class="footer-col">
+      <h3>Popular Cities</h3>
+      <a href="auto-detailing-bloomington.html">Bloomington</a>
+      <a href="auto-detailing-minneapolis.html">Minneapolis</a>
+      <a href="auto-detailing-st-paul.html">Saint Paul</a>
+      <a href="auto-detailing-eagan.html">Eagan</a>
+      <a href="auto-detailing-woodbury.html">Woodbury</a>
+    </div>
+    <div class="footer-col">
+      <h3>Company</h3>
+      
+      <a href="contact.html">Contact</a>
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="terms-and-conditions.html">Terms & Conditions</a>
+      <a href="refund-policy.html">Refund Policy</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Hazeltine Detailing. All rights reserved.</span>
+    <div class="footer-socials">      <a href="https://www.facebook.com/MinnDrive/" target="_blank" rel="noopener nofollow" title="Facebook"><img src="assets/icons/facebook.svg" alt="Facebook" style="width:24px;height:24px;"></a>      <a href="https://www.yelp.com/biz/minndrive-chaska" target="_blank" rel="noopener nofollow" title="Yelp"><img src="assets/icons/yelp.svg" alt="Yelp" style="width:24px;height:24px;"></a><a href="https://maps.app.goo.gl/XehiTJzZWRCXkyQW9" target="_blank" rel="noopener nofollow" title="Google"><img src="assets/icons/google.svg" alt="Google" style="width:22px;height:22px;"></a><a href="https://nextdoor.com/pages/minndrive-chaska-mn/" target="_blank" rel="noopener nofollow" title="Nextdoor"><img src="assets/icons/nextdoor.svg" alt="Nextdoor" style="width:22px;height:22px;"></a>    </div>
+  </div>
+</footer>
+
+<script>
+// Featured Events - This Week in Minnesota
+(function() {
+  const grid = document.getElementById('featured-events-grid');
+  if (!grid) return;
+
+  const BIG_VENUES = ['usbank', 'xcel', 'target', 'targetfield', 'allianz', 'armory'];
+  
+  function formatDate(dateStr) {
+    const date = new Date(dateStr + 'T12:00:00');
+    const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+    const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    return `${days[date.getDay()]}, ${months[date.getMonth()]} ${date.getDate()}`;
+  }
+  
+  function truncate(str, len) {
+    if (!str) return '';
+    return str.length > len ? str.substring(0, len) + '...' : str;
+  }
+  
+  function getEventEmoji(category) {
+    const emojiMap = {
+      'sports': '🏀',
+      'concerts': '🎵',
+      'theatre': '🎭',
+      'comedy': '😂',
+      'family': '👨‍👩‍👧‍👦',
+      'winery': '🍷'
+    };
+    return emojiMap[category] || '🎉';
+  }
+  
+  fetch('data/events-master.json?v=' + new Date().toISOString().slice(0, 10))
+    .then(r => {
+      if (!r.ok) throw new Error('Failed to load events');
+      return r.json();
+    })
+    .then(data => {
+      const events = Array.isArray(data) ? data : (data && Array.isArray(data.events) ? data.events : []);
+      if (events.length === 0) {
+        const section = document.getElementById('featured-events');
+        if (section) section.style.display = 'none';
+        return;
+      }
+      
+      const now = new Date();
+      now.setHours(0, 0, 0, 0);
+      const twoWeeksLater = new Date(now);
+      twoWeeksLater.setDate(twoWeeksLater.getDate() + 14);
+      
+      // Filter to next 14 days
+      let upcoming = events.filter(ev => {
+        if (!ev.date) return false;
+        const evDate = new Date(ev.date + 'T12:00:00');
+        return evDate >= now && evDate <= twoWeeksLater;
+      });
+      
+      // Sort by date
+      upcoming.sort((a, b) => new Date(a.date) - new Date(b.date));
+      
+      // Prioritize big venues
+      const bigVenueEvents = upcoming.filter(ev => BIG_VENUES.includes(ev.venue_key));
+      const otherEvents = upcoming.filter(ev => !BIG_VENUES.includes(ev.venue_key));
+      
+      // Take top 5: prefer big venue events
+      let featured = [];
+      if (bigVenueEvents.length >= 5) {
+        featured = bigVenueEvents.slice(0, 5);
+      } else {
+        featured = bigVenueEvents.concat(otherEvents.slice(0, 5 - bigVenueEvents.length));
+      }
+      
+      if (featured.length === 0) {
+        // Hide the section if no events
+        document.getElementById('featured-events').style.display = 'none';
+        return;
+      }
+      
+      // Render cards
+      featured.forEach(ev => {
+        const card = document.createElement('a');
+        card.href = 'events.html';
+        card.className = 'event-card';
+        
+        const hasImage = ev.image && ev.image.length > 0;
+        const imageHtml = hasImage
+          ? `<img src="${ev.image}" alt="${truncate(ev.name, 50)}" loading="lazy">`
+          : getEventEmoji(ev.category);
+        
+        card.innerHTML = `
+          <div class="event-image ${hasImage ? '' : 'placeholder'}">
+            ${imageHtml}
+          </div>
+          <div class="event-info">
+            <div class="event-date">${formatDate(ev.date)}</div>
+            <div class="event-name">${truncate(ev.name, 60)}</div>
+            <div class="event-venue">${ev.venue_name || ''}</div>
+            <div class="event-cta">Details &amp; events →</div>
+          </div>
+        `;
+        
+        grid.appendChild(card);
+      });
+    })
+    .catch(err => {
+      console.error('Featured events error:', err);
+      // Silently hide section on error
+      const section = document.getElementById('featured-events');
+      if (section) section.style.display = 'none';
+    });
+})();
+</script>
+
+<script>
+// Layer 4: Route Rotation — different featured cities each day for SEO freshness
+var CITY_ROTATION_DATA = [["Minneapolis","minneapolis","16",42],["St. Paul","st-paul","18",44],["Bloomington","bloomington","13",42],["Brooklyn Park","brooklyn-park","31",78],["Plymouth","plymouth","25",63],["Maple Grove","maple-grove","33",81],["Woodbury","woodbury","26",66],["Blaine","blaine","36",89],["Lakeville","lakeville","31",78],["Eagan","eagan","15",42],["Coon Rapids","coon-rapids","32",81],["Burnsville","burnsville","18",47],["Eden Prairie","eden-prairie","25",63],["Apple Valley","apple-valley","22",56],["Minnetonka","minnetonka","25",63],["Edina","edina","15",42],["St. Louis Park","st-louis-park","18",44],["Shakopee","shakopee","31",78],["Maplewood","maplewood","23",57],["Cottage Grove","cottage-grove","29",69],["Inver Grove Heights","inver-grove-heights","20",49],["Andover","andover","45",112],["Richfield","richfield","10",42],["Roseville","roseville","20",49],["Savage","savage","20",49],["Brooklyn Center","brooklyn-center","29",72],["Fridley","fridley","28",69],["Oakdale","oakdale","28",69],["Chaska","chaska","37",93],["Prior Lake","prior-lake","30",74],["Chanhassen","chanhassen","30",74],["Shoreview","shoreview","28",69],["White Bear Lake","white-bear-lake","33",81],["Rosemount","rosemount","23",57],["Champlin","champlin","43",104],["Farmington","farmington","33",84],["Crystal","crystal","25",63],["New Brighton","new-brighton","25",63],["Hastings","hastings","39",96],["Golden Valley","golden-valley","21",53],["Lino Lakes","lino-lakes","38",94],["Columbia Heights","columbia-heights","23",57],["New Hope","new-hope","26",66],["South St. Paul","south-st-paul","20",49],["Forest Lake","forest-lake","53",129],["West St. Paul","west-st-paul","15",42],["Stillwater","stillwater","44",109],["Hopkins","hopkins","21",51],["Anoka","anoka","43",106],["Ham Lake","ham-lake","46",114],["Hugo","hugo","41",102],["Rogers","rogers","48",118],["Robbinsdale","robbinsdale","24",59],["Vadnais Heights","vadnais-heights","28",69],["Waconia","waconia","51",124],["Mounds View","mounds-view","30",74],["North St. Paul","north-st-paul","28",69],["East Bethel","east-bethel","54",133],["Mendota Heights","mendota-heights","12",42],["Little Canada","little-canada","24",59],["Victoria","victoria","40",99],["Lake Elmo","lake-elmo","34",86],["Arden Hills","arden-hills","24",59],["Mound","mound","41",102],["Oak Grove","oak-grove","57",139],["Mahtomedi","mahtomedi","34",86],["Orono","orono","37",93],["Dayton","dayton","48",118],["Shorewood","shorewood","34",84],["St. Francis","st-francis","63",154],["Minnetrista","minnetrista","45",112],["Belle Plaine","belle-plaine","57",142],["Spring Lake Park","spring-lake-park","30",74],["Jordan","jordan","46",112],["Medina","medina","38",96],["Corcoran","corcoran","40",99],["Falcon Heights","falcon-heights","17",44],["St. Paul Park","st-paul-park","24",59],["Circle Pines","circle-pines","36",88],["Carver","carver","40",99],["North Oaks","north-oaks","32",81],["Nowthen","nowthen","59",144],["Elko New Market","elko-new-market","43",106],["Wayzata","wayzata","30",74],["Rockford","rockford","52",127],["Watertown","watertown","56",137],["Grant","grant","37",91],["Columbus","columbus","51",124],["Scandia","scandia","59",143],["Deephaven","deephaven","30",74],["Centerville","centerville","39",96],["Newport","newport","23",57],["Bayport","bayport","44",109],["Norwood Young America","norwood-young-america","62",154],["Independence","independence","47",114],["Hanover","hanover","52",127],["Greenfield","greenfield","49",123],["Osseo","osseo","36",88],["Afton","afton","40",99],["Lauderdale","lauderdale","18",44],["Excelsior","excelsior","32",81],["St. Bonifacius","st-bonifacius","47",114],["Lexington","lexington","21",51],["Cologne","cologne","52",127],["Mayer","mayer","59",143],["Long Lake","long-lake","36",88],["Spring Park","spring-park","38",94],["Tonka Bay","tonka-bay","34",84],["Dellwood","dellwood","36",88],["Hilltop","hilltop","25",63],["Marine on St. Croix","marine-on-st-croix","55",136],["Lilydale","lilydale","15",42],["Hamburg","hamburg","68",164],["Bethel","bethel","62",152],["Minnetonka Beach","minnetonka-beach","34",86],["Sunfish Lake","sunfish-lake","16",42],["Gem Lake","gem-lake","29",72],["Woodland","woodland","28",69],["New Germany","new-germany","64",158],["Medicine Lake","medicine-lake","25",63]];
+(function() {
+  var PINNED = ['minneapolis','st-paul','bloomington','eagan']; // Always shown (top 4)
+  var GRID_SLOTS = 8;  // Service Areas grid
+  var POP_SLOTS = 12;  // Rotated service-area links
+  
+  // Seeded shuffle using day-of-year
+  function dayOfYear() {
+    var now = new Date();
+    var start = new Date(now.getFullYear(), 0, 0);
+    return Math.floor((now - start) / 86400000);
+  }
+  function seededShuffle(arr, seed) {
+    var a = arr.slice();
+    for (var i = a.length - 1; i > 0; i--) {
+      seed = (seed * 16807 + 0) % 2147483647;
+      var j = seed % (i + 1);
+      var t = a[i]; a[i] = a[j]; a[j] = t;
+    }
+    return a;
+  }
+  
+  function renderAreaCard(c) {
+    return '<a href="auto-detailing-' + c[1] + '.html" class="area-card"><h3>' + c[0] + '</h3><span>~' + c[2] + ' min to MSP</span><div class="price">From $' + c[3] + '</div></a>';
+  }
+  function renderPopCard(c) {
+    return '<a href="auto-detailing-' + c[1] + '.html" style="background:var(--bg-card);border:1px solid rgba(139,92,246,0.08);border-radius:var(--radius);padding:1rem;text-decoration:none;color:var(--text);transition:all 0.3s;">' + c[0] + '</a>';
+  }
+  
+  try {
+    // City data: [name, slug, minutes, price] sorted by population desc
+    var ALL = CITY_ROTATION_DATA;
+    var pinSet = {};
+    PINNED.forEach(function(s) { pinSet[s] = true; });
+    var pinned = ALL.filter(function(c) { return pinSet[c[1]]; });
+    var rest = ALL.filter(function(c) { return !pinSet[c[1]]; });
+    var seed = dayOfYear();
+    var shuffled = seededShuffle(rest, seed);
+    
+    // Service Areas grid: 4 pinned + 4 rotated
+    var areaGrid = document.getElementById('areas-grid');
+    if (areaGrid) {
+      var areaCities = pinned.concat(shuffled.slice(0, GRID_SLOTS - pinned.length));
+      areaGrid.innerHTML = areaCities.map(renderAreaCard).join('');
+    }
+    
+    // Popular Rides grid: 4 pinned + 8 rotated (different slice)
+    var popGrid = document.getElementById('popular-rides-grid');
+    if (popGrid) {
+      var popCities = pinned.concat(shuffled.slice(0, POP_SLOTS - pinned.length));
+      popGrid.innerHTML = popCities.map(renderPopCard).join('');
+    }
+  } catch(e) { /* static fallback remains */ }
+})();
+</script>
+
+</html>

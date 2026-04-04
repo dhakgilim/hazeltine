@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="refresh" content="3;url=/">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Not Found - MinnDrive Airport Transportation</title>
+  <meta name="robots" content="noindex">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 2rem;
+    }
+    .container {
+      max-width: 600px;
+      text-align: center;
+      animation: fadeIn 0.5s ease-in;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .error-code {
+      font-size: 8rem;
+      font-weight: 700;
+      line-height: 1;
+      margin-bottom: 1rem;
+      text-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+      opacity: 0.95;
+    }
+    .btn-home {
+      display: inline-block;
+      padding: 1rem 2.5rem;
+      background: white;
+      color: #667eea;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.2);
+    }
+    .btn-home:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    }
+    .links {
+      margin-top: 2rem;
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .links a {
+      color: white;
+      text-decoration: none;
+      opacity: 0.9;
+      transition: opacity 0.2s;
+      font-size: 1rem;
+    }
+    .links a:hover {
+      opacity: 1;
+      text-decoration: underline;
+    }
+    .redirect-msg {
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="error-code">404</div>
+    <h1>Page Not Found</h1>
+    <p>Sorry, the page you're looking for doesn't exist. We recently migrated from Wix — you might be looking for one of these:</p>
+    
+    <a href="/" class="btn-home">Go to Homepage</a>
+    
+    <div class="links">
+      <a href="/reserve/">Book a Ride</a>
+      <a href="/events.html">Twin Cities Events</a>
+      <a href="/mayo-clinic-car-service.html">Mayo Clinic Rides</a>
+      <a href="/contact.html">Contact Us</a>
+    </div>
+    
+    <p class="redirect-msg">Redirecting to homepage in 3 seconds...</p>
+  </div>
+  
+  <script>
+    // Auto-redirect after 3 seconds
+    setTimeout(function() {
+      window.location.href = '/';
+    }, 3000);
+  </script>
+</body>
+</html>
