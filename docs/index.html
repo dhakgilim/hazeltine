@@ -15,12 +15,12 @@
 <meta property="og:url" content="https://dhakgilim.github.io/hazeltine/">
 <meta property="og:title" content="Hazeltine Detailing | Minneapolis &amp; St. Paul Auto Detailing &amp; Ceramic Coating">
 <meta property="og:description" content="Mobile auto detailing Minnesota — interior car cleaning Minneapolis, ceramic coating Chaska, Twin Cities. Request a quote or schedule a bay. From $149. (763) 352-7411.">
-<meta property="og:image" content="https://dhakgilim.github.io/hazeltine/images/hazeltine-logo.svg">
+<meta property="og:image" content="https://static.wixstatic.com/media/75705f_c00458e93c824a71b42b8fb2d2c8be15~mv2.jpg/v1/fill/w_1200,h_630,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/75705f_c00458e93c824a71b42b8fb2d2c8be15~mv2.jpg">
 <meta property="og:site_name" content="Hazeltine Detailing">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Hazeltine Detailing | Minneapolis &amp; St. Paul Auto Detailing">
 <meta name="twitter:description" content="Mobile detailing MN, interior cleaning Minneapolis, ceramic Chaska. Get a quote or schedule online. Packages from $149.">
-<meta name="twitter:image" content="https://dhakgilim.github.io/hazeltine/images/hazeltine-logo.svg">
+<meta name="twitter:image" content="https://static.wixstatic.com/media/75705f_c00458e93c824a71b42b8fb2d2c8be15~mv2.jpg/v1/fill/w_1200,h_630,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/75705f_c00458e93c824a71b42b8fb2d2c8be15~mv2.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <meta name="theme-color" content="#013220">
@@ -35,7 +35,7 @@
       "description": "Professional auto detailing serving Minneapolis, St. Paul, and the Twin Cities metro area. Services include ceramic coating, paint correction, swirl removal, hand wash and decontamination, interior shampoo, steam cleaning, and leather conditioning.",
       "url": "https://dhakgilim.github.io/hazeltine/",
       "telephone": "+1-763-352-7411",
-      "image": "https://dhakgilim.github.io/hazeltine/images/hazeltine-logo.svg",
+      "image": "https://static.wixstatic.com/media/75705f_be0ef1a5306242899bbcb2b94826d015~mv2.png/v1/fill/w_400,h_100,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/75705f_be0ef1a5306242899bbcb2b94826d015~mv2.png",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Minneapolis",
@@ -323,8 +323,8 @@ nav {
 
 .hero-bg {
   position: absolute; inset: 0;
-  background-color: var(--bg);
-  background-image: url('img/hero-backseat.jpg');
+  background-color: var(--navy-deep);
+  background-image: url('https://static.wixstatic.com/media/75705f_c00458e93c824a71b42b8fb2d2c8be15~mv2.jpg/v1/fill/w_1920,h_1080,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/75705f_c00458e93c824a71b42b8fb2d2c8be15~mv2.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -938,11 +938,18 @@ section { padding: 4.5rem max(1.25rem, env(safe-area-inset-left)) 4.5rem max(1.2
   overflow: hidden;
   aspect-ratio: 4/3;
   border: 1px solid var(--border);
+  background: var(--ios-grouped);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .craft-image img {
-  width: 100%; height: 100%;
-  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: clamp(1.25rem, 4vw, 2.75rem);
+  box-sizing: border-box;
 }
 
 .craft-details { list-style: none; }
@@ -1723,7 +1730,7 @@ button.nav-cta {
   .areas-grid { grid-template-columns: 1fr; }
   .hero-content { padding: 5rem 1rem 2rem; }
   .hero-text h1 { font-size: 2rem; }
-  .hero-bg { background-position: calc(50% - 2in) center; }
+  .hero-bg { background-position: center; background-size: cover; }
   .footer-inner { grid-template-columns: 1fr; }
   .trust-bar-inner { flex-direction: column; gap: 0.75rem; align-items: center; }
 }
@@ -1737,7 +1744,7 @@ button.nav-cta {
 <!-- ═══ NAV ═══ -->
 <nav role="navigation" aria-label="Main navigation">
   <a href="index.html" class="nav-brand" aria-label="Hazeltine Detailing home">
-    <img src="images/hazeltine-logo.svg" width="200" height="48" alt="Hazeltine Detailing — Twin Cities auto detailing, Minneapolis and St. Paul">
+    <img src="https://static.wixstatic.com/media/75705f_be0ef1a5306242899bbcb2b94826d015~mv2.png/v1/fill/w_400,h_100,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/75705f_be0ef1a5306242899bbcb2b94826d015~mv2.png" width="200" height="50" alt="Hazeltine Detailing — Twin Cities auto detailing, Minneapolis and St. Paul">
   </a>
   <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" onclick="this.classList.toggle('active');document.querySelector('.nav-links').classList.toggle('open');this.setAttribute('aria-expanded',this.classList.contains('active'))">
     <span></span><span></span><span></span>
@@ -2096,7 +2103,7 @@ button.nav-cta {
     <p class="section-subtitle">The boring stuff — done right — is what separates a weekend wash from a Hazeltine finish.</p>
     <div class="craft-grid">
       <div class="craft-image">
-        <img src="img/backseat-comfort.jpg" alt="Professional interior car detailing and leather conditioning — Hazeltine, Twin Cities Minnesota">
+        <img src="https://static.wixstatic.com/media/75705f_be0ef1a5306242899bbcb2b94826d015~mv2.png/v1/fill/w_900,h_240,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/75705f_be0ef1a5306242899bbcb2b94826d015~mv2.png" width="600" height="160" alt="Hazeltine Detailing wordmark — professional auto detailing, Twin Cities Minnesota">
       </div>
       <ul class="craft-details">
         <li>
@@ -2363,7 +2370,7 @@ button.nav-cta {
   <div class="footer-inner">
     <div class="footer-brand">
       <a href="index.html" class="nav-brand" style="margin-bottom:1rem;">
-        <img src="images/hazeltine-logo-light.svg" width="180" height="44" alt="Hazeltine Detailing — Minneapolis St. Paul auto detailing">
+        <img src="https://static.wixstatic.com/media/75705f_be0ef1a5306242899bbcb2b94826d015~mv2.png/v1/fill/w_360,h_90,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/75705f_be0ef1a5306242899bbcb2b94826d015~mv2.png" width="180" height="45" alt="Hazeltine Detailing — Minneapolis St. Paul auto detailing">
       </a>
       <p>Twin Cities auto detailing — paint correction, ceramic coatings, interior extraction &amp; leather care. Prep-forward process, clear packages, 120+ metro communities.</p>
     </div>
@@ -2444,12 +2451,15 @@ button.nav-cta {
     return emojiMap[category] || '🚗';
   }
   
-  fetch('data/events-master.json?v=' + new Date().toISOString().slice(0, 10))
-    .then(r => {
+  Promise.all([
+    fetch('data/events-master.json?v=' + new Date().toISOString().slice(0, 10)).then(r => {
       if (!r.ok) throw new Error('Failed to load events');
       return r.json();
-    })
-    .then(data => {
+    }),
+    fetch('data/default-car-event-images.json?v=1').then(r => (r.ok ? r.json() : { urls: [] })).catch(() => ({ urls: [] }))
+  ])
+    .then(([data, carPool]) => {
+      const defaultCarUrls = (carPool && carPool.urls) ? carPool.urls : [];
       const events = Array.isArray(data) ? data : (data && Array.isArray(data.events) ? data.events : []);
       if (events.length === 0) {
         const section = document.getElementById('featured-events');
@@ -2478,18 +2488,20 @@ button.nav-cta {
       }
       
       // Render cards
-      featured.forEach(ev => {
+      featured.forEach((ev, idx) => {
         const card = document.createElement('a');
         card.href = 'events.html';
         card.className = 'event-card';
         
         const hasImage = ev.image && ev.image.length > 0;
+        const poolImg = !hasImage && defaultCarUrls.length ? defaultCarUrls[idx % defaultCarUrls.length] : '';
+        const useImg = hasImage || poolImg;
         const imageHtml = hasImage
           ? `<img src="${ev.image}" alt="${truncate(ev.name, 50)}" loading="lazy">`
-          : getEventEmoji(ev.category);
+          : (poolImg ? `<img src="${poolImg}" alt="" loading="lazy">` : getEventEmoji(ev.category));
         
         card.innerHTML = `
-          <div class="event-image ${hasImage ? '' : 'placeholder'}">
+          <div class="event-image ${useImg ? '' : 'placeholder'}">
             ${imageHtml}
           </div>
           <div class="event-info">

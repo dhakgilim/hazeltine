@@ -22,8 +22,8 @@
 html{scroll-behavior:smooth}
 body{font-family:'Inter',-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}
 nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(13,13,26,0.85);backdrop-filter:blur(20px);border-bottom:1px solid rgba(139,92,246,0.1);padding:0 2rem;height:72px;display:flex;align-items:center;justify-content:space-between}
-.nav-logo{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700;color:var(--text);text-decoration:none;letter-spacing:1px}
-.nav-logo span{color:var(--accent)}
+.nav-brand{display:flex;align-items:center;text-decoration:none}
+.nav-brand img{height:40px;width:auto;display:block;max-width:min(200px,52vw)}
 .nav-links{display:flex;gap:2rem;align-items:center}
 .nav-links a{color:var(--text-muted);text-decoration:none;font-size:0.9rem;font-weight:500;transition:color 0.2s}
 .nav-links a:hover{color:var(--text)}
@@ -37,7 +37,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(13,13,26,0.8
 .hamburger.active span:nth-child(2){opacity:0}
 .hamburger.active span:nth-child(3){transform:rotate(-45deg) translate(7px,-7px)}
 .nav-links.open{display:flex!important;position:fixed;top:72px;left:0;right:0;background:rgba(13,13,26,0.98);backdrop-filter:blur(20px);flex-direction:column;padding:2rem;gap:1.5rem;border-bottom:1px solid rgba(139,92,246,0.15)}
-.events-hero{padding:8rem 2rem 4rem;background:linear-gradient(180deg,rgba(13,13,26,0.7) 0%,rgba(13,13,26,0.85) 100%),url('img/hero-backseat.jpg') center/cover no-repeat;text-align:center}
+.events-hero{padding:8rem 2rem 4rem;text-align:center;background-color:#071420;background-image:linear-gradient(180deg,rgba(7,20,32,0.82) 0%,rgba(1,50,32,0.88) 100%),url('https://static.wixstatic.com/media/75705f_c00458e93c824a71b42b8fb2d2c8be15~mv2.jpg/v1/fill/w_1920,h_1080,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/75705f_c00458e93c824a71b42b8fb2d2c8be15~mv2.jpg');background-position:center,center;background-size:cover,cover;background-repeat:no-repeat}
 .events-hero h1{font-family:'Playfair Display',serif;font-size:3rem;font-weight:700;line-height:1.15;margin-bottom:1rem}
 .events-hero h1 .highlight{background:linear-gradient(135deg,var(--accent),var(--accent-hover));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
 .events-hero p{font-size:1.15rem;color:var(--text-muted);max-width:650px;margin:0 auto 2rem;line-height:1.8}
@@ -124,7 +124,9 @@ footer{background:var(--bg-card);border-top:1px solid rgba(139,92,246,0.08);padd
 <body>
 <a href="#main" class="skip-link">Skip to main content</a>
 <nav role="navigation" aria-label="Main navigation">
-  <a href="index.html" class="nav-logo">Hazel<span>tine</span></a>
+  <a href="index.html" class="nav-brand" aria-label="Hazeltine Detailing home">
+    <img src="https://static.wixstatic.com/media/75705f_be0ef1a5306242899bbcb2b94826d015~mv2.png/v1/fill/w_400,h_100,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/75705f_be0ef1a5306242899bbcb2b94826d015~mv2.png" width="200" height="50" alt="Hazeltine Auto Detailing">
+  </a>
   <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" onclick="this.classList.toggle('active');document.querySelector('.nav-links').classList.toggle('open');this.setAttribute('aria-expanded',this.classList.contains('active'))">
     <span></span><span></span><span></span>
   </button>
@@ -138,9 +140,9 @@ footer{background:var(--bg-card);border-top:1px solid rgba(139,92,246,0.08);padd
 
 <main id="main">
 <section class="events-hero">
-  <h1>Rides to <span class="highlight">Every Event</span></h1>
-  <p>Concerts, games, shows — whatever's happening in the Twin Cities, MinnDrive gets you there from 120+ suburbs. Flat rates, no surge pricing, gratuity included.</p>
-  <a href="https://embed.evertransit.com/schedule.html?theme=default&amp;api_key=b68df50df04ee485999db06c3d29a936e6a6a49995d90be994f1895a439c6d152e" target="_blank" rel="noopener nofollow" class="btn-primary">Book Your Ride →</a>
+  <h1>Car shows &amp; <span class="highlight">vehicle weekends</span></h1>
+  <p>Monster Jam, cruises, boat &amp; RV shows, swap meets — curated for people who actually care how their paint looks. Plan a detail, then roll in clean.</p>
+  <a href="index.html#book" class="btn-primary">Get your quote →</a>
 </section>
 
 <!-- Live Events Feed -->
@@ -659,19 +661,24 @@ footer{background:var(--bg-card);border-top:1px solid rgba(139,92,246,0.08);padd
     URL.revokeObjectURL(a.href);
   }
 
-  function getImage(ev){
-    if(!ev.images||!ev.images.length) return '';
-    const img = ev.images.find(i=>i.ratio==='4_3'&&i.width>=200&&i.width<=400)
-      || ev.images.find(i=>i.ratio==='4_3')
-      || ev.images[0];
-    return img?img.url:'';
+  var defaultCarImages = [];
+  function getImage(ev, listIdx){
+    if(ev.images&&ev.images.length){
+      const img = ev.images.find(i=>i.ratio==='4_3'&&i.width>=200&&i.width<=400)
+        || ev.images.find(i=>i.ratio==='4_3')
+        || ev.images[0];
+      if(img&&img.url) return img.url;
+    }
+    if(defaultCarImages.length&&typeof listIdx==='number'&&listIdx>=0)
+      return defaultCarImages[listIdx % defaultCarImages.length];
+    return '';
   }
 
-  function renderCard(ev){
+  function renderCard(ev, listIdx){
     const dt = fmtDate(ev.dates.start.localDate);
     const time = fmtTime(ev);
     const venue = getVenueInfo(ev);
-    const img = getImage(ev);
+    const img = getImage(ev, listIdx);
     const imgHtml = img?'<img src="'+img+'" alt="" class="event-img" loading="lazy">':'';
     const gcalUrl = googleCalUrl(ev, venue);
     const evIdx = displayedEvents.indexOf(ev);
@@ -684,7 +691,7 @@ footer{background:var(--bg-card);border-top:1px solid rgba(139,92,246,0.08);padd
         '<div class="event-venue">'+venue.emoji+' '+escHtml(venue.name)+' — '+escHtml(venue.city)+'</div>'+
         (time?'<div class="event-time">'+time+'</div>':'')+
         '<div class="event-actions">'+
-          '<a href="https://embed.evertransit.com/schedule.html?theme=default&amp;api_key=b68df50df04ee485999db06c3d29a936e6a6a49995d90be994f1895a439c6d152e" target="_blank" rel="noopener nofollow" class="event-book">Book a ride →</a>'+
+          '<a href="index.html" class="event-book">Get a quote →</a>'+
           '<div class="event-cal-row">'+
             '<a href="'+escHtml(gcalUrl)+'" target="_blank" rel="noopener nofollow" class="event-cal" title="Add to Google Calendar">📅 Google</a>'+
             '<button class="event-cal" onclick="window.__dlICS('+evIdx+')" title="Add to Apple/Outlook Calendar">📅 iPhone</button>'+
@@ -738,7 +745,7 @@ footer{background:var(--bg-card);border-top:1px solid rgba(139,92,246,0.08);padd
       return;
     }
     empty.style.display = 'none';
-    grid.innerHTML = renderDestinationCards(false) + events.map(renderCard).join('');
+    grid.innerHTML = renderDestinationCards(false) + events.map(function(ev,i){ return renderCard(ev,i); }).join('');
   }
 
   function renderDestinationCards(forceAll){
@@ -780,7 +787,7 @@ footer{background:var(--bg-card);border-top:1px solid rgba(139,92,246,0.08);padd
         '<div class="event-venue">'+venueIcon(d.key)+' '+escHtml(d.city)+(d.season?' — '+escHtml(d.season):'')+'</div>'+
           '<div class="event-time" style="font-style:italic;opacity:0.8">'+escHtml(d.desc)+'</div>'+
           '<div class="event-actions">'+
-            '<a href="https://embed.evertransit.com/schedule.html?theme=default&amp;api_key=b68df50df04ee485999db06c3d29a936e6a6a49995d90be994f1895a439c6d152e" target="_blank" rel="noopener nofollow" class="event-book">Book a ride →</a>'+
+            '<a href="index.html" class="event-book">Get a quote →</a>'+
           '</div>'+
         '</div></div>';
   }
@@ -796,6 +803,15 @@ footer{background:var(--bg-card);border-top:1px solid rgba(139,92,246,0.08);padd
     if (/lfa \d+|\bboxing\b|\bwrestling\b/i.test(name) && !/monster jam/i.test(name)) return false;
     if (/motorcycle/.test(name) && !/show|swap|meet|expo|rally|viking/i.test(name)) return false;
     return /car show|auto show|monster jam|monster truck|boat show|rv show|motorcycle|cruise-in|cruise night|cars & coffee|cars and coffee|autocross|swap meet|gsta|gmcca|spring extravaganza|roadsters|on-water boat|mowog|viking motorcycle|truck show|jeep fest|off-road expo|collector car|exotic car meet|car meet|camper show|motorhome/i.test(name);
+  }
+
+  async function loadDefaultCarImages(){
+    try{
+      const r = await fetch('data/default-car-event-images.json?v='+todayLocal);
+      if(!r.ok) return;
+      const j = await r.json();
+      defaultCarImages = j.urls || [];
+    }catch(e){ console.warn('default car images:', e); }
   }
 
   async function loadMasterEvents(){
@@ -1776,8 +1792,8 @@ footer{background:var(--bg-card);border-top:1px solid rgba(139,92,246,0.08);padd
     renderCityFilterButton(cityName);
   }
 
-  // Initial load — all events from master JSON
-  loadMasterEvents().then(function(){
+  // Initial load — all events from master JSON + rotating car image pool
+  Promise.all([loadMasterEvents(), loadDefaultCarImages()]).then(function(){
     return initCityFilter();
   }).then(function(){
     loadEvents('all', 0);
