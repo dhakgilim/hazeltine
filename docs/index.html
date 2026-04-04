@@ -35,7 +35,7 @@
       "description": "Professional auto detailing serving Minneapolis, St. Paul, and the Twin Cities metro area. Services include ceramic coating, paint correction, swirl removal, hand wash and decontamination, interior shampoo, steam cleaning, and leather conditioning.",
       "url": "https://dhakgilim.github.io/hazeltine/",
       "telephone": "+1-763-352-7411",
-      "image": "https://static.wixstatic.com/media/75705f_be0ef1a5306242899bbcb2b94826d015~mv2.png/v1/fill/w_400,h_100,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/75705f_be0ef1a5306242899bbcb2b94826d015~mv2.png",
+      "image": "https://dhakgilim.github.io/hazeltine/images/hazeltine-logo.svg",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Minneapolis",
@@ -223,7 +223,15 @@ nav {
 .nav-brand img {
   height: 40px;
   width: auto;
+  max-width: min(240px, 58vw);
   display: block;
+  object-fit: contain;
+  object-position: left center;
+}
+
+footer .footer-brand .nav-brand img {
+  height: 44px;
+  max-width: min(280px, 85vw);
 }
 
 .nav-logo {
@@ -1744,7 +1752,7 @@ button.nav-cta {
 <!-- ═══ NAV ═══ -->
 <nav role="navigation" aria-label="Main navigation">
   <a href="index.html" class="nav-brand" aria-label="Hazeltine Detailing home">
-    <img src="https://static.wixstatic.com/media/75705f_be0ef1a5306242899bbcb2b94826d015~mv2.png/v1/fill/w_400,h_100,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/75705f_be0ef1a5306242899bbcb2b94826d015~mv2.png" width="200" height="50" alt="Hazeltine Detailing — Twin Cities auto detailing, Minneapolis and St. Paul">
+    <img src="images/hazeltine-logo.svg" width="240" height="42" alt="Hazeltine Detailing — Twin Cities auto detailing, Minneapolis and St. Paul">
   </a>
   <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" onclick="this.classList.toggle('active');document.querySelector('.nav-links').classList.toggle('open');this.setAttribute('aria-expanded',this.classList.contains('active'))">
     <span></span><span></span><span></span>
@@ -2103,7 +2111,7 @@ button.nav-cta {
     <p class="section-subtitle">The boring stuff — done right — is what separates a weekend wash from a Hazeltine finish.</p>
     <div class="craft-grid">
       <div class="craft-image">
-        <img src="https://static.wixstatic.com/media/75705f_be0ef1a5306242899bbcb2b94826d015~mv2.png/v1/fill/w_900,h_240,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/75705f_be0ef1a5306242899bbcb2b94826d015~mv2.png" width="600" height="160" alt="Hazeltine Detailing wordmark — professional auto detailing, Twin Cities Minnesota">
+        <img src="images/hazeltine-logo.svg" width="520" height="90" alt="Hazeltine Detailing wordmark — professional auto detailing, Twin Cities Minnesota">
       </div>
       <ul class="craft-details">
         <li>
@@ -2370,7 +2378,7 @@ button.nav-cta {
   <div class="footer-inner">
     <div class="footer-brand">
       <a href="index.html" class="nav-brand" style="margin-bottom:1rem;">
-        <img src="https://static.wixstatic.com/media/75705f_be0ef1a5306242899bbcb2b94826d015~mv2.png/v1/fill/w_360,h_90,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/75705f_be0ef1a5306242899bbcb2b94826d015~mv2.png" width="180" height="45" alt="Hazeltine Detailing — Minneapolis St. Paul auto detailing">
+        <img src="images/hazeltine-logo-light.svg" width="200" height="35" alt="Hazeltine Detailing — Minneapolis St. Paul auto detailing">
       </a>
       <p>Twin Cities auto detailing — paint correction, ceramic coatings, interior extraction &amp; leather care. Prep-forward process, clear packages, 120+ metro communities.</p>
     </div>
