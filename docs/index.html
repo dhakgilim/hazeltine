@@ -2318,15 +2318,17 @@ button.nav-cta {
     <h2 class="section-title">120+ mobile service areas. One standard.</h2>
     <p class="section-subtitle">We route <strong>mobile detailing</strong> across the Twin Cities metro — Bloomington to Stillwater and everywhere between — with the same prep, chemistry, and finish whether we meet you in Minneapolis, St. Paul, or a ring suburb.</p>
     <div class="areas-grid" id="areas-grid">
-      <!-- Populated by route rotation JS; static fallback below -->
-      <a href="auto-detailing-bloomington.html" class="area-card"><h3>Bloomington</h3><span>In our mobile service area</span><div class="price">Detailing from $149+</div></a>
-      <a href="auto-detailing-minneapolis.html" class="area-card"><h3>Minneapolis</h3><span>In our mobile service area</span><div class="price">Detailing from $149+</div></a>
-      <a href="auto-detailing-st-paul.html" class="area-card"><h3>St. Paul</h3><span>In our mobile service area</span><div class="price">Detailing from $149+</div></a>
-      <a href="auto-detailing-eagan.html" class="area-card"><h3>Eagan</h3><span>In our mobile service area</span><div class="price">Detailing from $149+</div></a>
-      <a href="auto-detailing-eden-prairie.html" class="area-card"><h3>Eden Prairie</h3><span>In our mobile service area</span><div class="price">Detailing from $149+</div></a>
-      <a href="auto-detailing-woodbury.html" class="area-card"><h3>Woodbury</h3><span>In our mobile service area</span><div class="price">Detailing from $149+</div></a>
-      <a href="auto-detailing-maple-grove.html" class="area-card"><h3>Maple Grove</h3><span>In our mobile service area</span><div class="price">Detailing from $149+</div></a>
-      <a href="auto-detailing-shakopee.html" class="area-card"><h3>Shakopee</h3><span>In our mobile service area</span><div class="price">Detailing from $149+</div></a>
+      
+      <!-- Synced by tools/update_index_area_lists.py (America/Chicago DOY) -->
+      <a href="auto-detailing-minneapolis.html" class="area-card"><h3>Minneapolis</h3><span>Mobile service area</span><div class="price">Detailing from $149+</div></a>
+      <a href="auto-detailing-st-paul.html" class="area-card"><h3>St. Paul</h3><span>Mobile service area</span><div class="price">Detailing from $149+</div></a>
+      <a href="auto-detailing-bloomington.html" class="area-card"><h3>Bloomington</h3><span>Mobile service area</span><div class="price">Detailing from $149+</div></a>
+      <a href="auto-detailing-eagan.html" class="area-card"><h3>Eagan</h3><span>Mobile service area</span><div class="price">Detailing from $149+</div></a>
+      <a href="auto-detailing-circle-pines.html" class="area-card"><h3>Circle Pines</h3><span>Mobile service area</span><div class="price">Detailing from $149+</div></a>
+      <a href="auto-detailing-carver.html" class="area-card"><h3>Carver</h3><span>Mobile service area</span><div class="price">Detailing from $149+</div></a>
+      <a href="auto-detailing-new-hope.html" class="area-card"><h3>New Hope</h3><span>Mobile service area</span><div class="price">Detailing from $149+</div></a>
+      <a href="auto-detailing-plymouth.html" class="area-card"><h3>Plymouth</h3><span>Mobile service area</span><div class="price">Detailing from $149+</div></a>
+    
     </div>
     <div class="areas-more">
       <a href="all-cities.html">View all 120+ cities →</a>
@@ -2395,18 +2397,21 @@ button.nav-cta {
 <section id="service-areas-popular" class="service-areas-popular-block">
   <h2>Popular service areas</h2>
   <div id="service-areas-grid-rotated" class="service-areas-grid-min">
-    <a href="auto-detailing-bloomington.html">Bloomington</a>
+    
+    <!-- Synced by tools/update_index_area_lists.py -->
     <a href="auto-detailing-minneapolis.html">Minneapolis</a>
     <a href="auto-detailing-st-paul.html">St. Paul</a>
-    <a href="auto-detailing-eden-prairie.html">Eden Prairie</a>
-    <a href="auto-detailing-plymouth.html">Plymouth</a>
+    <a href="auto-detailing-bloomington.html">Bloomington</a>
     <a href="auto-detailing-eagan.html">Eagan</a>
-    <a href="auto-detailing-maple-grove.html">Maple Grove</a>
-    <a href="auto-detailing-woodbury.html">Woodbury</a>
-    <a href="auto-detailing-burnsville.html">Burnsville</a>
-    <a href="auto-detailing-lakeville.html">Lakeville</a>
-    <a href="auto-detailing-chaska.html">Chaska</a>
-    <a href="auto-detailing-shakopee.html">Shakopee</a>
+    <a href="auto-detailing-lauderdale.html">Lauderdale</a>
+    <a href="auto-detailing-norwood-young-america.html">Norwood Young America</a>
+    <a href="auto-detailing-maplewood.html">Maplewood</a>
+    <a href="auto-detailing-crystal.html">Crystal</a>
+    <a href="auto-detailing-bethel.html">Bethel</a>
+    <a href="auto-detailing-hilltop.html">Hilltop</a>
+    <a href="auto-detailing-lake-elmo.html">Lake Elmo</a>
+    <a href="auto-detailing-st-bonifacius.html">St. Bonifacius</a>
+  
   </div>
   <p class="view-all"><a href="all-cities.html">View all 120+ cities →</a></p>
 </section>
@@ -2561,7 +2566,7 @@ button.nav-cta {
       const now = new Date();
       now.setHours(0, 0, 0, 0);
       const horizon = new Date(now);
-      horizon.setDate(horizon.getDate() + 120);
+      horizon.setDate(horizon.getDate() + 30);
 
       let upcoming = events.filter(ev => {
         if (!ev.date || !hazeltineIsVehicleEventRaw(ev)) return false;

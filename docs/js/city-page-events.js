@@ -61,7 +61,7 @@
       var now = new Date();
       now.setHours(0, 0, 0, 0);
       var horizon = new Date(now);
-      horizon.setDate(horizon.getDate() + 120);
+      horizon.setDate(horizon.getDate() + 30);
 
       roots.forEach(function (root) {
         var slug = root.getAttribute('data-city-slug') || '';
