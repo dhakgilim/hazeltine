@@ -10,7 +10,9 @@ from __future__ import annotations
 import html as html_module
 import json
 import re
+from datetime import datetime
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 ROOT = Path(__file__).resolve().parents[1]
 DOCS = ROOT / "docs"
@@ -170,6 +172,7 @@ def render_page(
     nearby: str,
     hero_url: str,
     meta_desc: str,
+    events_js_v: str,
 ) -> str:
     city_e = html_module.escape(city)
     county_e = html_module.escape(county)
@@ -452,7 +455,7 @@ def render_page(
   </div>
 </footer>
 
-<script src="js/city-page-events.js" defer></script>
+<script src="js/city-page-events.js?v={events_js_v}" defer></script>
 <script>function loadScript(a){{var b=document.getElementsByTagName("head")[0],c=document.createElement("script");c.type="text/javascript",c.src="https://tracker.metricool.com/resources/be.js",c.onreadystatechange=a,c.onload=a,b.appendChild(c)}}loadScript(function(){{if(typeof beTracker!=='undefined')beTracker.t({{hash:"5c6a5ef4e3c7cca1567e6995a471fa07"}})}})</script>
 </body>
 </html>
@@ -460,6 +463,7 @@ def render_page(
 
 
 def main() -> None:
+    events_js_v = datetime.now(ZoneInfo("America/Chicago")).strftime("%Y-%m-%d")
     urls = json.loads(CAR_JSON.read_text(encoding="utf-8")).get("urls") or []
     if not urls:
         raise SystemExit("No urls in default-car-event-images.json")
@@ -496,6 +500,7 @@ def main() -> None:
             nearby=nearby,
             hero_url=hero_url,
             meta_desc=meta_desc,
+            events_js_v=events_js_v,
         )
         path.write_text(out, encoding="utf-8")
         print(path.name)
