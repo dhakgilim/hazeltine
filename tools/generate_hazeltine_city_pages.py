@@ -463,7 +463,9 @@ def render_page(
 
 
 def main() -> None:
-    events_js_v = datetime.now(ZoneInfo("America/Chicago")).strftime("%Y-%m-%d")
+    # Weekly cache-bust avoids a 120-file git commit every day when only the calendar day changed.
+    _ic = datetime.now(ZoneInfo("America/Chicago")).isocalendar()
+    events_js_v = f"{_ic.year}-W{_ic.week:02d}"
     urls = json.loads(CAR_JSON.read_text(encoding="utf-8")).get("urls") or []
     if not urls:
         raise SystemExit("No urls in default-car-event-images.json")
